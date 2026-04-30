@@ -1,25 +1,19 @@
-
+import React, { useEffect, useState } from 'react';
+import { fetchArticles } from '../api';
 import { BookOpen, Calendar } from 'lucide-react';
 
 const Hub = () => {
-  // Static articles for the temporary website
-  const articles = [
-    {
-      id: 1,
-      category: 'PBS',
-      title: 'Understanding Positive Behaviour Support',
-      content: 'Positive Behaviour Support (PBS) is a comprehensive approach to understanding why challenging behaviours occur. It focuses on preventative strategies and teaching alternative skills to improve a persons quality of life.',
-      created_at: new Date().toISOString()
-    },
-    {
-      id: 2,
-      category: 'Support Coordination',
-      title: 'How to Prepare for Your NDIS Plan Review',
-      content: 'A plan review is your opportunity to discuss what is working, what isn\'t, and what goals you want to achieve in the next year. Here is how you and your Support Coordinator can prepare effectively.',
-      created_at: new Date().toISOString()
-    }
-  ];
+  const [articles, setArticles] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const loadArticles = async () => {
+      const data = await fetchArticles();
+      setArticles(data);
+      setLoading(false);
+    };
+    loadArticles();
+  }, []);
 
   return (
     <div className="container py-16 fade-in">
@@ -28,7 +22,9 @@ const Hub = () => {
         <p className="text-muted max-w-2xl mx-auto">Latest updates, resources, and educational materials regarding the NDIS, Support Coordination, and Positive Behaviour Support.</p>
       </div>
 
-      {articles.length === 0 ? (
+      {loading ? (
+        <div className="text-center text-muted py-8">Connecting to secure AWS Database...</div>
+      ) : articles.length === 0 ? (
         <div className="text-center text-muted py-8" style={{ backgroundColor: 'var(--white)', padding: '3rem', borderRadius: 'var(--radius-lg)' }}>
           <BookOpen size={48} color="var(--primary-light)" style={{ margin: '0 auto 1rem auto' }} />
           <h3>No articles found.</h3>

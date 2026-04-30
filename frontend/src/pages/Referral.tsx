@@ -1,72 +1,89 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { submitReferral } from '../api';
 
 const Referral = () => {
-  const [activeForm, setActiveForm] = useState<'ssc' | 'pbs' | null>(null);
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone: '',
+    ndis_number: '',
+    service_requested: 'Support Coordination',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('Submitting securely to AWS Database...');
+    try {
+      await submitReferral(formData);
+      setStatus('Success! Your referral has been securely submitted. We will be in touch shortly.');
+      setFormData({ first_name: '', last_name: '', email: '', phone: '', ndis_number: '', service_requested: 'Support Coordination', message: '' });
+    } catch (error) {
+      setStatus('Error submitting referral. Please ensure the backend database is running.');
+    }
+  };
 
   return (
     <div className="container py-16 fade-in">
-      <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: 'var(--white)', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)' }}>
-        <h2 className="text-4xl mb-2 text-center">Make a Referral</h2>
-        <p className="text-muted text-center mb-8">Please select the specific service you are referring for to load the correct secure form.</p>
+      <div style={{ maxWidth: '600px', margin: '0 auto', backgroundColor: 'var(--white)', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)' }}>
+        <h2 className="text-4xl mb-2 text-center">Make a Secure Referral</h2>
+        <p className="text-muted text-center mb-8">Please fill out the form below. Your data is encrypted and securely stored.</p>
 
-        {!activeForm && (
-          <div className="flex flex-col sm:flex-row justify-center gap-4" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button 
-              onClick={() => setActiveForm('ssc')} 
-              className="btn btn-primary"
-              style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
-            >
-              Support Coordination Referral
-            </button>
-            <button 
-              onClick={() => setActiveForm('pbs')} 
-              className="btn btn-accent"
-              style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
-            >
-              Positive Behaviour Support (PBS) Referral
-            </button>
+        {status && (
+          <div style={{ padding: '1rem', marginBottom: '2rem', borderRadius: 'var(--radius-md)', backgroundColor: status.includes('Success') ? '#D1FAE5' : '#FEE2E2', color: status.includes('Success') ? '#065F46' : '#991B1B' }}>
+            {status}
           </div>
         )}
 
-        {activeForm === 'ssc' && (
-          <div className="fade-in">
-            <div className="flex justify-between items-center mb-4" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-              <h3 className="text-xl" style={{ color: 'var(--primary-dark)' }}>Support Coordination Form</h3>
-              <button 
-                onClick={() => setActiveForm(null)} 
-                className="text-muted" 
-                style={{ textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer', fontSize: '0.9rem' }}
-              >
-                ← Back to Service Selection
-              </button>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="flex gap-4">
+            <div style={{ flex: 1 }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>First Name *</label>
+              <input type="text" name="first_name" required value={formData.first_name} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
             </div>
-            <iframe 
-              src="https://www.cognitoforms.com/DyarPTYLTD/DYARSupportCoordinationReferralForm" 
-              style={{ border: 0, width: '100%', height: '800px', borderRadius: 'var(--radius-md)' }} 
-              title="Support Coordination Referral Form"
-            ></iframe>
-          </div>
-        )}
-
-        {activeForm === 'pbs' && (
-          <div className="fade-in">
-            <div className="flex justify-between items-center mb-4" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-              <h3 className="text-xl" style={{ color: 'var(--primary-dark)' }}>Positive Behaviour Support Form</h3>
-              <button 
-                onClick={() => setActiveForm(null)} 
-                className="text-muted" 
-                style={{ textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer', fontSize: '0.9rem' }}
-              >
-                ← Back to Service Selection
-              </button>
+            <div style={{ flex: 1 }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Last Name *</label>
+              <input type="text" name="last_name" required value={formData.last_name} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
             </div>
-            <iframe 
-              src="https://www.cognitoforms.com/DyarPTYLTD/PBSReferralFormDYAR" 
-              style={{ border: 0, width: '100%', height: '800px', borderRadius: 'var(--radius-md)' }} 
-              title="PBS Referral Form"
-            ></iframe>
           </div>
-        )}
+
+          <div className="flex gap-4">
+            <div style={{ flex: 1 }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Email *</label>
+              <input type="email" name="email" required value={formData.email} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
+            </div>
+            <div style={{ flex: 1 }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Phone *</label>
+              <input type="text" name="phone" required value={formData.phone} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
+            </div>
+          </div>
+
+          <div>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>NDIS Number</label>
+            <input type="text" name="ndis_number" value={formData.ndis_number} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
+          </div>
+
+          <div>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Service Requested *</label>
+            <select name="service_requested" value={formData.service_requested} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB', backgroundColor: 'var(--white)' }}>
+              <option value="Support Coordination">Support Coordination</option>
+              <option value="PBS">Positive Behaviour Support (PBS)</option>
+            </select>
+          </div>
+
+          <div>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Additional Information</label>
+            <textarea name="message" rows={4} value={formData.message} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB', resize: 'vertical' }}></textarea>
+          </div>
+
+          <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem', padding: '1rem' }}>Submit Secure Referral</button>
+        </form>
       </div>
     </div>
   );
