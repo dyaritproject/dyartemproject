@@ -13,7 +13,7 @@ const Services = () => {
         <div className="flex flex-col gap-16">
           
           {/* Support Coordination */}
-          <div className="flex flex-col gap-8 items-center" style={{ md: { flexDirection: 'row' } }}>
+          <div className="flex flex-col gap-8 items-center">
             <div style={{ flex: 1, backgroundColor: 'var(--white)', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}>
               <div style={{ display: 'inline-flex', padding: '1rem', backgroundColor: 'var(--bg-light)', borderRadius: 'var(--radius-full)', marginBottom: '1.5rem' }}>
                 <Users size={40} color="var(--primary)" />
@@ -34,7 +34,7 @@ const Services = () => {
           </div>
 
           {/* Positive Behaviour Support */}
-          <div className="flex flex-col gap-8 items-center" style={{ md: { flexDirection: 'row-reverse' } }}>
+          <div className="flex flex-col gap-8 items-center">
             <div style={{ flex: 1, backgroundColor: 'var(--white)', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}>
               <div style={{ display: 'inline-flex', padding: '1rem', backgroundColor: 'var(--bg-light)', borderRadius: 'var(--radius-full)', marginBottom: '1.5rem' }}>
                 <Activity size={40} color="var(--accent)" />
