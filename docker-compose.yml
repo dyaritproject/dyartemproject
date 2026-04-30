@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dyar-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: dyar-website-container
+    restart: unless-stopped
