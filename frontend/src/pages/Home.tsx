@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Activity, Users, ShieldCheck, Heart, Calendar, BookOpen, Plus, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Activity, Users, ShieldCheck, Plus, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Home = () => {
   const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
