@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { submitReferral } from '../api';
+import { ShieldCheck } from 'lucide-react';
 
 const Referral = () => {
   const [formData, setFormData] = useState({
@@ -30,60 +31,71 @@ const Referral = () => {
   };
 
   return (
-    <div className="container py-16 fade-in">
-      <div style={{ maxWidth: '600px', margin: '0 auto', backgroundColor: 'var(--white)', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)' }}>
-        <h2 className="text-4xl mb-2 text-center">Make a Secure Referral</h2>
-        <p className="text-muted text-center mb-8">Please fill out the form below. Your data is encrypted and securely stored.</p>
-
-        {status && (
-          <div style={{ padding: '1rem', marginBottom: '2rem', borderRadius: 'var(--radius-md)', backgroundColor: status.includes('Success') ? '#D1FAE5' : '#FEE2E2', color: status.includes('Success') ? '#065F46' : '#991B1B' }}>
-            {status}
-          </div>
-        )}
-
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div className="flex gap-4">
-            <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>First Name *</label>
-              <input type="text" name="first_name" required value={formData.first_name} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
+    <div className="font-sans text-gray-800 bg-slate-50 min-h-screen py-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+          <div className="bg-gradient-to-r from-purple-800 to-blue-600 px-8 py-10 text-center text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+              <ShieldCheck size={120} />
             </div>
-            <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Last Name *</label>
-              <input type="text" name="last_name" required value={formData.last_name} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
-            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-3 relative z-10">Make a Secure Referral</h2>
+            <p className="text-purple-100 text-lg relative z-10">Please fill out the form below. Your data is encrypted and securely stored.</p>
           </div>
+          
+          <div className="p-8 md:p-12">
+            {status && (
+              <div className={`p-4 mb-8 rounded-xl flex items-center font-medium ${status.includes('Success') ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : status.includes('Submitting') ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+                {status}
+              </div>
+            )}
 
-          <div className="flex gap-4">
-            <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Email *</label>
-              <input type="email" name="email" required value={formData.email} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
-            </div>
-            <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Phone *</label>
-              <input type="text" name="phone" required value={formData.phone} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">First Name *</label>
+                  <input type="text" name="first_name" required value={formData.first_name} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white" />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Last Name *</label>
+                  <input type="text" name="last_name" required value={formData.last_name} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white" />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Email *</label>
+                  <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white" />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Phone *</label>
+                  <input type="text" name="phone" required value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">NDIS Number</label>
+                <input type="text" name="ndis_number" value={formData.ndis_number} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Service Requested *</label>
+                <select name="service_requested" value={formData.service_requested} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white appearance-none cursor-pointer">
+                  <option value="Support Coordination">Support Coordination</option>
+                  <option value="PBS">Positive Behaviour Support (PBS)</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Additional Information</label>
+                <textarea name="message" rows={4} value={formData.message} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white resize-y"></textarea>
+              </div>
+
+              <button type="submit" className="w-full flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-[0.98]">
+                Submit Secure Referral
+              </button>
+            </form>
           </div>
-
-          <div>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>NDIS Number</label>
-            <input type="text" name="ndis_number" value={formData.ndis_number} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB' }} />
-          </div>
-
-          <div>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Service Requested *</label>
-            <select name="service_requested" value={formData.service_requested} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB', backgroundColor: 'var(--white)' }}>
-              <option value="Support Coordination">Support Coordination</option>
-              <option value="PBS">Positive Behaviour Support (PBS)</option>
-            </select>
-          </div>
-
-          <div>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Additional Information</label>
-            <textarea name="message" rows={4} value={formData.message} onChange={handleChange} style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid #E5E7EB', resize: 'vertical' }}></textarea>
-          </div>
-
-          <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem', padding: '1rem' }}>Submit Secure Referral</button>
-        </form>
+        </div>
       </div>
     </div>
   );
