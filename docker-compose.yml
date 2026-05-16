@@ -31,8 +31,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./frontend:/app/frontend
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - certbot_www:/var/www/certbot
 
 volumes:
   postgres_data:
+  certbot_www:
