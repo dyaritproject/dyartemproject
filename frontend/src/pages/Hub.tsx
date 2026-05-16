@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { fetchArticles } from '../api';
-import { BookOpen, Calendar, ChevronRight, FileText, Download, PlayCircle } from 'lucide-react';
+import { BookOpen, Calendar, ChevronRight, FileText, Download, PlayCircle, X } from 'lucide-react';
 
 const Hub = () => {
   const [articles, setArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedArticle, setSelectedArticle] = useState<any>(null);
 
   // Fallback / Featured Articles
   const featuredArticles = [
@@ -87,7 +88,7 @@ const Hub = () => {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {displayArticles.map((article: any, index: number) => (
-                <div key={article.id || index} className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col h-full cursor-pointer hover:-translate-y-1">
+                <div key={article.id || index} onClick={() => setSelectedArticle(article)} className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col h-full cursor-pointer hover:-translate-y-1">
                   <div className={`h-48 bg-gradient-to-br ${article.color || 'from-purple-500 to-[#6A0DAD]'} flex items-center justify-center relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
                     {article.type === 'video' ? (
@@ -143,15 +144,66 @@ const Hub = () => {
                     <p className="text-xs text-gray-500 font-medium mt-0.5">{doc.ext} • {doc.size}</p>
                   </div>
                 </div>
-                <button className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-[#6A0DAD] hover:text-white hover:border-[#6A0DAD] transition-all shadow-sm">
+                <a 
+                  href="/sample-form.pdf" 
+                  download={`${doc.name}.${doc.ext.toLowerCase()}`}
+                  className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-[#6A0DAD] hover:text-white hover:border-[#6A0DAD] transition-all shadow-sm"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <Download size={18} />
-                </button>
+                </a>
               </div>
             ))}
           </div>
         </div>
 
       </div>
+
+      {/* Article Reading Modal */}
+      {selectedArticle && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedArticle(null)}></div>
+          <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col animate-in fade-in zoom-in duration-300">
+            {/* Modal Header */}
+            <div className={`h-32 sm:h-48 bg-gradient-to-br ${selectedArticle.color || 'from-purple-500 to-[#6A0DAD]'} relative shrink-0`}>
+              <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+              <button 
+                onClick={() => setSelectedArticle(null)}
+                className="absolute top-4 right-4 w-10 h-10 bg-black/20 hover:bg-black/40 text-white rounded-full flex items-center justify-center transition-colors z-10"
+              >
+                <X size={20} />
+              </button>
+              <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+                <span className="inline-block px-3 py-1 mb-3 text-xs font-bold text-white bg-white/20 backdrop-blur-md rounded-full uppercase tracking-wider border border-white/20">
+                  {selectedArticle.category || 'Article'}
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight drop-shadow-md">
+                  {selectedArticle.title}
+                </h2>
+              </div>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="p-6 sm:p-10 overflow-y-auto flex-1 bg-white">
+              <div className="flex items-center text-gray-500 text-sm font-medium mb-8 border-b border-gray-100 pb-4">
+                <Calendar size={16} className="mr-2" />
+                Published on {new Date(selectedArticle.created_at).toLocaleDateString()}
+              </div>
+              <div className="prose prose-lg prose-purple max-w-none text-gray-700 leading-relaxed">
+                {selectedArticle.type === 'video' ? (
+                  <div className="bg-slate-100 rounded-2xl aspect-video flex items-center justify-center mb-8 border border-slate-200">
+                    <PlayCircle size={64} className="text-slate-400" />
+                    <p className="ml-4 text-slate-500 font-bold">Video Player Placeholder</p>
+                  </div>
+                ) : null}
+                <p className="text-xl font-medium text-gray-900 mb-6">{selectedArticle.content}</p>
+                <p>This is a detailed reading view for the selected insight. In a full production environment, this area would render rich text HTML or Markdown fetched directly from the database.</p>
+                <p className="mt-4">Our Positive Behaviour Support and Support Coordination teams regularly update this knowledge hub to ensure all NDIS participants and their families have access to the most accurate, evidence-based methodologies available.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

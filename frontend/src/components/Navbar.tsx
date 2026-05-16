@@ -14,8 +14,17 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-blue-600">
-            Dyar Pty Ltd
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/logo.jpg" 
+              alt="Dyar Logo" 
+              className="h-16 w-auto object-contain"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null; 
+                target.src = "https://ui-avatars.com/api/?name=Dyar+Pty+Ltd&background=6A0DAD&color=fff&size=128&font-size=0.33&bold=true";
+              }}
+            />
           </Link>
           
           {/* Desktop Nav */}

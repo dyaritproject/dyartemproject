@@ -4,6 +4,7 @@ import Services from './pages/Services';
 import Hub from './pages/Hub';
 import Referral from './pages/Referral';
 import About from './pages/About';
+import Support from './pages/Support';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/hub" element={<Hub />} />
             <Route path="/referral" element={<Referral />} />
+            <Route path="/support" element={<Support />} />
           </Routes>
         </main>
         <Footer />
