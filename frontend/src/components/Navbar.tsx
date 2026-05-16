@@ -1,10 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn, LayoutDashboard } from 'lucide-react';
 import { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
 const Navbar = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isAuthenticated } = useAuth();
   
   const isActive = (path: string) => {
     return location.pathname === path ? "text-purple-700 font-bold" : "text-gray-600 hover:text-purple-600 font-medium";
@@ -33,9 +35,20 @@ const Navbar = () => {
             <Link to="/about" className={isActive('/about')}>About</Link>
             <Link to="/services" className={isActive('/services')}>Services</Link>
             <Link to="/hub" className={isActive('/hub')}>Knowledge Hub</Link>
-            <Link to="/referral" className="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
-              Make a Referral
-            </Link>
+            {isAuthenticated ? (
+              <Link to="/dashboard" className="ml-4 inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
+                <LayoutDashboard size={16} /> My Portal
+              </Link>
+            ) : (
+              <div className="flex items-center gap-2 ml-4">
+                <Link to="/login" className="inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-bold rounded-xl text-[#6A0DAD] border border-purple-200 hover:bg-purple-50 transition-all">
+                  <LogIn size={16} /> Sign In
+                </Link>
+                <Link to="/referral" className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
+                  Make a Referral
+                </Link>
+              </div>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
