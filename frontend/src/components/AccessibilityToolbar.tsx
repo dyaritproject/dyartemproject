@@ -40,9 +40,9 @@ const AccessibilityToolbar = () => {
         .high-contrast a, .high-contrast button { outline: 2px solid #FFD700 !important; }
       `}</style>
 
-      <div className="fixed bottom-6 left-6 z-[200] flex flex-col items-start gap-2">
+      <div className="relative flex items-center">
         {open && (
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-52 animate-in slide-in-from-bottom-2 duration-200">
+          <div className="absolute right-0 top-12 bg-white rounded-2xl shadow-xl border border-gray-100 p-4 w-52 animate-in fade-in slide-in-from-top-2 duration-200 z-[200]">
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Accessibility</p>
 
             {/* Font Size */}
@@ -93,11 +93,11 @@ const AccessibilityToolbar = () => {
 
         <button
           onClick={() => setOpen(o => !o)}
-          className="w-12 h-12 bg-[#6A0DAD] hover:bg-purple-800 text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+          className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${open ? 'bg-purple-100 text-purple-700' : 'bg-gray-50 text-gray-600 hover:bg-purple-50 hover:text-purple-600'}`}
           aria-label="Accessibility options"
           aria-expanded={open}
         >
-          {open ? <ChevronUp size={20} /> : <Accessibility size={20} />}
+          <Accessibility size={20} />
         </button>
       </div>
     </>

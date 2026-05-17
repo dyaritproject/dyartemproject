@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
-import AccessibilityToolbar from './components/AccessibilityToolbar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -19,7 +18,6 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <AccessibilityToolbar />
         <Routes>
           {/* Auth pages — no navbar/footer */}
           <Route path="/login" element={<Login />} />

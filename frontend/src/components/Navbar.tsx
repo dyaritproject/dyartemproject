@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import AccessibilityToolbar from './AccessibilityToolbar';
 
 const Navbar = () => {
   const location = useLocation();
@@ -29,13 +30,17 @@ const Navbar = () => {
             <Link to="/services" className={isActive('/services')}>Services</Link>
             <Link to="/hub" className={isActive('/hub')}>Knowledge Hub</Link>
             <Link to="/resources" className={isActive('/resources')}>Resources</Link>
-            <Link to="/referral" className="ml-4 inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
+            <div className="ml-2 flex items-center">
+              <AccessibilityToolbar />
+            </div>
+            <Link to="/referral" className="ml-2 inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
               Make a Referral
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-2">
+            <AccessibilityToolbar />
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-600 hover:text-purple-600 focus:outline-none p-2"
