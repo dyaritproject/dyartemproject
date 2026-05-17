@@ -4,6 +4,8 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import Referral, Article, Document
 from .serializers import (
     RegisterSerializer, UserSerializer,
@@ -56,9 +58,31 @@ class ReferralViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         if self.request.user.is_authenticated:
-            serializer.save(user=self.request.user)
+            referral = serializer.save(user=self.request.user)
         else:
-            serializer.save()
+            referral = serializer.save()
+            
+        try:
+            subject = f"New Referral Received: {referral.first_name} {referral.last_name}"
+            message = (
+                f"A new referral has been securely submitted via the DYAR website.\n\n"
+                f"Participant: {referral.first_name} {referral.last_name}\n"
+                f"Service Requested: {referral.service_requested}\n"
+                f"Email provided: {referral.email}\n"
+                f"Phone provided: {referral.phone}\n\n"
+                f"To protect participant privacy, the full details (including NDIS number and additional information) "
+                f"are stored securely in the database.\n\n"
+                f"Please log in to the secure administrator dashboard at https://dyar.com.au/admin to view and process this referral."
+            )
+            send_mail(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                ['hello@dyar.com.au'],
+                fail_silently=True,
+            )
+        except Exception as e:
+            print(f"Failed to send referral email notification: {e}")
 
 
 class ArticleViewSet(viewsets.ModelViewSet):
