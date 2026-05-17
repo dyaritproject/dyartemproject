@@ -13,7 +13,7 @@ const Hub = () => {
       id: 'f1',
       title: 'Understanding Positive Behaviour Support (PBS): A Guide for Families',
       category: 'Education',
-      content: 'Positive Behaviour Support is an evidence-based framework designed to improve quality of life and decrease behaviors of concern. It focuses on understanding the reasons behind behavior and teaching new skills.',
+      content: 'Positive Behaviour Support is an evidence-based framework designed to improve quality of life and decrease behaviours of concern. It focuses on understanding the reasons behind behaviour and teaching new skills.',
       created_at: new Date().toISOString(),
       type: 'article',
       color: 'from-blue-500 to-indigo-600'

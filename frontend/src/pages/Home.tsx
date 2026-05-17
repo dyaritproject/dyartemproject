@@ -94,7 +94,7 @@ const Home = () => {
               Our Core <span className="text-[#6A0DAD]">Expertise</span>.
             </h2>
             <p className="text-slate-900 max-w-3xl mx-auto text-lg leading-relaxed font-bold">
-              Specialized services designed around your unique needs and goals.
+              Specialised services designed around your unique needs and goals.
               We provide the clinical expertise and coordination required to safely manage your NDIS plan.
             </p>
           </div>

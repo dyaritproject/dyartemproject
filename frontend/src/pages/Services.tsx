@@ -8,7 +8,7 @@ const Services = () => {
       <section className="relative bg-gradient-to-b from-purple-50 to-white pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">Our NDIS Services</h1>
-          <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">Providing specialized, compassionate, and evidence-based support to help you navigate your NDIS plan.</p>
+          <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">Providing specialised, compassionate, and evidence-based support to help you navigate your NDIS plan.</p>
         </div>
       </section>
 
