@@ -67,7 +67,7 @@ const About = () => {
             <h2 className="text-3xl font-extrabold text-gray-900 mb-6 tracking-tight">Who we are</h2>
             <div className="text-gray-600 leading-relaxed text-lg space-y-5">
               <p>
-                DYAR delivers Specialist Behaviour Support, Specialist Support Coordination, Specialist Disability Accommodation, Early Childhood Supports, High Intensity Daily Personal Activities, Community Access, Core Support, Therapeutic Supports, Psychosocial Recovery Coaching, Consumables, and Transport.
+                DYAR delivers Specialist Behaviour Support, Specialist Disability Accommodation, Early Childhood Supports, High Intensity Daily Personal Activities, Core Civic and Social Participation (Community Access), Core Support, Therapeutic Supports, Psychosocial Recovery Coaching, Consumables, and Transport.
               </p>
               <div className="bg-purple-50 border-l-4 border-purple-600 p-5 rounded-r-xl">
                 <p className="font-medium text-purple-900">

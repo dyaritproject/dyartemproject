@@ -11,13 +11,12 @@ const Home = () => {
 
   const services = [
     { name: 'Specialist Behaviour Support (PBS)', desc: 'Functional assessments and individualised PBS plans.' },
-    { name: 'Specialist Support Coordination', desc: 'Level 2 & 3 coordination for complex support needs.' },
     { name: 'Specialist Disability Accommodation (SDA)', desc: 'Connecting participants to appropriate housing solutions.' },
     { name: 'Therapeutic Supports', desc: 'Allied health assessments and evidence-based interventions.' },
     { name: 'Psychosocial Recovery Coaching', desc: 'Supporting recovery and building resilience.' },
     { name: 'Early Childhood Supports', desc: 'Early intervention for children under 9 with developmental needs.' },
     { name: 'High Intensity Daily Personal Activities', desc: 'Complex personal care delivered by trained practitioners.' },
-    { name: 'Community Access', desc: 'Group and individual participation in community life.' },
+    { name: 'Core Civic & Social Participation', desc: 'Community Access, group activities, and social inclusion.' },
     { name: 'Core Support – Assistance with Daily Life', desc: 'Practical supports for everyday activities and independence.' },
     { name: 'Consumables & Transport', desc: 'Essential consumable supports and travel assistance.' },
   ];
