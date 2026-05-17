@@ -16,18 +16,13 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/logo.jpg" 
-              alt="Dyar Logo" 
-              className="h-16 w-auto object-contain"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null; 
-                target.src = "https://ui-avatars.com/api/?name=Dyar+Pty+Ltd&background=6A0DAD&color=fff&size=128&font-size=0.33&bold=true";
-              }}
-            />
+          <Link to="/" className="flex items-center gap-1 group">
+            <span className="text-4xl font-black tracking-tight bg-gradient-to-r from-purple-700 via-purple-600 to-violet-500 bg-clip-text text-transparent drop-shadow-sm transition-all group-hover:from-purple-800 group-hover:to-violet-600" style={{fontFamily: "'Inter', 'Outfit', sans-serif", letterSpacing: '-0.03em'}}>
+              DYAR
+            </span>
+            <span className="w-2 h-2 rounded-full bg-purple-500 mb-1 group-hover:bg-purple-700 transition-colors" />
           </Link>
+
           
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
