@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import Hub from './pages/Hub';
 import Referral from './pages/Referral';
 import Support from './pages/Support';
+import Resources from './pages/Resources';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -41,6 +42,7 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/services" element={<Services />} />
                   <Route path="/hub" element={<Hub />} />
+                  <Route path="/resources" element={<Resources />} />
                   <Route path="/referral" element={<Referral />} />
                   <Route path="/support" element={<Support />} />
                 </Routes>
