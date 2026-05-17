@@ -9,7 +9,7 @@ const Referral = () => {
     email: '',
     phone: '',
     ndis_number: '',
-    service_requested: 'Support Coordination',
+    service_requested: 'Core Civic & Social Participation',
     message: ''
   });
   const [status, setStatus] = useState('');
@@ -24,7 +24,7 @@ const Referral = () => {
     try {
       await submitReferral(formData);
       setStatus('Success! Your referral has been securely submitted. We will be in touch shortly.');
-      setFormData({ first_name: '', last_name: '', email: '', phone: '', ndis_number: '', service_requested: 'Support Coordination', message: '' });
+      setFormData({ first_name: '', last_name: '', email: '', phone: '', ndis_number: '', service_requested: 'Core Civic & Social Participation', message: '' });
     } catch (error) {
       setStatus('Error submitting referral. Please ensure the backend database is running.');
     }
@@ -80,8 +80,9 @@ const Referral = () => {
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Service Requested *</label>
                 <select name="service_requested" value={formData.service_requested} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white appearance-none cursor-pointer">
-                  <option value="Support Coordination">Support Coordination</option>
+                  <option value="Core Civic & Social Participation">Core Civic & Social Participation (Community Access)</option>
                   <option value="PBS">Positive Behaviour Support (PBS)</option>
+                  <option value="Other">Other / Unsure</option>
                 </select>
               </div>
 

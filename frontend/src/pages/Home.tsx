@@ -100,7 +100,7 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto relative items-start" style={{ perspective: '1000px' }}>
-            {/* Support Coordination Flip Card */}
+            {/* Community Access Flip Card */}
             <div
               className={`relative transition-all duration-500 h-[480px] w-full cursor-pointer ${flippedIndex === 0 ? 'z-50' : 'z-10'} ${flippedIndex === 1 ? 'blur-[1px] opacity-40 pointer-events-none' : ''}`}
               style={{ transformStyle: 'preserve-3d', transform: flippedIndex === 0 ? 'rotateY(180deg)' : 'none' }}
@@ -108,26 +108,26 @@ const Home = () => {
             >
               <div className="absolute inset-0 bg-white p-8 md:p-10 shadow-sm border border-gray-100 hover:border-purple-200 transition-all duration-500 flex flex-col items-center text-center justify-center rounded-3xl" style={{ backfaceVisibility: 'hidden' }}>
                 <div className="absolute top-6 right-6">
-                  <span className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold border shadow-sm tracking-wide bg-[#F0FDF4] text-[#166534] border-[#DCFCE7]">Level 2 &amp; 3</span>
+                  <span className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold border shadow-sm tracking-wide bg-[#F0FDF4] text-[#166534] border-[#DCFCE7]">Core Support</span>
                 </div>
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-emerald-50 text-emerald-600 shadow-inner">
                   <Users size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 px-4 leading-tight">Support Coordination</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 px-4 leading-tight">Core Civic &amp; Social Participation</h3>
                 <p className="text-sm text-slate-800 font-bold leading-relaxed max-w-xs mb-8">
-                  Navigate the NDIS with confidence. We connect you with the right providers to bring your goals to life.
+                  Meaningful community access, group activities, and social inclusion supports.
                 </p>
                 <button className="w-full py-4 bg-[#6A0DAD] text-white font-bold text-sm rounded-xl hover:bg-purple-800 transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3">
                   <span>View Features</span><Plus size={16} />
                 </button>
               </div>
               <div className="absolute inset-0 bg-white p-8 md:p-10 shadow-xl border border-purple-100 transition-all duration-500 flex flex-col items-center text-center rounded-3xl overflow-y-auto" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Seamless NDIS plan management.</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Meaningful Community Engagement.</h3>
                 <div className="text-sm text-slate-900 leading-relaxed font-bold mb-8 flex-grow">
-                  Our experienced Support Coordinators work alongside you to understand your plan, resolve points of crisis, and build your capacity to direct your own life.
+                  We support participants to actively engage in their community, build social networks, and participate in recreational or civic activities that align with their personal goals.
                 </div>
                 <ul className="text-left w-full space-y-3 mb-8">
-                  {['Budget Tracking', 'Provider Negotiation', 'Crisis Resolution', 'Plan Review Preparation'].map((item, i) => (
+                  {['Supported Group Activities', '1:1 Community Access', 'Social Skill Building', 'Recreational Outings'].map((item, i) => (
                     <li key={i} className="flex items-start text-sm font-medium text-gray-700">
                       <CheckCircle size={16} className="text-emerald-500 mt-0.5 mr-2 shrink-0" /> {item}
                     </li>
