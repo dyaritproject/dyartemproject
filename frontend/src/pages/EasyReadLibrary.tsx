@@ -197,9 +197,10 @@ const EasyReadLibrary = () => {
             
             <button 
               onClick={() => setSelectedDoc(null)}
-              className="w-12 h-12 bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-red-500 rounded-full flex items-center justify-center transition-colors"
+              className="px-6 h-12 bg-red-50 hover:bg-red-100 text-red-600 border-2 border-red-200 hover:border-red-300 rounded-full flex items-center justify-center gap-2 font-extrabold text-lg transition-all shadow-sm active:scale-95"
             >
-              <X size={24} />
+              <X size={24} strokeWidth={3} />
+              Close
             </button>
           </div>
 
