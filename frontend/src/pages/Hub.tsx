@@ -1,5 +1,5 @@
 import { useState, createElement } from 'react';
-import { BookOpen, ChevronRight, FileText, Globe, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users, Plus, Minus } from 'lucide-react';
+import { BookOpen, ChevronRight, ChevronLeft, FileText, Globe, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users, Plus, Minus } from 'lucide-react';
 import { cm1Data } from '../data/cm1Data';
 import cm1EasyReadData from '../data/cm1EasyReadData.json';
 
@@ -28,6 +28,7 @@ const blogPosts = [
     date: 'May 18, 2026',
     category: 'Compliance',
     excerpt: 'The NDIS Quality and Safeguards Commission has released updated guidelines focusing on participant safety and positive behaviour support strategies.',
+    content: 'The NDIS Quality and Safeguards Commission has officially released its updated Practice Standards for 2026. These updates focus heavily on ensuring participant safety, elevating the quality of positive behaviour support, and demanding higher transparency from registered providers.\n\nKey changes include mandatory reporting timelines for any restrictive practices, enhanced auditing requirements for providers offering high-intensity daily personal activities, and new mandatory training modules for all support workers dealing with complex needs participants.\n\nDYAR Pty Ltd is actively reviewing these changes and updating all internal policies to remain fully compliant. Participants can rest assured that our services will continue to exceed these new rigorous national standards.'
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const blogPosts = [
     date: 'May 10, 2026',
     category: 'Funding',
     excerpt: 'Key changes to the upcoming NDIA support catalogue, including adjustments to therapy rates and community participation limits.',
+    content: 'The National Disability Insurance Agency (NDIA) has announced its updated Price Guide and Support Catalogue for the 2026-2027 financial year. This update introduces several critical adjustments to pricing caps for therapy services and community participation.\n\nMost notably, the price limits for core supports, including standard support worker hours, have been indexed to align with recent wage adjustments. Furthermore, there are new line items introduced to better support flexible, short-term accommodations (STA) and tailored community access programs.\n\nDYAR will be rolling out communications to all participants outlining how these changes might impact their upcoming plan reviews and budget utilization.'
   },
   {
     id: 3,
@@ -42,12 +44,14 @@ const blogPosts = [
     date: 'May 2, 2026',
     category: 'Workforce',
     excerpt: 'A comprehensive breakdown of the mandatory NDIS Worker Screening Check and what it means for DYAR providers and participants.',
+    content: 'Ensuring the safety of participants is the cornerstone of the NDIS. To bolster this, the new mandatory NDIS Worker Screening Check has been implemented across all states and territories. This is a rigorous national assessment that evaluates a worker\'s history to determine if they pose any risk to people with a disability.\n\nAt DYAR, we mandate that 100% of our staff, including support workers, administrative staff, and contractors, hold a cleared NDIS Worker Screening Check before they ever interact with a participant. This update reinforces our zero-tolerance policy towards abuse, neglect, and exploitation, ensuring you are always supported by trusted, vetted professionals.'
   }
 ];
 
 const Hub = () => {
   const [selectedLang, setSelectedLang] = useState('en');
   const [expandedCM1, setExpandedCM1] = useState<string | null>(null);
+  const [selectedBlog, setSelectedBlog] = useState<number | null>(null);
 
   const getIconForText = (text: string) => {
     const lower = text.toLowerCase();
@@ -132,21 +136,51 @@ const Hub = () => {
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Latest NDIS News & Updates</h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            {blogPosts.map(post => (
-              <div key={post.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-lg hover:border-purple-200 transition-all cursor-pointer flex flex-col h-full group">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">{post.category}</span>
-                  <span className="text-xs text-gray-500 font-medium">{post.date}</span>
+          {selectedBlog !== null ? (
+            <div className="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 md:p-10 animate-fade-in">
+              <button 
+                onClick={() => setSelectedBlog(null)} 
+                className="flex items-center gap-2 text-purple-700 font-bold mb-8 hover:text-purple-900 transition-colors bg-purple-50 px-4 py-2 rounded-xl"
+              >
+                <ChevronLeft size={20} /> Back to all updates
+              </button>
+              
+              {blogPosts.filter(p => p.id === selectedBlog).map(post => (
+                <div key={post.id} className="max-w-3xl mx-auto">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-sm font-bold text-purple-700 bg-purple-50 px-3 py-1.5 rounded-lg">{post.category}</span>
+                    <span className="text-sm text-gray-500 font-medium">{post.date}</span>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 leading-tight tracking-tight">{post.title}</h3>
+                  <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+                    {post.content.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx}>{paragraph}</p>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#6A0DAD] transition-colors">{post.title}</h3>
-                <p className="text-sm text-gray-600 mb-6 leading-relaxed flex-1">{post.excerpt}</p>
-                <button className="text-sm font-bold text-purple-600 flex items-center group-hover:text-purple-800 transition-colors">
-                  Read Article <ChevronRight size={16} className="ml-1" />
-                </button>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-3 gap-6">
+              {blogPosts.map(post => (
+                <div 
+                  key={post.id} 
+                  onClick={() => setSelectedBlog(post.id)}
+                  className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-lg hover:border-purple-300 transition-all cursor-pointer flex flex-col h-full group"
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">{post.category}</span>
+                    <span className="text-xs text-gray-500 font-medium">{post.date}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#6A0DAD] transition-colors">{post.title}</h3>
+                  <p className="text-sm text-gray-600 mb-6 leading-relaxed flex-1">{post.excerpt}</p>
+                  <button className="text-sm font-bold text-purple-600 flex items-center group-hover:text-purple-800 transition-colors">
+                    Read Article <ChevronRight size={16} className="ml-1" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* CM1 Principles Accordion Section */}
