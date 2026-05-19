@@ -7,11 +7,11 @@ const jobCategories = [
     icon: <Heart className="text-rose-600" size={24} />,
     color: 'bg-rose-50 border-rose-100',
     jobs: [
-      { title: 'Behaviour Support Practitioner', type: 'Full-time / Part-time' },
-      { title: 'Occupational Therapist', type: 'Full-time / Part-time' },
-      { title: 'Counsellor / Psychologist', type: 'Full-time / Part-time' },
-      { title: 'Psychosocial Recovery Coach', type: 'Full-time / Part-time' },
-      { title: 'Specialist Support Coordinator', type: 'Full-time' }
+      { title: 'Behaviour Support Practitioner', type: 'Full-time / Part-time', description: null },
+      { title: 'Occupational Therapist', type: 'Full-time / Part-time', description: null },
+      { title: 'Counsellor / Psychologist', type: 'Full-time / Part-time', description: null },
+      { title: 'Psychosocial Recovery Coach', type: 'Full-time / Part-time', description: null },
+      { title: 'Specialist Support Coordinator', type: 'Full-time', description: null }
     ]
   },
   {
@@ -19,8 +19,8 @@ const jobCategories = [
     icon: <Users className="text-blue-600" size={24} />,
     color: 'bg-blue-50 border-blue-100',
     jobs: [
-      { title: 'Support Worker', type: 'Casual / Part-time' },
-      { title: 'Team Leader — Support Workers', type: 'Full-time' }
+      { title: 'Support Worker', type: 'Casual / Part-time', description: null },
+      { title: 'Team Leader — Support Workers', type: 'Full-time', description: null }
     ]
   },
   {
@@ -28,8 +28,28 @@ const jobCategories = [
     icon: <Shield className="text-emerald-600" size={24} />,
     color: 'bg-emerald-50 border-emerald-100',
     jobs: [
-      { title: 'LEAG Member (Recruiting Now)', type: 'Advisory / Part-time' },
-      { title: 'LEAG Chair (Elect after Members appointed)', type: 'Advisory / Part-time' }
+      { title: 'LEAG Member (Recruiting Now)', type: 'Advisory / Part-time', description: (
+        <div className="space-y-4 text-gray-700">
+          <p><strong>What is this?</strong> DYAR is setting up an Advisory Group of people with lived experience of disability (or carers). The Group meets four times a year to advise DYAR on how to be accessible, person-centred, and continuously improving.</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Come to 4 meetings a year (approx 2 hours each).</li>
+            <li>Share your perspective and ideas on how DYAR can improve.</li>
+            <li>Help us co-design new forms, policies, and Easy-Read versions.</li>
+            <li><strong>Pay:</strong> $150 per meeting + all transport and access costs covered.</li>
+          </ul>
+        </div>
+      )},
+      { title: 'LEAG Chair (Elect after Members appointed)', type: 'Advisory / Part-time', description: (
+        <div className="space-y-4 text-gray-700">
+          <p><strong>Note:</strong> This role only becomes available AFTER Members are appointed. If interested, apply to be a Member first!</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Runs the quarterly meetings and ensures every voice is heard.</li>
+            <li>Co-designs the agenda with the Director.</li>
+            <li>Submits minutes and recommendations within 10 business days.</li>
+            <li><strong>Pay:</strong> $200 per meeting + $100 preparation time. DYAR also pays for external chair-skills training.</li>
+          </ul>
+        </div>
+      )}
     ]
   },
   {
@@ -37,8 +57,8 @@ const jobCategories = [
     icon: <Building className="text-purple-600" size={24} />,
     color: 'bg-purple-50 border-purple-100',
     jobs: [
-      { title: 'Operations Manager', type: 'Full-time' },
-      { title: 'Admin & Finance Coordinator', type: 'Full-time / Part-time' }
+      { title: 'Operations Manager', type: 'Full-time', description: null },
+      { title: 'Admin & Finance Coordinator', type: 'Full-time / Part-time', description: null }
     ]
   }
 ];
@@ -100,10 +120,16 @@ const WorkWithUs = () => {
                     
                     {/* Expandable Application Instructions */}
                     <div 
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedJob === job.title ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedJob === job.title ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}
                     >
-                      <div className="p-8 bg-purple-50/50 border-t border-purple-50">
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                      <div className="p-8 bg-white border-t border-gray-100">
+                        {job.description && (
+                          <div className="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                            <h4 className="font-bold text-gray-900 mb-4 text-lg">About this role</h4>
+                            {job.description}
+                          </div>
+                        )}
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 bg-purple-50/50 rounded-2xl border border-purple-50">
                           <div>
                             <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
                               <ArrowRight className="text-[#6A0DAD]" size={18} /> How to Apply
