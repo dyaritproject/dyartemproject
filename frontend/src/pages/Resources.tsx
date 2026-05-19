@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Minus, Globe, AlertTriangle, Bell, Info } from 'lucide-react';
+import { Plus, Minus, Globe, AlertTriangle, Bell, Info, Download } from 'lucide-react';
 import { languages, resourceTranslations } from '../data/resourcesData';
 
 const newResourcesTabs = [
@@ -7,19 +7,36 @@ const newResourcesTabs = [
     id: 'emp',
     title: 'Emergency Management Plan (EMP)',
     accordions: [
-      { id: 'emp-1', title: 'Emergency Management Plan (EMP)', content: '<p>Content coming soon...</p>' },
-      { id: 'emp-2', title: 'Templates', content: '<p>Content coming soon...</p>' },
-      { id: 'emp-3', title: 'FAQ', content: '<p>Content coming soon...</p>' },
-      { id: 'emp-4', title: 'Form to be completed', content: '<p>Content coming soon...</p>' },
+      { id: 'emp-1', title: 'Emergency Management Plan (EMP)', content: '<p>Download the Emergency Management Plan documents below.</p>', pdf: '/documents/resources/06 — Emergency Management Plan (EMP).pdf', docx: '/documents/resources/06 — Emergency Management Plan (EMP).docx' },
+      { id: 'emp-2', title: 'Templates', content: '<p>Download the EMP templates below.</p>', pdf: '/documents/resources/07 — EMP Templates.pdf', docx: '/documents/resources/07 — EMP Templates.docx' },
+      { id: 'emp-3', title: 'FAQ', content: '<p>Download the EMP FAQ below.</p>', pdf: '/documents/resources/08 — EMP FAQ.pdf', docx: '/documents/resources/08 — EMP FAQ.docx' },
+      { id: 'emp-4', title: 'PEEP Form to be completed', content: '<p>Download the Personal Emergency Evacuation Plan (PEEP) Form below.</p>', pdf: '/documents/resources/09 — Personal Emergency Evacuation Plan (PEEP) Form.pdf', docx: '/documents/resources/09 — Personal Emergency Evacuation Plan (PEEP) Form.docx' },
     ]
   },
-  { id: 'contact', title: 'Emergency Contact Details', accordions: [] },
-  { id: 'checklist', title: 'Check List', accordions: [] },
-  { id: 'training', title: 'Training Materials', accordions: [] },
-  { id: 'announcements', title: 'Announcements', accordions: [] },
-  { id: 'advocacy', title: 'Statement on Advocacy Services', accordions: [] },
-  { id: 'conflict', title: 'Conflict of Interest Statement & Service Delivery', accordions: [] },
-  { id: 'feedback', title: 'EMP Feedback Form', accordions: [] },
+  { 
+    id: 'contact', title: 'Emergency Contact Details', 
+    accordions: [{ id: 'contact-1', title: 'Emergency Contact Details', content: '<p>Download the Emergency Contact Details form below.</p>', pdf: '/documents/resources/10 — Emergency Contact Details.pdf', docx: '/documents/resources/10 — Emergency Contact Details.docx' }]
+  },
+  { 
+    id: 'checklist', title: 'Check List', 
+    accordions: [{ id: 'check-1', title: 'Emergency Preparedness Checklist', content: '<p>Download the Emergency Preparedness Checklist below.</p>', pdf: '/documents/resources/11 — Emergency Preparedness Checklist.pdf', docx: '/documents/resources/11 — Emergency Preparedness Checklist.docx' }]
+  },
+  { 
+    id: 'training', title: 'Training Materials', 
+    accordions: [{ id: 'train-1', title: 'Training Materials', content: '<p>Download the Training Materials below.</p>', pdf: '/documents/resources/12 — Training Materials.pdf', docx: '/documents/resources/12 — Training Materials.docx' }]
+  },
+  { 
+    id: 'advocacy', title: 'Statement on Advocacy Services', 
+    accordions: [{ id: 'adv-1', title: 'Statement on Advocacy Services', content: '<p>Download the Statement on Advocacy Services below.</p>', pdf: '/documents/resources/14 — Statement on Advocacy Services.pdf', docx: '/documents/resources/14 — Statement on Advocacy Services.docx' }]
+  },
+  { 
+    id: 'conflict', title: 'Conflict of Interest Statement & Service Delivery', 
+    accordions: [{ id: 'coi-1', title: 'Conflict of Interest Statement', content: '<p>Download the Conflict of Interest Statement below.</p>', pdf: '/documents/resources/15 — Conflict of Interest Statement & Service Delivery.pdf', docx: '/documents/resources/15 — Conflict of Interest Statement & Service Delivery.docx' }]
+  },
+  { 
+    id: 'feedback', title: 'EMP Feedback Form', 
+    accordions: [{ id: 'feed-1', title: 'EMP Feedback Form', content: '<p>Download the EMP Feedback Form below.</p>', pdf: '/documents/resources/16 — EMP Feedback Form.pdf', docx: '/documents/resources/16 — EMP Feedback Form.docx' }]
+  }
 ];
 
 const Resources = () => {
@@ -216,6 +233,21 @@ const Resources = () => {
                         <div className="p-6 pt-0 bg-purple-50 border-t border-purple-100">
                           <div className="mt-4 text-gray-700 leading-relaxed text-base">
                             <div dangerouslySetInnerHTML={{ __html: item.content }} />
+                            
+                            {(item.pdf || item.docx) && (
+                              <div className="flex flex-wrap gap-4 mt-6">
+                                {item.pdf && (
+                                  <a href={item.pdf} download className="inline-flex items-center gap-2 px-5 py-2.5 bg-rose-50 text-rose-700 rounded-xl font-bold hover:bg-rose-100 transition-colors shadow-sm border border-rose-100">
+                                    <Download size={18} /> Download PDF
+                                  </a>
+                                )}
+                                {item.docx && (
+                                  <a href={item.docx} download className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-50 text-blue-700 rounded-xl font-bold hover:bg-blue-100 transition-colors shadow-sm border border-blue-100">
+                                    <Download size={18} /> Download Word (DOCX)
+                                  </a>
+                                )}
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
