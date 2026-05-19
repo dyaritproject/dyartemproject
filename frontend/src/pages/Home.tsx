@@ -387,7 +387,7 @@ const Home = () => {
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <DollarSign size={20} className="text-emerald-600" />
-                  <h4 className="font-bold text-gray-900 text-lg">{serviceT.priceLabel}</h4>
+                  <h4 className="font-bold text-gray-900 text-lg">Pricing & Funding</h4>
                 </div>
                 <p className="text-gray-600 leading-relaxed bg-gray-50 p-5 rounded-xl border border-gray-100">
                   {serviceT.services[selectedServiceId as keyof typeof serviceT.services]?.pricing}
@@ -398,7 +398,7 @@ const Home = () => {
               <div>
                 <div className="flex items-center gap-2 mb-5 border-b border-gray-100 pb-3">
                   <HelpCircle size={20} className="text-blue-600" />
-                  <h4 className="font-bold text-gray-900 text-lg">{serviceT.faqLabel}</h4>
+                  <h4 className="font-bold text-gray-900 text-lg">Frequently Asked Questions</h4>
                 </div>
                 <div className="space-y-4">
                   {serviceT.services[selectedServiceId as keyof typeof serviceT.services]?.faqs.map((faq, idx) => (
@@ -408,6 +408,17 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* View Full Details Button */}
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <Link 
+                  to={`/services#${selectedServiceId}`}
+                  className="w-full inline-flex items-center justify-center px-6 py-4 text-base font-bold rounded-xl text-[#6A0DAD] bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-all"
+                  onClick={() => setSelectedServiceId(null)}
+                >
+                  Find Out More <ArrowRight size={18} className="ml-2 rtl:mr-2 rtl:ml-0" />
+                </Link>
               </div>
 
             </div>

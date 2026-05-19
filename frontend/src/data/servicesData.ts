@@ -1,333 +1,384 @@
 export const servicesTranslations = {
   en: {
-    sectionTitle: "Our",
+    sectionTitle: "Our NDIS",
     sectionTitleHL: "Services",
     sectionSubtitle: "DYAR delivers a comprehensive suite of professional supports tailored to your unique NDIS plan.",
     closeBtn: "Close",
-    priceLabel: "Pricing Structure",
-    faqLabel: "Frequently Asked Questions",
     services: {
       pbs: {
         title: 'Specialist Behaviour Support (PBS)',
         desc: 'Functional assessments and individualised PBS plans.',
-        explanation: 'Our Positive Behaviour Support (PBS) involves comprehensive functional behavioural assessments to understand the reasons behind behaviours of concern. We then develop highly individualised PBS plans focused on improving your quality of life, reducing restrictive practices, and building positive skills.',
+        explanation: 'Our Positive Behaviour Support involves comprehensive behavioural assessments to understand why behaviours of concern occur. We then develop highly individualised plans aimed at improving quality of life and safely reducing restrictive practices.',
         pricing: 'We charge in strict accordance with the NDIS Pricing Arrangements and Price Limits. Standard Specialist Behaviour Support is billed at $232.99 per hour (Item Number: 11_022_0110_7_3).',
         faqs: [
-          { q: 'Do I need specific funding for PBS?', a: 'Yes, you need Improved Relationships funding in your NDIS plan.' },
-          { q: 'How long does an assessment take?', a: 'A standard functional assessment usually takes between 15 to 20 hours, including observation, interviews, and report writing.' }
+          { q: 'Do I need specific NDIS funding for this?', a: 'Yes, you require funding under "Capacity Building - Improved Relationships" in your NDIS plan.' },
+          { q: 'How long does a functional assessment take?', a: 'A comprehensive functional behavioural assessment typically takes between 10 to 15 hours, including observation, interviews, and report writing.' },
+          { q: 'Do you implement restrictive practices?', a: 'Our primary goal is the reduction and elimination of restrictive practices. If they are required for safety, they are strictly monitored and reported to the NDIS Commission.' }
         ]
       },
-      sda: {
-        title: 'Specialist Disability Accommodation (SDA)',
-        desc: 'Connecting participants to appropriate housing solutions.',
-        explanation: 'We assist participants with extreme functional impairment or very high support needs to secure and manage highly specialised housing. We ensure your accommodation is built and tailored to maximize your independence and safety.',
-        pricing: 'SDA pricing is highly dependent on the dwelling type, location, and your specific NDIS plan approval. We do not charge above the NDIS SDA benchmark rates.',
-        faqs: [
-          { q: 'Who is eligible for SDA?', a: 'Participants with an extreme functional impairment or very high support needs.' },
-          { q: 'Do you own the houses?', a: 'We partner with registered SDA property providers to find the perfect home for you.' }
-        ]
-      },
-      therapeutic: {
+      therapy: {
         title: 'Therapeutic Supports',
-        desc: 'Allied health assessments and evidence-based interventions.',
-        explanation: 'Our qualified Allied Health professionals (such as Occupational Therapists and Speech Pathologists) deliver evidence-based therapeutic interventions to help you gain skills, independence, and participate fully in your community.',
-        pricing: 'Therapeutic Supports are billed at the standard NDIS Price Limit of $193.99 per hour (Item Number: 15_056_0128_1_3).',
+        desc: 'Occupational therapy and speech pathology.',
+        explanation: 'Our allied health professionals provide evidence-based therapeutic interventions to help you build functional capacity, improve independence, and participate actively in your community.',
+        pricing: 'Billed strictly at the NDIS Price Limit, typically $193.99 per hour for standard therapy (Item: 15_056_0128_1_3).',
         faqs: [
-          { q: 'Where do these sessions happen?', a: 'We can deliver therapy in your home, in the community, or at our clinic.' }
+          { q: 'What types of therapy do you offer?', a: 'We currently offer Occupational Therapy, Speech Pathology, and specialized psychological supports.' },
+          { q: 'Can you provide therapy in my home?', a: 'Yes, our therapists provide mobile services and can visit you at home, school, or in the community.' },
+          { q: 'How is travel time billed?', a: 'Provider travel is billed in accordance with the NDIS Pricing Arrangements, usually capped at a maximum of 30-60 minutes depending on your location.' }
         ]
       },
       recovery: {
         title: 'Psychosocial Recovery Coaching',
-        desc: 'Supporting recovery and building resilience.',
-        explanation: 'Our Recovery Coaches work collaboratively with participants living with a psychosocial disability. We help you design, plan, and implement a recovery plan, coordinating with your broader mental health support team.',
+        desc: 'Specialised mental health support.',
+        explanation: 'Our Recovery Coaches assist participants with psychosocial disabilities to design, plan, and implement a recovery plan. We collaborate with you, your family, and mainstream mental health services.',
         pricing: 'Billed strictly at the NDIS Price Limit, typically $105.43 per hour during standard weekday hours.',
         faqs: [
-          { q: 'Is this the same as Support Coordination?', a: 'It is similar, but specifically tailored with mental health and recovery expertise.' }
+          { q: 'Is a Recovery Coach the same as a Support Coordinator?', a: 'They are similar, but Recovery Coaches have specialized knowledge and skills in mental health and psychosocial disability.' },
+          { q: 'Do I need a formal mental health diagnosis?', a: 'Yes, you must have a primary psychosocial disability recognized by the NDIS to receive this specific funding.' },
+          { q: 'Can a Recovery Coach help me in a crisis?', a: 'While we assist with crisis planning, we are not an emergency service. In an immediate crisis, you should contact emergency services or a mental health triage team.' }
         ]
       },
       early: {
         title: 'Early Childhood Supports',
-        desc: 'Early intervention for children under 9 with developmental needs.',
-        explanation: 'We provide specialised early intervention supports for children under 9 years old who have a developmental delay or disability. Our focus is on building capacity through play-based, family-centred approaches.',
-        pricing: 'Billed at the NDIS Early Childhood Support rate of $193.99 per hour.',
+        desc: 'Intervention for children under 9 years.',
+        explanation: 'We provide specialized early intervention for children under the age of 9. Our family-centered approach ensures that parents and caregivers are empowered to support their child\'s development in natural environments.',
+        pricing: 'Billed strictly at the NDIS Price Limit for Early Childhood supports ($193.99 per hour).',
         faqs: [
-          { q: 'Do parents need to be present?', a: 'Yes, our approach relies heavily on coaching parents and caregivers to support the child.' }
-        ]
-      },
-      civic: {
-        title: 'Core Civic & Social Participation',
-        desc: 'Community Access, group activities, and social inclusion.',
-        explanation: 'We support you to actively participate in your community. Whether it is joining a local club, attending community events, or participating in group activities, we are here to help you build social networks and have fun.',
-        pricing: 'Billed at standard NDIS Core Support rates (e.g., $70.23/hr for standard weekday support).',
-        faqs: [
-          { q: 'Do you provide transport for these activities?', a: 'Yes, our support workers can provide transport. Transport costs are billed per kilometer according to NDIS limits.' }
+          { q: 'Does my child need a formal diagnosis?', a: 'Under the NDIS Early Childhood approach, a formal diagnosis is not always required to access early intervention support.' },
+          { q: 'Where do the sessions take place?', a: 'We focus on natural environments, meaning sessions usually take place at your home, at the child\'s daycare, or at school.' },
+          { q: 'How do you involve parents?', a: 'Parents and caregivers are central to our approach. We coach you on how to embed therapeutic strategies into your daily routines.' }
         ]
       },
       core: {
-        title: 'Core Support – Assistance with Daily Life',
-        desc: 'Practical supports for everyday activities and independence.',
-        explanation: 'Our compassionate support workers assist you with your daily personal activities. This includes help with personal hygiene, meal preparation, household tasks, and maintaining your home environment.',
+        title: 'Core Supports',
+        desc: 'Assistance with daily living and personal care.',
+        explanation: 'We assist with or supervise personal tasks of daily life to enable participants to live as autonomously as possible. This includes showering, dressing, meal preparation, and household tasks.',
+        pricing: 'Billed at standard NDIS Core Support rates (e.g., $70.23/hr for standard weekday support).',
+        faqs: [
+          { q: 'Do you provide 24/7 care?', a: 'Yes, depending on your funding and needs, we can provide round-the-clock support, including active night shifts and sleepovers.' },
+          { q: 'Can I choose my support workers?', a: 'Absolutely. We believe in matching participants with support workers who share similar interests and respect their cultural background.' },
+          { q: 'Is there a minimum shift length?', a: 'Generally, our minimum shift length is 2 hours, as per the Social, Community, Home Care and Disability Services Industry Award.' }
+        ]
+      },
+      civic: {
+        title: 'Community Participation',
+        desc: 'Social, civic, and community activities.',
+        explanation: 'We support participants to actively engage in community, social, and recreational activities. Whether it\'s joining a club, going to the library, or attending a local event, we are here to assist.',
         pricing: 'Billed at standard NDIS Core Support rates (e.g., $70.23/hr for standard weekday support, with applicable penalty rates for weekends).',
         faqs: [
-          { q: 'Can I choose my support worker?', a: 'Yes! We actively match you with support workers based on your preferences and personality.' }
+          { q: 'Do you provide transport to these activities?', a: 'Yes, our support workers can provide transport. This is usually billed separately from the hourly support rate.' },
+          { q: 'Can I use this for group activities?', a: 'Yes, if you wish to participate in group programs, we can facilitate this and bill at the appropriate group ratio rate.' },
+          { q: 'Do I have to pay for my worker\'s ticket to events?', a: 'As per NDIS rules, participants are generally responsible for covering the cost of their support worker\'s entry tickets or activity fees.' }
         ]
       },
       transport: {
-        title: 'Consumables & Transport',
-        desc: 'Essential consumable supports and travel assistance.',
-        explanation: 'We provide specialized transport assistance so you can get to appointments, work, or social outings safely. We also assist with the procurement of necessary daily consumables covered under your plan.',
-        pricing: 'Transport is billed at the standard NDIS rate of $1.00 per kilometer (standard vehicle) plus the worker\'s time.',
+        title: 'Travel & Transport',
+        desc: 'Safe transport to appointments and events.',
+        explanation: 'We offer safe, reliable, and accessible transport solutions to help you get to medical appointments, educational facilities, or social outings safely.',
+        pricing: 'Billed at the NDIS maximum limit for provider travel (typically $1.00 per kilometer) plus the worker\'s hourly rate if applicable.',
         faqs: [
-          { q: 'Do I need specific transport funding?', a: 'Usually yes, or you can use your flexible Core funding to cover transport costs.' }
+          { q: 'Are your vehicles wheelchair accessible?', a: 'We have access to modified vehicles. Please let us know your specific mobility requirements during intake.' },
+          { q: 'How is transport billed?', a: 'You are billed a per-kilometer rate for the vehicle running costs, and the worker\'s time is billed as Core Support.' },
+          { q: 'Can I use transport funding for anything?', a: 'Transport funding must be used to help you achieve the goals outlined in your NDIS plan.' }
+        ]
+      },
+      sda: {
+        title: 'SDA & SIL Hosting',
+        desc: 'Supported independent living arrangements.',
+        explanation: 'We provide specialized housing solutions (SDA) and the in-home daily support (SIL) required to help participants live independently in the community.',
+        pricing: 'SIL is quoted based on a Roster of Care (RoC). SDA pricing is dependent on the dwelling type, capped at the NDIS benchmark.',
+        faqs: [
+          { q: 'What is the difference between SIL and SDA?', a: 'SDA is the physical house (the bricks and mortar), while SIL is the support staff inside the house.' },
+          { q: 'Do I have to share a house?', a: 'Not necessarily. SIL and SDA funding can be provided for shared homes or for individuals living alone, depending on your NDIS plan.' },
+          { q: 'Are groceries included in SIL?', a: 'No, SIL funding covers the cost of support staff. Participants are responsible for their own rent, groceries, and utilities.' }
         ]
       }
     }
   },
   easy: {
-    sectionTitle: "Our",
-    sectionTitleHL: "Services",
-    sectionSubtitle: "We offer many different types of help to support you in your everyday life.",
+    sectionTitle: "How We",
+    sectionTitleHL: "Help You",
+    sectionSubtitle: "We have many ways to help you live a good life.",
     closeBtn: "Close",
-    priceLabel: "How Much It Costs",
-    faqLabel: "Questions People Ask",
     services: {
       pbs: {
-        title: 'Help with Behaviour (PBS)',
-        desc: 'Help to understand feelings and act in safe ways.',
-        explanation: 'We help you understand why you feel angry or upset. We make a plan to help you feel happier and stay safe.',
+        title: 'Help with Feelings and Actions (PBS)',
+        desc: 'We help you when you feel angry or upset.',
+        explanation: 'Sometimes people feel very upset and do things that are not safe. We help find out why this happens. We make a plan to help you feel calm and stay safe.',
         pricing: 'We charge the exact price the NDIS tells us to charge. It usually costs $232.99 for one hour.',
         faqs: [
-          { q: 'Do I need NDIS funding for this?', a: 'Yes, you need Improved Relationships funding.' },
-          { q: 'Does it take a long time?', a: 'Yes, we will spend a lot of time talking with you to understand how you feel.' }
+          { q: 'Do I need special money for this?', a: 'Yes, you need money in your NDIS plan called "Improved Relationships".' },
+          { q: 'How long does it take?', a: 'It takes time. We will meet with you many times to talk and learn about you.' },
+          { q: 'Will you make me do things I do not want to do?', a: 'No. We want you to be free and happy. We only stop you if you are going to get hurt.' }
         ]
       },
-      sda: {
-        title: 'Special Housing (SDA)',
-        desc: 'Help to find a home that is built for your needs.',
-        explanation: 'We help you find a special house if you need a lot of help to move around or stay safe.',
-        pricing: 'The cost depends on the type of house. We only charge what the NDIS allows.',
-        faqs: [
-          { q: 'Can anyone get this house?', a: 'No, it is only for people who need a very special house to live safely.' }
-        ]
-      },
-      therapeutic: {
-        title: 'Therapy (Like OT or Speech)',
-        desc: 'Help to learn new skills and get stronger.',
-        explanation: 'Our therapists will help you learn how to do new things, like cooking, talking clearly, or getting dressed by yourself.',
+      therapy: {
+        title: 'Therapy Services',
+        desc: 'Help with talking and doing daily tasks.',
+        explanation: 'Our therapists can help you learn new skills. We can help you with speaking, moving your body, and doing things for yourself at home.',
         pricing: 'We charge the exact NDIS price. It usually costs $193.99 for one hour.',
         faqs: [
-          { q: 'Where do we do the therapy?', a: 'We can come to your house or meet you in the community.' }
+          { q: 'Who will help me?', a: 'People called Occupational Therapists and Speech Pathologists will help you.' },
+          { q: 'Do I have to go to an office?', a: 'No, our therapists can come to your house.' },
+          { q: 'Do I have to pay for travel?', a: 'Yes, your NDIS money pays for the therapist to drive to your house.' }
         ]
       },
       recovery: {
         title: 'Mental Health Coaching',
-        desc: 'Help to feel better and strong in your mind.',
-        explanation: 'We help you make a plan to feel better when you are sad or worried. We help you reach your goals.',
+        desc: 'Help to feel better in your mind.',
+        explanation: 'If you have a mental health disability, we can help. A coach will work with you to make a plan so you can feel better and reach your goals.',
         pricing: 'We charge the exact NDIS price. It usually costs $105.43 for one hour.',
         faqs: [
-          { q: 'Is this like support coordination?', a: 'Yes, but it is special for people with mental health needs.' }
+          { q: 'Is a coach the same as a coordinator?', a: 'They are similar, but a coach knows a lot about mental health.' },
+          { q: 'Do I need a doctor\'s note?', a: 'The NDIS must know that you have a mental health disability.' },
+          { q: 'Can a coach help me if I am very sick right now?', a: 'If you are very sick and unsafe, you must call a doctor or 000. A coach helps you plan for the future.' }
         ]
       },
       early: {
-        title: 'Help for Young Children',
-        desc: 'Help for kids under 9 years old.',
-        explanation: 'We help young children learn how to play, talk, and make friends. We work closely with the parents.',
+        title: 'Help for Children',
+        desc: 'Support for young kids under 9.',
+        explanation: 'We help young children learn how to play, talk, and do things. We also teach parents how to help their children at home.',
         pricing: 'We charge the exact NDIS price. It usually costs $193.99 for one hour.',
         faqs: [
-          { q: 'Do parents need to be there?', a: 'Yes! We teach the parents how to help their child.' }
-        ]
-      },
-      civic: {
-        title: 'Going Out in the Community',
-        desc: 'Help to go to clubs, events, and have fun.',
-        explanation: 'We will go with you to do fun things outside your house. We can go to the shops, a club, or the park.',
-        pricing: 'We charge the exact NDIS price. It usually costs $70.23 for one hour on a weekday.',
-        faqs: [
-          { q: 'Can you drive me there?', a: 'Yes, we can drive you. There is an extra cost for the driving.' }
+          { q: 'Does my child need to be very sick?', a: 'No, young children can get help even without a doctor saying exactly what is wrong.' },
+          { q: 'Where do you see my child?', a: 'We see your child at home or at school, where they are happy.' },
+          { q: 'Do parents have to stay?', a: 'Yes! We want parents to stay so we can show you how to help your child.' }
         ]
       },
       core: {
         title: 'Help at Home',
-        desc: 'Help with cooking, cleaning, and personal care.',
-        explanation: 'We come to your house to help you. We can help you cook food, clean the house, or take a shower.',
+        desc: 'Help with cooking, cleaning, and washing.',
+        explanation: 'A support worker can come to your house. They can help you cook food, clean your house, and take a shower.',
         pricing: 'We charge the exact NDIS price. It usually costs $70.23 for one hour on a weekday.',
         faqs: [
-          { q: 'Can I choose who comes to my house?', a: 'Yes! You can pick a worker that you like.' }
+          { q: 'Can someone stay with me at night?', a: 'Yes, if you have the right money in your NDIS plan, someone can sleep at your house to keep you safe.' },
+          { q: 'Can I choose my worker?', a: 'Yes, you can choose a worker you like.' },
+          { q: 'How long do they stay?', a: 'A worker must stay for at least 2 hours when they come.' }
+        ]
+      },
+      civic: {
+        title: 'Going Out and Having Fun',
+        desc: 'Help to go to the shops or join a club.',
+        explanation: 'A support worker can take you out of the house. They can help you go shopping, go to the park, or meet your friends.',
+        pricing: 'We charge the exact NDIS price. It usually costs $70.23 for one hour on a weekday.',
+        faqs: [
+          { q: 'Will the worker drive me?', a: 'Yes, the worker can drive you in their car.' },
+          { q: 'Can I go with friends?', a: 'Yes, you can go out in a group with your friends.' },
+          { q: 'Do I pay for the worker\'s movie ticket?', a: 'Yes, you usually have to pay for the worker\'s ticket if you go to a movie or a show.' }
         ]
       },
       transport: {
-        title: 'Driving and Transport',
-        desc: 'Help to get to the places you need to go.',
-        explanation: 'We will drive you to the doctor, to work, or to see your friends.',
-        pricing: 'We charge the exact NDIS price. It costs $1.00 for every kilometer we drive, plus the worker\'s time.',
+        title: 'Driving Services',
+        desc: 'Help to get to the doctor or the shops.',
+        explanation: 'We can drive you to places you need to go. We will make sure you get there safely.',
+        pricing: 'The NDIS pays for the driving. It usually costs $1.00 for every kilometre we drive.',
         faqs: [
-          { q: 'Do I need special transport money in my NDIS plan?', a: 'Usually yes, but you can also use your everyday funding.' }
+          { q: 'Can my wheelchair fit in the car?', a: 'Tell us you have a wheelchair, and we will bring a special car.' },
+          { q: 'How do I pay?', a: 'The NDIS pays for the driving distance, and the time the worker spends with you.' },
+          { q: 'Can I go anywhere?', a: 'You must go to places that help you with your NDIS goals.' }
+        ]
+      },
+      sda: {
+        title: 'Places to Live',
+        desc: 'Houses and support to live on your own.',
+        explanation: 'We can help you find a safe house to live in. We can also provide the workers who stay in the house to help you.',
+        pricing: 'The NDIS decides how much this costs based on what kind of house you need.',
+        faqs: [
+          { q: 'What is SDA and SIL?', a: 'SDA is the house. SIL is the workers who help you in the house.' },
+          { q: 'Do I have to live with other people?', a: 'No, you can live alone or with others, depending on your NDIS plan.' },
+          { q: 'Does the NDIS pay for my food?', a: 'No, you must buy your own food and pay your own rent.' }
         ]
       }
     }
   },
   ar: {
-    sectionTitle: "خدماتنا",
-    sectionTitleHL: "",
-    sectionSubtitle: "تقدم DYAR مجموعة شاملة من الدعم المهني المصمم خصيصاً لخطة NDIS الخاصة بك.",
+    sectionTitle: "خدمات",
+    sectionTitleHL: "NDIS لدينا",
+    sectionSubtitle: "تقدم DYAR مجموعة شاملة من خدمات الدعم المهني المصممة خصيصًا لخطة NDIS الفريدة الخاصة بك.",
     closeBtn: "إغلاق",
-    priceLabel: "هيكل التسعير",
-    faqLabel: "الأسئلة المتداولة",
     services: {
       pbs: {
         title: 'دعم السلوك المتخصص (PBS)',
-        desc: 'تقييمات وظيفية وخطط دعم سلوكي فردية.',
-        explanation: 'يتضمن دعم السلوك الإيجابي لدينا تقييمات شاملة لفهم أسباب السلوكيات. نقوم بتطوير خطط فردية لتحسين نوعية حياتك.',
+        desc: 'التقييمات الوظيفية وخطط PBS الفردية.',
+        explanation: 'يتضمن دعمنا الإيجابي للسلوك تقييمات سلوكية شاملة لفهم سبب حدوث السلوكيات المثيرة للقلق. ثم نقوم بوضع خطط فردية للغاية.',
         pricing: 'نفرض رسوماً وفقاً لحدود أسعار NDIS. تكلفة دعم السلوك المتخصص القياسي هي 232.99 دولار في الساعة.',
         faqs: [
-          { q: 'هل أحتاج إلى تمويل محدد لـ PBS؟', a: 'نعم، تحتاج إلى تمويل تحسين العلاقات في خطة NDIS الخاصة بك.' },
-          { q: 'كم يستغرق التقييم؟', a: 'يستغرق التقييم القياسي عادةً من 15 إلى 20 ساعة.' }
+          { q: 'هل أحتاج إلى تمويل NDIS خاص لهذا؟', a: 'نعم، أنت بحاجة إلى تمويل ضمن "بناء القدرات - تحسين العلاقات".' },
+          { q: 'كم من الوقت يستغرق التقييم؟', a: 'يستغرق التقييم الشامل عادة ما بين 10 إلى 15 ساعة.' },
+          { q: 'هل تطبقون ممارسات تقييدية؟', a: 'هدفنا الأساسي هو تقليل وإلغاء الممارسات التقييدية.' }
         ]
       },
-      sda: {
-        title: 'إقامة مخصصة لذوي الإعاقة (SDA)',
-        desc: 'توصيل المشاركين بحلول الإسكان المناسبة.',
-        explanation: 'نحن نساعد المشاركين ذوي الاحتياجات العالية جداً في تأمين وإدارة مساكن متخصصة للغاية.',
-        pricing: 'تعتمد أسعار SDA على نوع المسكن والموقع. نحن لا نفرض رسوماً أعلى من معدلات NDIS القياسية.',
+      therapy: {
+        title: 'الخدمات العلاجية',
+        desc: 'العلاج المهني وعلاج النطق.',
+        explanation: 'يقدم متخصصو الصحة المساعدة لدينا تدخلات علاجية قائمة على الأدلة لمساعدتك على بناء القدرات الوظيفية وتحسين الاستقلالية.',
+        pricing: 'يتم فوترته بصرامة وفقاً للحد الأقصى لسعر NDIS، عادةً 193.99 دولار في الساعة.',
         faqs: [
-          { q: 'من هو المؤهل لـ SDA؟', a: 'المشاركون الذين يعانون من ضعف وظيفي شديد أو احتياجات دعم عالية جداً.' }
-        ]
-      },
-      therapeutic: {
-        title: 'الدعم العلاجي',
-        desc: 'التقييمات الصحية والتدخلات القائمة على الأدلة.',
-        explanation: 'يقدم المتخصصون لدينا تدخلات علاجية لمساعدتك على اكتساب المهارات والاستقلالية.',
-        pricing: 'يتم فوترة الدعم العلاجي بالحد الأقصى لسعر NDIS القياسي البالغ 193.99 دولاراً في الساعة.',
-        faqs: [
-          { q: 'أين تعقد هذه الجلسات؟', a: 'يمكننا تقديم العلاج في منزلك، في المجتمع، أو في عيادتنا.' }
+          { q: 'ما هي أنواع العلاج التي تقدمونها؟', a: 'نحن نقدم حاليًا العلاج المهني وعلاج النطق والدعم النفسي المتخصص.' },
+          { q: 'هل يمكنكم تقديم العلاج في منزلي؟', a: 'نعم، يمكن للمعالجين لدينا زيارتك في المنزل أو المدرسة.' },
+          { q: 'كيف يتم احتساب وقت السفر؟', a: 'يتم احتساب وقت سفر المزود وفقًا لترتيبات تسعير NDIS.' }
         ]
       },
       recovery: {
-        title: 'تدريب التعافي النفسي والاجتماعي',
-        desc: 'دعم التعافي وبناء المرونة.',
-        explanation: 'يعمل مدربو التعافي لدينا معك لتصميم وتخطيط وتنفيذ خطة تعافي.',
+        title: 'التدريب على التعافي النفسي والاجتماعي',
+        desc: 'دعم متخصص للصحة النفسية.',
+        explanation: 'يساعد مدربو التعافي لدينا المشاركين الذين يعانون من إعاقات نفسية واجتماعية على تصميم وتخطيط وتنفيذ خطة التعافي.',
         pricing: 'يتم فوترته وفقاً للحد الأقصى لسعر NDIS، عادةً 105.43 دولار في الساعة.',
         faqs: [
-          { q: 'هل هذا نفس تنسيق الدعم؟', a: 'إنه مشابه، ولكنه مصمم خصيصاً للخبرة في مجال الصحة العقلية.' }
+          { q: 'هل مدرب التعافي هو نفسه منسق الدعم؟', a: 'هم متشابهون، لكن مدربي التعافي لديهم مهارات متخصصة في الصحة النفسية.' },
+          { q: 'هل أحتاج إلى تشخيص رسمي للصحة النفسية؟', a: 'نعم، يجب أن يكون لديك إعاقة نفسية واجتماعية أولية معترف بها من قبل NDIS.' },
+          { q: 'هل يمكن لمدرب التعافي مساعدتي في أزمة؟', a: 'في حالة الأزمات الفورية، يجب عليك الاتصال بخدمات الطوارئ.' }
         ]
       },
       early: {
         title: 'دعم الطفولة المبكرة',
-        desc: 'التدخل المبكر للأطفال دون سن التاسعة.',
-        explanation: 'نقدم خدمات التدخل المبكر للأطفال الذين يعانون من تأخر في النمو، مع التركيز على الأساليب القائمة على اللعب.',
-        pricing: 'يتم فوترته بمعدل 193.99 دولاراً في الساعة لـ NDIS.',
+        desc: 'التدخل للأطفال دون سن 9 سنوات.',
+        explanation: 'نحن نقدم تدخلاً مبكراً متخصصاً للأطفال دون سن 9 سنوات. يضمن نهجنا المتمحور حول الأسرة تمكين الآباء ومقدمي الرعاية.',
+        pricing: 'يتم فوترته بصرامة وفقاً للحد الأقصى لسعر NDIS (193.99 دولار في الساعة).',
         faqs: [
-          { q: 'هل يجب أن يحضر الوالدان؟', a: 'نعم، يعتمد نهجنا على تدريب الآباء لدعم الطفل.' }
-        ]
-      },
-      civic: {
-        title: 'المشاركة المدنية والاجتماعية',
-        desc: 'الوصول إلى المجتمع والأنشطة الجماعية.',
-        explanation: 'نحن ندعمك للمشاركة بنشاط في مجتمعك وبناء شبكات اجتماعية.',
-        pricing: 'يتم فوترته بمعدلات الدعم الأساسي القياسية لـ NDIS (مثلاً 70.23 دولار في الساعة).',
-        faqs: [
-          { q: 'هل توفرون النقل لهذه الأنشطة؟', a: 'نعم، يمكن لعمال الدعم لدينا توفير وسائل النقل.' }
+          { q: 'هل يحتاج طفلي إلى تشخيص رسمي؟', a: 'بموجب نهج NDIS للطفولة المبكرة، لا يُطلب دائمًا إجراء تشخيص رسمي.' },
+          { q: 'أين تعقد الجلسات؟', a: 'تعقد الجلسات عادة في منزلك، أو في الحضانة، أو في المدرسة.' },
+          { q: 'كيف تشركون الآباء؟', a: 'الآباء هم محور نهجنا. نقوم بتدريبك على كيفية دمج الاستراتيجيات العلاجية في روتينك.' }
         ]
       },
       core: {
-        title: 'الدعم الأساسي – المساعدة في الحياة اليومية',
-        desc: 'دعم عملي للأنشطة اليومية والاستقلالية.',
-        explanation: 'يساعدك عمال الدعم لدينا في أنشطتك الشخصية اليومية مثل النظافة وإعداد الوجبات.',
-        pricing: 'يتم فوترته بمعدلات الدعم الأساسي القياسية لـ NDIS.',
+        title: 'الدعم الأساسي',
+        desc: 'المساعدة في الحياة اليومية والرعاية الشخصية.',
+        explanation: 'نحن نساعد في أو نشرف على المهام الشخصية للحياة اليومية لتمكين المشاركين من العيش بشكل مستقل قدر الإمكان.',
+        pricing: 'يتم فوترته بمعدلات الدعم الأساسي القياسية لـ NDIS (مثلاً 70.23 دولار في الساعة).',
         faqs: [
-          { q: 'هل يمكنني اختيار عامل الدعم الخاص بي؟', a: 'نعم! نقوم بمطابقتك بنشاط مع العمال بناءً على تفضيلاتك.' }
+          { q: 'هل تقدمون رعاية على مدار 24/7؟', a: 'نعم، اعتمادًا على التمويل الخاص بك، يمكننا توفير دعم على مدار الساعة.' },
+          { q: 'هل يمكنني اختيار عمال الدعم الخاصين بي؟', a: 'بالتأكيد. نحن نؤمن بمطابقة المشاركين مع العمال المناسبين.' },
+          { q: 'هل هناك حد أدنى لطول المناوبة؟', a: 'الحد الأدنى لطول المناوبة لدينا هو ساعتان.' }
+        ]
+      },
+      civic: {
+        title: 'المشاركة المجتمعية',
+        desc: 'الأنشطة الاجتماعية والمدنية والمجتمعية.',
+        explanation: 'نحن ندعم المشاركين للمشاركة بنشاط في الأنشطة المجتمعية والاجتماعية والترفيهية.',
+        pricing: 'يتم فوترته بمعدلات الدعم الأساسي القياسية لـ NDIS (مثلاً 70.23 دولار في الساعة).',
+        faqs: [
+          { q: 'هل تقدمون النقل لهذه الأنشطة؟', a: 'نعم، يمكن لعمال الدعم لدينا توفير النقل.' },
+          { q: 'هل يمكنني استخدام هذا للأنشطة الجماعية؟', a: 'نعم، يمكننا تسهيل البرامج الجماعية.' },
+          { q: 'هل يجب علي دفع ثمن تذكرة العامل الخاص بي للأحداث؟', a: 'وفقًا لقواعد NDIS، يكون المشاركون مسؤولين عمومًا عن تغطية التكاليف.' }
         ]
       },
       transport: {
-        title: 'المستهلكات والنقل',
-        desc: 'دعم المستهلكات والمساعدة في السفر.',
-        explanation: 'نحن نقدم مساعدة النقل المتخصصة حتى تتمكن من الوصول إلى المواعيد أو العمل.',
-        pricing: 'يتم فوترة النقل بمعدل 1.00 دولار لكل كيلومتر بالإضافة إلى وقت العامل.',
+        title: 'السفر والنقل',
+        desc: 'النقل الآمن إلى المواعيد والأحداث.',
+        explanation: 'نحن نقدم حلول نقل آمنة وموثوقة ويمكن الوصول إليها لمساعدتك في الوصول إلى المواعيد الطبية أو المرافق التعليمية أو النزهات الاجتماعية بأمان.',
+        pricing: 'يتم فوترته بحد NDIS الأقصى لرحلات المزود (عادةً 1.00 دولار لكل كيلومتر).',
         faqs: [
-          { q: 'هل أحتاج إلى تمويل نقل محدد؟', a: 'عادة نعم، أو يمكنك استخدام تمويلك الأساسي المرن.' }
+          { q: 'هل سياراتكم مجهزة للكراسي المتحركة؟', a: 'لدينا إمكانية الوصول إلى مركبات معدلة.' },
+          { q: 'كيف يتم حساب فاتورة النقل؟', a: 'يتم محاسبتك بسعر لكل كيلومتر لتكاليف تشغيل السيارة، ووقت العامل.' },
+          { q: 'هل يمكنني الذهاب إلى أي مكان؟', a: 'يجب استخدام التمويل لمساعدتك في تحقيق أهداف خطة NDIS الخاصة بك.' }
+        ]
+      },
+      sda: {
+        title: 'سكن SDA & SIL',
+        desc: 'ترتيبات المعيشة المستقلة المدعومة.',
+        explanation: 'نحن نقدم حلول الإسكان المتخصصة (SDA) والدعم اليومي المنزلي (SIL) المطلوب لمساعدة المشاركين على العيش بشكل مستقل في المجتمع.',
+        pricing: 'يتم تسعير SIL بناءً على قائمة الرعاية (RoC). تسعير SDA يعتمد على نوع المسكن.',
+        faqs: [
+          { q: 'ما هو الفرق بين SIL و SDA؟', a: 'SDA هو المنزل الفعلي، في حين أن SIL هم موظفو الدعم داخل المنزل.' },
+          { q: 'هل يجب أن أشارك منزلاً؟', a: 'ليس بالضرورة. يمكن توفير التمويل للمنازل المشتركة أو للأفراد الذين يعيشون بمفردهم.' },
+          { q: 'هل البقالة مشمولة في SIL؟', a: 'لا، يغطي التمويل تكلفة موظفي الدعم فقط.' }
         ]
       }
     }
   },
   fa: {
     sectionTitle: "خدمات",
-    sectionTitleHL: "ما",
-    sectionSubtitle: "DYAR مجموعه جامعی از پشتیبانی‌های حرفه‌ای را متناسب با برنامه NDIS شما ارائه می‌دهد.",
+    sectionTitleHL: "NDIS ما",
+    sectionSubtitle: "DYAR مجموعه ای جامع از پشتیبانی های حرفه ای متناسب با برنامه NDIS شما ارائه می دهد.",
     closeBtn: "بستن",
-    priceLabel: "ساختار قیمت‌گذاری",
-    faqLabel: "سوالات متداول",
     services: {
       pbs: {
-        title: 'پشتیبانی رفتاری تخصصی (PBS)',
-        desc: 'ارزیابی‌های عملکردی و برنامه‌های حمایتی فردی.',
-        explanation: 'این خدمات شامل ارزیابی‌های رفتاری برای درک دلایل رفتارهاست. ما برنامه‌های فردی برای بهبود کیفیت زندگی شما تهیه می‌کنیم.',
+        title: 'پشتیبانی رفتاری متخصص (PBS)',
+        desc: 'ارزیابی‌های عملکردی و برنامه‌های فردی.',
+        explanation: 'پشتیبانی رفتار مثبت ما شامل ارزیابی‌های جامع است تا درک کنیم چرا رفتارهای نگران‌کننده رخ می‌دهند.',
         pricing: 'ما دقیقاً مطابق با محدودیت‌های قیمت NDIS هزینه دریافت می‌کنیم (حدود 232.99 دلار در ساعت).',
         faqs: [
-          { q: 'آیا برای این کار به بودجه خاصی نیاز دارم؟', a: 'بله، به بودجه بهبود روابط نیاز دارید.' },
-          { q: 'ارزیابی چقدر طول می‌کشد؟', a: 'یک ارزیابی استاندارد معمولاً بین 15 تا 20 ساعت طول می‌کشد.' }
+          { q: 'آیا برای این کار به بودجه خاص NDIS نیاز دارم؟', a: 'بله، شما به بودجه ای تحت عنوان "ساخت ظرفیت - بهبود روابط" نیاز دارید.' },
+          { q: 'ارزیابی عملکردی چقدر طول می کشد؟', a: 'یک ارزیابی جامع معمولاً بین 10 تا 15 ساعت طول می کشد.' },
+          { q: 'آیا اقدامات محدود کننده اجرا می کنید؟', a: 'هدف اصلی ما کاهش و حذف اقدامات محدود کننده است.' }
         ]
       },
-      sda: {
-        title: 'محل اقامت تخصصی معلولیت (SDA)',
-        desc: 'ارتباط دادن شرکت‌کنندگان به راه‌حل‌های مسکن مناسب.',
-        explanation: 'ما به شرکت‌کنندگان کمک می‌کنیم تا مسکن بسیار تخصصی را تأمین و مدیریت کنند.',
-        pricing: 'قیمت بر اساس نوع مسکن متفاوت است. ما بالاتر از نرخ‌های NDIS دریافت نمی‌کنیم.',
+      therapy: {
+        title: 'خدمات درمانی',
+        desc: 'کاردرمانی و گفتاردرمانی.',
+        explanation: 'متخصصان ما مداخلات درمانی مبتنی بر شواهد را برای کمک به ایجاد ظرفیت عملکردی ارائه می‌دهند.',
+        pricing: 'هزینه طبق محدودیت NDIS، معمولاً 193.99 دلار در ساعت.',
         faqs: [
-          { q: 'چه کسی واجد شرایط است؟', a: 'افرادی که نیازهای حمایتی بسیار بالایی دارند.' }
-        ]
-      },
-      therapeutic: {
-        title: 'پشتیبانی‌های درمانی',
-        desc: 'ارزیابی‌های بهداشتی و مداخلات مبتنی بر شواهد.',
-        explanation: 'متخصصان ما مداخلات درمانی را برای کمک به شما در کسب مهارت‌ها و استقلال ارائه می‌دهند.',
-        pricing: 'هزینه این خدمات 193.99 دلار در ساعت طبق NDIS است.',
-        faqs: [
-          { q: 'این جلسات کجا برگزار می‌شود؟', a: 'ما می‌توانیم درمان را در خانه شما، در جامعه یا در کلینیک ارائه دهیم.' }
+          { q: 'چه نوع درمانی ارائه می دهید؟', a: 'ما در حال حاضر کاردرمانی، گفتاردرمانی و پشتیبانی روانشناختی تخصصی ارائه می دهیم.' },
+          { q: 'آیا می توانید در خانه من درمان ارائه دهید؟', a: 'بله، درمانگران ما می توانند در خانه یا مدرسه به شما مراجعه کنند.' },
+          { q: 'زمان سفر چگونه محاسبه می شود؟', a: 'زمان سفر ارائه دهنده مطابق با ترتیبات قیمت گذاری NDIS صورتحساب می شود.' }
         ]
       },
       recovery: {
         title: 'مربیگری بازیابی روانی-اجتماعی',
-        desc: 'حمایت از بهبودی و ایجاد تاب‌آوری.',
-        explanation: 'مربیان ما به شما در طراحی و اجرای یک برنامه بازیابی بهداشت روان کمک می‌کنند.',
-        pricing: 'هزینه طبق محدودیت NDIS، معمولاً 105.43 دلار در ساعت است.',
+        desc: 'پشتیبانی تخصصی سلامت روان.',
+        explanation: 'مربیان بازیابی ما به شرکت‌کنندگان دارای ناتوانی‌های روانی-اجتماعی کمک می‌کنند تا یک برنامه بازیابی طراحی کنند.',
+        pricing: 'هزینه طبق محدودیت NDIS، معمولاً 105.43 دلار در ساعت.',
         faqs: [
-          { q: 'آیا این همان هماهنگی پشتیبانی است؟', a: 'مشابه است، اما مخصوص نیازهای بهداشت روان طراحی شده است.' }
+          { q: 'آیا مربی بازیابی همان هماهنگ کننده پشتیبانی است؟', a: 'آنها شبیه هستند، اما مربیان دانش تخصصی در زمینه سلامت روان دارند.' },
+          { q: 'آیا به تشخیص رسمی سلامت روان نیاز دارم؟', a: 'بله، برای دریافت این بودجه خاص باید یک ناتوانی روانی-اجتماعی اولیه داشته باشید.' },
+          { q: 'آیا یک مربی می تواند در یک بحران به من کمک کند؟', a: 'در یک بحران فوری، باید با خدمات اورژانس تماس بگیرید.' }
         ]
       },
       early: {
-        title: 'پشتیبانی‌های دوران کودکی',
-        desc: 'مداخله زودهنگام برای کودکان زیر 9 سال.',
-        explanation: 'ما پشتیبانی‌های مداخله زودهنگام را برای کودکان دارای تاخیر رشدی ارائه می‌دهیم.',
-        pricing: 'هزینه بر اساس نرخ NDIS (193.99 دلار در ساعت) است.',
+        title: 'پشتیبانی های اوایل کودکی',
+        desc: 'مداخله برای کودکان زیر 9 سال.',
+        explanation: 'ما مداخله زودهنگام تخصصی برای کودکان زیر 9 سال ارائه می‌دهیم تا والدین را توانمند کنیم.',
+        pricing: 'هزینه طبق محدودیت NDIS برای اوایل کودکی (193.99 دلار در ساعت).',
         faqs: [
-          { q: 'آیا والدین باید حضور داشته باشند؟', a: 'بله، رویکرد ما بر آموزش والدین متمرکز است.' }
-        ]
-      },
-      civic: {
-        title: 'مشارکت مدنی و اجتماعی',
-        desc: 'دسترسی به جامعه و فعالیت‌های گروهی.',
-        explanation: 'ما از شما حمایت می‌کنیم تا در جامعه خود به طور فعال شرکت کنید.',
-        pricing: 'بر اساس نرخ‌های استاندارد پشتیبانی اصلی NDIS (مثلاً 70.23 دلار در ساعت).',
-        faqs: [
-          { q: 'آیا برای این فعالیت‌ها حمل و نقل ارائه می‌دهید؟', a: 'بله، کارکنان ما می‌توانند حمل و نقل را فراهم کنند.' }
+          { q: 'آیا فرزند من به تشخیص رسمی نیاز دارد؟', a: 'تحت رویکرد اوایل کودکی NDIS، تشخیص رسمی همیشه مورد نیاز نیست.' },
+          { q: 'جلسات کجا برگزار می شود؟', a: 'جلسات معمولاً در خانه، مهدکودک یا مدرسه شما برگزار می شود.' },
+          { q: 'والدین چگونه درگیر می شوند؟', a: 'والدین در مرکز رویکرد ما قرار دارند. ما به شما آموزش می دهیم که چگونه استراتژی ها را در روال روزانه خود جای دهید.' }
         ]
       },
       core: {
-        title: 'پشتیبانی اصلی - کمک در زندگی روزمره',
-        desc: 'پشتیبانی عملی برای فعالیت‌های روزمره.',
-        explanation: 'کارکنان ما به شما در فعالیت‌های شخصی روزانه مانند بهداشت و تهیه غذا کمک می‌کنند.',
-        pricing: 'بر اساس نرخ‌های استاندارد NDIS.',
+        title: 'پشتیبانی های اصلی',
+        desc: 'کمک در زندگی روزمره و مراقبت شخصی.',
+        explanation: 'ما در کارهای شخصی زندگی روزمره کمک یا نظارت می‌کنیم تا شرکت‌کنندگان بتوانند به طور مستقل زندگی کنند.',
+        pricing: 'بر اساس نرخ‌های استاندارد پشتیبانی اصلی NDIS (مثلاً 70.23 دلار در ساعت).',
         faqs: [
-          { q: 'آیا می‌توانم کارگر پشتیبانی خود را انتخاب کنم؟', a: 'بله! ما کارگران را بر اساس ترجیحات شما مطابقت می‌دهیم.' }
+          { q: 'آیا مراقبت 24/7 ارائه می دهید؟', a: 'بله، بسته به بودجه شما، ما می توانیم پشتیبانی شبانه روزی ارائه دهیم.' },
+          { q: 'آیا می توانم کارگران پشتیبانی خود را انتخاب کنم؟', a: 'قطعا. ما معتقدیم که باید شما را با کارگرانی مطابقت دهیم که به شما احترام می گذارند.' },
+          { q: 'حداقل طول شیفت چقدر است؟', a: 'به طور کلی، حداقل طول شیفت ما 2 ساعت است.' }
+        ]
+      },
+      civic: {
+        title: 'مشارکت اجتماعی',
+        desc: 'فعالیت‌های اجتماعی و مدنی.',
+        explanation: 'ما از شرکت‌کنندگان برای مشارکت فعال در فعالیت‌های اجتماعی و تفریحی حمایت می‌کنیم.',
+        pricing: 'بر اساس نرخ‌های استاندارد پشتیبانی اصلی NDIS (مثلاً 70.23 دلار در ساعت).',
+        faqs: [
+          { q: 'آیا حمل و نقل برای این فعالیت ها فراهم می کنید؟', a: 'بله، کارگران ما می توانند حمل و نقل را فراهم کنند.' },
+          { q: 'آیا می توانم از این برای فعالیت های گروهی استفاده کنم؟', a: 'بله، اگر مایل به شرکت در برنامه های گروهی هستید، ما می توانیم این را تسهیل کنیم.' },
+          { q: 'آیا باید هزینه بلیط کارگر خود را برای رویدادها پرداخت کنم؟', a: 'طبق قوانین NDIS، شرکت کنندگان معمولاً مسئول پوشش هزینه هستند.' }
         ]
       },
       transport: {
-        title: 'مواد مصرفی و حمل و نقل',
-        desc: 'حمایت از مواد مصرفی و کمک در سفر.',
-        explanation: 'ما کمک تخصصی حمل و نقل ارائه می‌دهیم تا با خیال راحت به قرارها برسید.',
-        pricing: 'هزینه حمل و نقل 1.00 دلار در هر کیلومتر به علاوه زمان کارگر است.',
+        title: 'سفر و حمل و نقل',
+        desc: 'حمل و نقل ایمن به قرار ملاقات‌ها.',
+        explanation: 'ما راه‌حل‌های حمل و نقل ایمن و قابل اعتمادی را ارائه می‌دهیم تا به شما کمک کنیم به قرارهای پزشکی برسید.',
+        pricing: 'طبق حداکثر هزینه حمل و نقل NDIS (معمولاً 1.00 دلار در هر کیلومتر).',
         faqs: [
-          { q: 'آیا به بودجه خاصی برای حمل و نقل نیاز دارم؟', a: 'معمولاً بله، اما می‌توانید از بودجه انعطاف‌پذیر خود استفاده کنید.' }
+          { q: 'آیا وسایل نقلیه شما برای ویلچر قابل دسترسی است؟', a: 'ما به وسایل نقلیه اصلاح شده دسترسی داریم. لطفاً نیازهای خود را به ما اطلاع دهید.' },
+          { q: 'هزینه حمل و نقل چگونه صورتحساب می شود؟', a: 'هزینه مسافت و زمان کارگر جداگانه محاسبه می شود.' },
+          { q: 'آیا می توانم به هر جایی بروم؟', a: 'بودجه حمل و نقل باید برای کمک به شما در دستیابی به اهداف NDIS شما استفاده شود.' }
+        ]
+      },
+      sda: {
+        title: 'مسکن SDA & SIL',
+        desc: 'ترتیبات زندگی مستقل با پشتیبانی.',
+        explanation: 'ما راه حل های تخصصی مسکن (SDA) و پشتیبانی روزانه در خانه (SIL) را برای کمک به زندگی مستقل ارائه می دهیم.',
+        pricing: 'قیمت گذاری SIL بر اساس یک لیست مراقبت (RoC) است. SDA بستگی به نوع مسکن دارد.',
+        faqs: [
+          { q: 'تفاوت بین SIL و SDA چیست؟', a: 'SDA خانه فیزیکی است، در حالی که SIL کارکنان پشتیبانی داخل خانه است.' },
+          { q: 'آیا باید در یک خانه مشترک زندگی کنم؟', a: 'نه لزوما. بودجه را می توان برای خانه های مشترک یا افراد تنها فراهم کرد.' },
+          { q: 'آیا مواد غذایی در SIL گنجانده شده است؟', a: 'خیر، شرکت کنندگان مسئول پرداخت هزینه های اجاره و غذای خود هستند.' }
         ]
       }
     }
@@ -335,55 +386,49 @@ export const servicesTranslations = {
   zh: {
     sectionTitle: "我们的",
     sectionTitleHL: "服务",
-    sectionSubtitle: "DYAR 提供全面的专业支持，为您的 NDIS 计划量身定制。",
+    sectionSubtitle: "DYAR 为您独特的 NDIS 计划提供全面的专业支持。",
     closeBtn: "关闭",
-    priceLabel: "定价结构",
-    faqLabel: "常见问题",
     services: {
-      pbs: { title: '专家行为支持 (PBS)', desc: '功能评估和个性化 PBS 计划。', explanation: '我们的积极行为支持涉及行为评估以了解行为背后的原因。', pricing: '我们严格按照 NDIS 定价收费（标准费用为 $232.99/小时）。', faqs: [{q: '这需要特定资金吗？', a: '是的，您需要关系改善资金。'}] },
-      sda: { title: '专家残疾人住宿 (SDA)', desc: '将参与者与合适的住房解决方案联系起来。', explanation: '我们协助参与者获得高度专业的住房。', pricing: '定价取决于住房类型，不高于 NDIS 基准率。', faqs: [{q: '谁有资格？', a: '具有极高支持需求的参与者。'}] },
-      therapeutic: { title: '治疗支持', desc: '健康评估和循证干预。', explanation: '我们的治疗师提供治疗以帮助您获得技能。', pricing: '按照 NDIS 标准收费（$193.99/小时）。', faqs: [{q: '在哪里进行？', a: '在您家中、社区或我们的诊所。'}] },
-      recovery: { title: '心理社会康复辅导', desc: '支持康复。', explanation: '我们的康复教练帮助您设计和实施心理健康康复计划。', pricing: '按照 NDIS 限额收费（$105.43/小时）。', faqs: [{q: '这与支持协调相同吗？', a: '类似，但专长于心理健康。'}] },
-      early: { title: '幼儿支持', desc: '对 9 岁以下儿童的早期干预。', explanation: '我们为发育迟缓的儿童提供早期干预支持。', pricing: '按照 NDIS 费率收费（$193.99/小时）。', faqs: [{q: '父母需要在这吗？', a: '是的，我们侧重于指导父母。'}] },
-      civic: { title: '社区参与', desc: '社区活动和小组活动。', explanation: '我们支持您积极参与社区活动。', pricing: '按照 NDIS 核心支持费率（$70.23/小时）。', faqs: [{q: '提供交通吗？', a: '是的，我们可以提供交通服务。'}] },
-      core: { title: '核心支持 - 日常生活协助', desc: '日常活动的实际支持。', explanation: '我们的工作人员协助您完成日常个人活动。', pricing: '按照 NDIS 核心支持费率。', faqs: [{q: '我可以选择工作人员吗？', a: '可以，您可以根据偏好选择。'}] },
-      transport: { title: '消耗品和交通', desc: '旅行协助。', explanation: '我们提供专业的交通协助。', pricing: '交通费为每公里 $1.00 加上工作人员的时间。', faqs: [{q: '我需要特定资金吗？', a: '通常需要，也可以使用核心资金。'}] }
+      pbs: { title: '专家行为支持 (PBS)', desc: '功能评估和个性化 PBS 计划。', explanation: '我们的积极行为支持涉及行为评估以了解行为背后的原因。', pricing: '我们严格按照 NDIS 定价收费（标准费用为 $232.99/小时）。', faqs: [{q: '这需要特定资金吗？', a: '是的，您需要关系改善资金。'}, {q: '评估需要多长时间？', a: '通常需要 10 到 15 个小时。'}, {q: '您是否实施限制性做法？', a: '我们的主要目标是减少限制性做法。'}] },
+      therapy: { title: '治疗支持', desc: '职业治疗和言语治疗。', explanation: '我们提供循证干预以改善您的独立性。', pricing: '按照 NDIS 限额收费（$193.99/小时）。', faqs: [{q: '您提供哪些治疗？', a: 'OT，言语治疗和心理支持。'}, {q: '可以在家治疗吗？', a: '可以，我们可以上门服务。'}, {q: '差旅费怎么算？', a: '按照 NDIS 规定收取差旅费。'}] },
+      recovery: { title: '心理社会康复辅导', desc: '支持康复。', explanation: '我们的康复教练帮助您设计和实施心理健康康复计划。', pricing: '按照 NDIS 限额收费（$105.43/小时）。', faqs: [{q: '这与支持协调相同吗？', a: '类似，但专长于心理健康。'}, {q: '需要诊断吗？', a: '需要，您必须有公认的心理社会残疾。'}, {q: '能处理紧急危机吗？', a: '在紧急情况下，请联系紧急服务。'}] },
+      early: { title: '儿童早期支持', desc: '9岁以下儿童的干预。', explanation: '我们为幼儿提供早期干预。', pricing: '按照 NDIS 幼儿支持限额收费（$193.99/小时）。', faqs: [{q: '需要正式诊断吗？', a: '不一定需要正式诊断。'}, {q: '在哪里上课？', a: '在家里或学校。'}, {q: '父母需要参与吗？', a: '是的，父母参与是核心。'}] },
+      core: { title: '核心支持', desc: '日常生活协助。', explanation: '我们协助日常生活中的个人任务。', pricing: '按照 NDIS 核心支持费率（$70.23/小时）。', faqs: [{q: '提供24小时护理吗？', a: '根据您的资金，我们可以提供。'}, {q: '可以自己选护工吗？', a: '可以，我们会为您匹配合适的护工。'}, {q: '有最少服务时间吗？', a: '通常每次最少2小时。'}] },
+      civic: { title: '社区参与', desc: '社区活动和小组活动。', explanation: '我们支持您积极参与社区活动。', pricing: '按照 NDIS 核心支持费率（$70.23/小时）。', faqs: [{q: '提供交通吗？', a: '是的，我们可以提供交通服务。'}, {q: '可以参加小组活动吗？', a: '可以的。'}, {q: '活动门票谁付？', a: '参与者需要自己支付门票费用。'}] },
+      transport: { title: '交通服务', desc: '安全的交通接送。', explanation: '我们提供安全可靠的交通服务。', pricing: '按照 NDIS 交通费率（约 $1.00/公里）。', faqs: [{q: '有轮椅无障碍车吗？', a: '有的，请提前告知。'}, {q: '如何收费？', a: '按公里数和人员时间收费。'}, {q: '可以去任何地方吗？', a: '必须与您的 NDIS 目标相关。'}] },
+      sda: { title: 'SDA 和 SIL', desc: '独立生活支持。', explanation: '我们提供专业的住房和支持人员。', pricing: 'SIL 根据护理排班定价，SDA 根据房屋类型定价。', faqs: [{q: 'SDA 和 SIL 有什么区别？', a: 'SDA 是房子，SIL 是里面的支持人员。'}, {q: '必须合租吗？', a: '不一定，也可以独居。'}, {q: '包吃住吗？', a: '不包，资金只涵盖护理人员的费用。'}] }
     }
   },
   hi: {
-    sectionTitle: "हमारी",
-    sectionTitleHL: "सेवाएं",
-    sectionSubtitle: "DYAR आपकी NDIS योजना के अनुरूप पेशेवर समर्थन प्रदान करता है।",
+    sectionTitle: "हमारी NDIS",
+    sectionTitleHL: "सेवाएँ",
+    sectionSubtitle: "हम पेशेवर समर्थन का एक सूट प्रदान करते हैं।",
     closeBtn: "बंद करें",
-    priceLabel: "मूल्य निर्धारण",
-    faqLabel: "अक्सर पूछे जाने वाले प्रश्न",
     services: {
-      pbs: { title: 'विशेषज्ञ व्यवहार समर्थन (PBS)', desc: 'कार्यात्मक मूल्यांकन और PBS योजनाएं।', explanation: 'हम व्यवहार को समझने के लिए मूल्यांकन करते हैं।', pricing: 'NDIS सीमा के अनुसार ($232.99/घंटा)।', faqs: [{q: 'क्या इसके लिए विशिष्ट धन की आवश्यकता है?', a: 'हां, बेहतर संबंध धन।'}] },
-      sda: { title: 'विशेषज्ञ विकलांगता आवास (SDA)', desc: 'आवास समाधान।', explanation: 'हम आवास खोजने में सहायता करते हैं।', pricing: 'NDIS बेंचमार्क के अनुसार।', faqs: [{q: 'कौन योग्य है?', a: 'अत्यधिक समर्थन आवश्यकता वाले।'}] },
-      therapeutic: { title: 'चिकित्सीय सहायता', desc: 'स्वास्थ्य मूल्यांकन और हस्तक्षेप।', explanation: 'हम कौशल प्राप्त करने में मदद करने के लिए चिकित्सा प्रदान करते हैं।', pricing: 'NDIS मानक ($193.99/घंटा)।', faqs: [{q: 'कहाँ?', a: 'घर या क्लिनिक में।'}] },
-      recovery: { title: 'रिकवरी कोचिंग', desc: 'मानसिक स्वास्थ्य रिकवरी।', explanation: 'हम आपकी मानसिक स्वास्थ्य रिकवरी योजना में मदद करते हैं।', pricing: 'NDIS सीमा ($105.43/घंटा)।', faqs: [{q: 'क्या यह समन्वय के समान है?', a: 'समान, लेकिन मानसिक स्वास्थ्य पर केंद्रित है।'}] },
-      early: { title: 'बचपन का समर्थन', desc: '9 वर्ष से कम उम्र के बच्चों के लिए।', explanation: 'बच्चों के लिए प्रारंभिक हस्तक्षेप।', pricing: 'NDIS दर ($193.99/घंटा)।', faqs: [{q: 'क्या माता-पिता की आवश्यकता है?', a: 'हां।'}] },
-      civic: { title: 'सामुदायिक भागीदारी', desc: 'सामुदायिक पहुँच और गतिविधियाँ।', explanation: 'हम समुदाय में भाग लेने में मदद करते हैं।', pricing: 'NDIS दर ($70.23/घंटा)।', faqs: [{q: 'क्या परिवहन प्रदान किया जाता है?', a: 'हां।'}] },
-      core: { title: 'मुख्य समर्थन', desc: 'दैनिक जीवन में सहायता।', explanation: 'दैनिक व्यक्तिगत गतिविधियों में सहायता।', pricing: 'NDIS दर।', faqs: [{q: 'क्या मैं अपना कार्यकर्ता चुन सकता हूँ?', a: 'हां।'}] },
-      transport: { title: 'परिवहन', desc: 'यात्रा सहायता।', explanation: 'परिवहन सहायता प्रदान की जाती है।', pricing: '$1.00 प्रति किलोमीटर।', faqs: [{q: 'धन की आवश्यकता है?', a: 'हां।'}] }
+      pbs: { title: 'विशेषज्ञ व्यवहार समर्थन (PBS)', desc: 'कार्यात्मक मूल्यांकन और PBS योजनाएं।', explanation: 'हम व्यवहार को समझने के लिए मूल्यांकन करते हैं।', pricing: 'NDIS सीमा के अनुसार ($232.99/घंटा)।', faqs: [{q: 'क्या इसके लिए विशिष्ट धन की आवश्यकता है?', a: 'हां, बेहतर संबंध धन।'}, {q: 'मूल्यांकन में कितना समय लगता है?', a: '10 से 15 घंटे।'}, {q: 'क्या आप प्रतिबंधात्मक प्रथाओं को लागू करते हैं?', a: 'हमारा लक्ष्य उन्हें कम करना है।'}] },
+      therapy: { title: 'चिकित्सीय सहायता', desc: 'व्यावसायिक और भाषण चिकित्सा।', explanation: 'हम आपकी स्वतंत्रता में सुधार के लिए हस्तक्षेप प्रदान करते हैं।', pricing: 'NDIS सीमा ($193.99/घंटा)।', faqs: [{q: 'आप क्या चिकित्सा प्रदान करते हैं?', a: 'OT, भाषण चिकित्सा, और मनोविज्ञान।'}, {q: 'क्या घर पर चिकित्सा हो सकती है?', a: 'हां, हम मोबाइल सेवाएं प्रदान करते हैं।'}, {q: 'यात्रा का समय कैसे लिया जाता है?', a: 'NDIS नियमों के अनुसार।'}] },
+      recovery: { title: 'रिकवरी कोचिंग', desc: 'मानसिक स्वास्थ्य रिकवरी।', explanation: 'हम आपकी मानसिक स्वास्थ्य रिकवरी योजना में मदद करते हैं।', pricing: 'NDIS सीमा ($105.43/घंटा)।', faqs: [{q: 'क्या यह समन्वय के समान है?', a: 'समान, लेकिन मानसिक स्वास्थ्य पर केंद्रित है।'}, {q: 'क्या निदान की आवश्यकता है?', a: 'हां।'}, {q: 'क्या आप आपात स्थिति में मदद करते हैं?', a: 'आपातकालीन सेवाओं को कॉल करें।'}] },
+      early: { title: 'प्रारंभिक बचपन समर्थन', desc: '9 वर्ष से कम उम्र के बच्चों के लिए।', explanation: 'हम छोटे बच्चों के लिए प्रारंभिक हस्तक्षेप प्रदान करते हैं।', pricing: 'NDIS सीमा ($193.99/घंटा)।', faqs: [{q: 'क्या औपचारिक निदान की आवश्यकता है?', a: 'हमेशा नहीं।'}, {q: 'सत्र कहाँ होते हैं?', a: 'घर या स्कूल में।'}, {q: 'क्या माता-पिता शामिल हैं?', a: 'हां, यह बहुत महत्वपूर्ण है।'}] },
+      core: { title: 'मुख्य सहायता', desc: 'दैनिक जीवन में सहायता।', explanation: 'हम दैनिक जीवन के कार्यों में सहायता करते हैं।', pricing: 'NDIS दर ($70.23/घंटा)।', faqs: [{q: 'क्या 24/7 देखभाल है?', a: 'हां, आपके वित्त पोषण के आधार पर।'}, {q: 'क्या मैं अपने कार्यकर्ता को चुन सकता हूं?', a: 'बिल्कुल।'}, {q: 'न्यूनतम शिफ्ट क्या है?', a: '2 घंटे।'}] },
+      civic: { title: 'सामुदायिक भागीदारी', desc: 'सामुदायिक पहुँच और गतिविधियाँ।', explanation: 'हम समुदाय में भाग लेने में मदद करते हैं।', pricing: 'NDIS दर ($70.23/घंटा)।', faqs: [{q: 'क्या परिवहन प्रदान किया जाता है?', a: 'हां।'}, {q: 'क्या मैं समूहों में जा सकता हूं?', a: 'हां।'}, {q: 'टिकट के लिए कौन भुगतान करता है?', a: 'प्रतिभागी को भुगतान करना होगा।'}] },
+      transport: { title: 'परिवहन', desc: 'सुरक्षित परिवहन।', explanation: 'हम सुरक्षित और विश्वसनीय परिवहन प्रदान करते हैं।', pricing: 'NDIS सीमा (लगभग $1.00/किमी)।', faqs: [{q: 'क्या वाहन व्हीलचेयर सुलभ हैं?', a: 'हां, कृपया हमें बताएं।'}, {q: 'बिल कैसे किया जाता है?', a: 'दूरी और समय के आधार पर।'}, {q: 'क्या मैं कहीं भी जा सकता हूँ?', a: 'NDIS लक्ष्यों से संबंधित होना चाहिए।'}] },
+      sda: { title: 'SDA और SIL', desc: 'समर्थित स्वतंत्र जीवन।', explanation: 'हम आवास और कर्मचारी प्रदान करते हैं।', pricing: 'SIL और SDA NDIS सीमाओं के अधीन हैं।', faqs: [{q: 'SDA और SIL में क्या अंतर है?', a: 'SDA घर है, SIL समर्थन कर्मचारी है।'}, {q: 'क्या मुझे साझा करना होगा?', a: 'जरूरी नहीं।'}, {q: 'क्या भोजन शामिल है?', a: 'नहीं, केवल समर्थन।'}] }
     }
   },
   vi: {
     sectionTitle: "Dịch vụ",
     sectionTitleHL: "Của Chúng Tôi",
-    sectionSubtitle: "DYAR cung cấp các hỗ trợ chuyên nghiệp phù hợp với kế hoạch NDIS của bạn.",
+    sectionSubtitle: "DYAR cung cấp các dịch vụ hỗ trợ chuyên nghiệp.",
     closeBtn: "Đóng",
-    priceLabel: "Cấu trúc giá",
-    faqLabel: "Câu hỏi thường gặp",
     services: {
-      pbs: { title: 'Hỗ trợ Hành vi Chuyên gia (PBS)', desc: 'Đánh giá chức năng.', explanation: 'Chúng tôi đánh giá và lập kế hoạch hỗ trợ hành vi cá nhân.', pricing: 'Tính phí theo NDIS ($232.99/giờ).', faqs: [{q: 'Cần quỹ riêng?', a: 'Có.'}] },
-      sda: { title: 'Chỗ ở Đặc biệt (SDA)', desc: 'Giải pháp nhà ở.', explanation: 'Hỗ trợ tìm nhà ở chuyên biệt.', pricing: 'Theo tiêu chuẩn NDIS.', faqs: [{q: 'Ai đủ điều kiện?', a: 'Người có nhu cầu cao.'}] },
-      therapeutic: { title: 'Hỗ trợ Trị liệu', desc: 'Can thiệp y tế.', explanation: 'Các nhà trị liệu giúp bạn đạt được kỹ năng.', pricing: 'Tính phí theo NDIS ($193.99/giờ).', faqs: [{q: 'Ở đâu?', a: 'Tại nhà hoặc phòng khám.'}] },
-      recovery: { title: 'Huấn luyện Phục hồi', desc: 'Phục hồi sức khỏe tâm thần.', explanation: 'Hỗ trợ kế hoạch phục hồi sức khỏe tâm thần.', pricing: 'Tính phí theo NDIS ($105.43/giờ).', faqs: [{q: 'Giống điều phối?', a: 'Tương tự nhưng chuyên về tâm thần.'}] },
-      early: { title: 'Hỗ trợ Trẻ em', desc: 'Dành cho trẻ dưới 9 tuổi.', explanation: 'Can thiệp sớm cho trẻ em.', pricing: 'Tính phí theo NDIS ($193.99/giờ).', faqs: [{q: 'Cần cha mẹ?', a: 'Có.'}] },
-      civic: { title: 'Tham gia Cộng đồng', desc: 'Hoạt động nhóm.', explanation: 'Hỗ trợ tham gia hoạt động cộng đồng.', pricing: 'Tính phí theo NDIS ($70.23/giờ).', faqs: [{q: 'Có xe buýt không?', a: 'Có.'}] },
-      core: { title: 'Hỗ trợ Cốt lõi', desc: 'Hỗ trợ hàng ngày.', explanation: 'Giúp đỡ vệ sinh và việc nhà.', pricing: 'Tính phí theo NDIS.', faqs: [{q: 'Có thể chọn người?', a: 'Có.'}] },
-      transport: { title: 'Giao thông', desc: 'Hỗ trợ đi lại.', explanation: 'Hỗ trợ đi lại an toàn.', pricing: '$1.00 mỗi kilomet.', faqs: [{q: 'Cần quỹ?', a: 'Có.'}] }
+      pbs: { title: 'Hỗ trợ Hành vi Chuyên gia (PBS)', desc: 'Đánh giá chức năng.', explanation: 'Chúng tôi đánh giá và lập kế hoạch hỗ trợ hành vi cá nhân.', pricing: 'Tính phí theo NDIS ($232.99/giờ).', faqs: [{q: 'Cần quỹ riêng?', a: 'Có.'}, {q: 'Mất bao lâu?', a: '10-15 giờ.'}, {q: 'Có hạn chế không?', a: 'Mục tiêu là giảm thiểu.'}] },
+      therapy: { title: 'Hỗ trợ Trị liệu', desc: 'Trị liệu nghề nghiệp và ngôn ngữ.', explanation: 'Chúng tôi giúp bạn cải thiện tính độc lập.', pricing: 'Tính phí theo NDIS ($193.99/giờ).', faqs: [{q: 'Có trị liệu gì?', a: 'OT và Ngôn ngữ.'}, {q: 'Làm tại nhà được không?', a: 'Được.'}, {q: 'Phí đi lại?', a: 'Theo NDIS.'}] },
+      recovery: { title: 'Huấn luyện Phục hồi', desc: 'Phục hồi sức khỏe tâm thần.', explanation: 'Hỗ trợ kế hoạch phục hồi sức khỏe tâm thần.', pricing: 'Tính phí theo NDIS ($105.43/giờ).', faqs: [{q: 'Giống điều phối?', a: 'Tương tự nhưng chuyên về tâm thần.'}, {q: 'Cần chẩn đoán?', a: 'Có.'}, {q: 'Khẩn cấp?', a: 'Gọi cấp cứu.'}] },
+      early: { title: 'Hỗ trợ Trẻ em', desc: 'Trẻ dưới 9 tuổi.', explanation: 'Can thiệp sớm cho trẻ nhỏ.', pricing: 'Tính phí theo NDIS ($193.99/giờ).', faqs: [{q: 'Cần chẩn đoán?', a: 'Không bắt buộc.'}, {q: 'Ở đâu?', a: 'Tại nhà hoặc trường.'}, {q: 'Cha mẹ tham gia?', a: 'Có.'}] },
+      core: { title: 'Hỗ trợ Cốt lõi', desc: 'Chăm sóc cá nhân.', explanation: 'Hỗ trợ các công việc hàng ngày.', pricing: 'Tính phí theo NDIS ($70.23/giờ).', faqs: [{q: 'Có 24/7 không?', a: 'Có.'}, {q: 'Được chọn người?', a: 'Được.'}, {q: 'Tối thiểu bao lâu?', a: '2 giờ.'}] },
+      civic: { title: 'Tham gia Cộng đồng', desc: 'Hoạt động nhóm.', explanation: 'Hỗ trợ tham gia hoạt động cộng đồng.', pricing: 'Tính phí theo NDIS ($70.23/giờ).', faqs: [{q: 'Có xe buýt không?', a: 'Có.'}, {q: 'Đi nhóm được không?', a: 'Được.'}, {q: 'Trả tiền vé?', a: 'Người tham gia trả.'}] },
+      transport: { title: 'Giao thông', desc: 'Đưa đón an toàn.', explanation: 'Đưa đón y tế và xã hội.', pricing: 'Tính phí theo NDIS ($1.00/km).', faqs: [{q: 'Có xe lăn?', a: 'Có.'}, {q: 'Tính phí thế nào?', a: 'Theo km và thời gian.'}, {q: 'Đi đâu cũng được?', a: 'Phải liên quan mục tiêu NDIS.'}] },
+      sda: { title: 'Nhà ở SDA & SIL', desc: 'Sống độc lập.', explanation: 'Nhà ở và nhân viên hỗ trợ.', pricing: 'Theo giới hạn NDIS.', faqs: [{q: 'Khác nhau gì?', a: 'SDA là nhà, SIL là người.'}, {q: 'Phải ở chung?', a: 'Không bắt buộc.'}, {q: 'Bao ăn không?', a: 'Không.'}] }
     }
   }
 };
