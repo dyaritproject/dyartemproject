@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { submitReferral } from '../api';
-import { ShieldCheck, UserCircle, Activity, ClipboardList, AlertTriangle, MessageSquare, CheckCircle, Lock, Heart, Hash } from 'lucide-react';
+import { ShieldCheck, UserCircle, Activity, ClipboardList, AlertTriangle, MessageSquare, CheckCircle, Lock, Heart, Hash, UploadCloud } from 'lucide-react';
 
 const Referral = () => {
   const [status, setStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [attachedFile, setAttachedFile] = useState<File | null>(null);
 
   // Comprehensive Form State
   const [formData, setFormData] = useState({
@@ -127,6 +128,7 @@ const Referral = () => {
 #### Section 3 & 4: Reason & Funding
 - Funding Category: ${formData.funding_category}
 - Primary Reason for Referral: ${formData.primary_reason}
+- NDIS Plan Attached: ${attachedFile ? 'Yes (' + attachedFile.name + ')' : 'No'}
 
 #### Section 5A: Person-Centred Profile (About Me)
 **Identity & Culture:**
@@ -161,7 +163,7 @@ const Referral = () => {
 - Meal Routine: ${formData.routine_meal}
 
 #### Section 5B & 6: Clinical Context & Team
-- Service-Specific Context: ${formData.clinical_context}
+- ${formData.service_requested} Specific Context: ${formData.clinical_context}
 - Treating Team: ${formData.treating_team}
 
 #### Section 7: Risk Information
@@ -350,9 +352,30 @@ const Referral = () => {
                 </select>
               </div>
             </div>
-            <div>
+            <div className="mb-6">
               <label className="block text-sm font-bold text-gray-700 mb-2">Primary Reason for Referral (in your own words)</label>
               <textarea name="primary_reason" rows={3} value={formData.primary_reason} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#6A0DAD] outline-none resize-y"></textarea>
+            </div>
+            
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+              <label className="block text-sm font-bold text-blue-900 mb-2">Attach NDIS Plan (Optional)</label>
+              <p className="text-xs text-blue-700 mb-4">Please upload a copy of the participant's current NDIS plan if available. This helps us ensure adequate funding for the requested service.</p>
+              <div className="flex items-center justify-center w-full">
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-blue-200 border-dashed rounded-xl cursor-pointer bg-white hover:bg-blue-50 transition-colors">
+                      <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                          <UploadCloud className="w-8 h-8 text-blue-500 mb-2" />
+                          <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
+                          <p className="text-xs text-gray-500">PDF, DOCX, or JPG (MAX. 10MB)</p>
+                      </div>
+                      <input type="file" className="hidden" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" onChange={(e) => setAttachedFile(e.target.files ? e.target.files[0] : null)} />
+                  </label>
+              </div>
+              {attachedFile && (
+                <div className="mt-4 p-3 bg-white border border-blue-200 rounded-lg flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">{attachedFile.name}</span>
+                  <button type="button" onClick={() => setAttachedFile(null)} className="text-red-500 hover:text-red-700 text-sm font-bold">Remove</button>
+                </div>
+              )}
             </div>
           </div>
 
@@ -376,7 +399,12 @@ const Referral = () => {
                       <option>No</option><option>Yes - Aboriginal</option><option>Yes - Torres Strait Islander</option><option>Yes - Both</option><option>Prefer not to say</option>
                     </select>
                   </div>
-                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Cultural Background / Heritage</label><input type="text" name="culture_bg" value={formData.culture_bg} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200" /></div>
+                  <div><label className="block text-sm font-medium text-gray-700 mb-1">CaLD / Cultural Background</label><input type="text" name="culture_bg" value={formData.culture_bg} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200" placeholder="e.g. Persian, Vietnamese, etc." /></div>
+                  <div><label className="block text-sm font-medium text-gray-700 mb-1">LGBTIQA+ Community?</label>
+                    <select name="lgbtiqa" value={formData.lgbtiqa} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200">
+                      <option>Prefer not to say</option><option>Yes</option><option>No</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
@@ -396,8 +424,19 @@ const Referral = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div><label className="block text-sm font-medium text-gray-700 mb-1">Things I find OVERWHELMING</label><textarea name="sensory_overwhelm" value={formData.sensory_overwhelm} onChange={handleChange} rows={2} className="w-full px-3 py-2 rounded-lg border border-gray-200" placeholder="e.g. loud noises, bright lights"></textarea></div>
                   <div><label className="block text-sm font-medium text-gray-700 mb-1">Things that help me feel SAFE</label><textarea name="feel_safe" value={formData.feel_safe} onChange={handleChange} rows={2} className="w-full px-3 py-2 rounded-lg border border-gray-200"></textarea></div>
-                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Worker Preferences</label><input type="text" name="worker_pref" value={formData.worker_pref} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200" placeholder="e.g. gender, language, age" /></div>
-                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Important People in my life</label><input type="text" name="important_people" value={formData.important_people} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200" /></div>
+                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Preferred Worker Gender</label>
+                    <select name="worker_pref" value={formData.worker_pref} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200">
+                      <option>No preference</option><option>Female</option><option>Male</option><option>Non-binary</option>
+                    </select>
+                  </div>
+                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Preferred Day(s) of Support</label><input type="text" name="best_time" value={formData.best_time} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200" placeholder="e.g. Mondays, Weekends, Flexible" /></div>
+
+                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Best Method of Communication</label>
+                    <select name="comm_style" value={formData.comm_style} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200">
+                      <option>Email</option><option>Phone Call</option><option>Text Message / SMS</option><option>Through Nominee</option>
+                    </select>
+                  </div>
+                  <div><label className="block text-sm font-medium text-gray-700 mb-1">Important People in my life</label><input type="text" name="important_people" value={formData.important_people} onChange={handleChange} className="w-full px-3 py-2 rounded-lg border border-gray-200" placeholder="e.g. Mother, Support Coordinator" /></div>
                 </div>
               </div>
             </div>
@@ -411,8 +450,16 @@ const Referral = () => {
             </div>
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Service-Specific Context</label>
-                <p className="text-sm text-gray-500 mb-3">Include specifics relevant to the requested service (e.g., SDA property preferences, existing BSPs, continence sizes).</p>
+                <label className="block text-sm font-bold text-gray-700 mb-2">
+                  <span className="text-[#6A0DAD]">{formData.service_requested}</span> — Clinical / Support Context
+                </label>
+                <p className="text-sm text-gray-500 mb-3">
+                  {formData.service_requested === 'Community Access' ? 'Please include preferred activities, transport readiness, group size tolerance, etc.' : 
+                   formData.service_requested === 'Consumables' ? 'Please specify required products, sizes, quantities, and delivery instructions.' : 
+                   formData.service_requested === 'Specialist Behaviour Support' ? 'Please include details on existing Behaviour Support Plans, restrictive practices, or current incidents.' : 
+                   formData.service_requested === 'Specialist Disability Accommodation' ? 'Please include housing preferences, robust build requirements, and current living situation.' : 
+                   'Include specifics relevant to the requested service.'}
+                </p>
                 <textarea name="clinical_context" rows={3} value={formData.clinical_context} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#6A0DAD] outline-none"></textarea>
               </div>
               <div>
