@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Minus, Globe, AlertTriangle } from 'lucide-react';
+import { Plus, Minus, Globe, AlertTriangle, Bell, Info } from 'lucide-react';
 import { languages, resourceTranslations } from '../data/resourcesData';
 
 const newResourcesTabs = [
@@ -14,7 +14,6 @@ const newResourcesTabs = [
     ]
   },
   { id: 'contact', title: 'Emergency Contact Details', accordions: [] },
-  { id: 'person', title: 'Person-Centred Resources', accordions: [] },
   { id: 'checklist', title: 'Check List', accordions: [] },
   { id: 'training', title: 'Training Materials', accordions: [] },
   { id: 'announcements', title: 'Announcements', accordions: [] },
@@ -149,8 +148,50 @@ const Resources = () => {
           </div>
         )}
 
+        {/* Render Announcements Custom View */}
+        {activeTabId === 'announcements' && (
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
+            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+              <div className="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center shrink-0">
+                <Bell size={24} strokeWidth={2} />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                Updates &amp; Emergency Announcements
+              </h2>
+            </div>
+            
+            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 mb-8 flex flex-col md:flex-row gap-5 items-start">
+              <div className="w-10 h-10 shrink-0 bg-white rounded-full flex items-center justify-center text-amber-600 shadow-sm">
+                <AlertTriangle size={20} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="font-bold text-amber-900 mb-2">Emergency Communication Protocol</h3>
+                <p className="text-amber-800 text-sm leading-relaxed">
+                  In the event of an emergency or natural disaster, this page will be immediately updated with critical information. You will also receive an urgent <strong>SMS text message</strong> and <strong>email notification</strong> outlining the situation and any necessary steps to stay safe.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <Info size={18} className="text-[#6A0DAD]" /> Recent Announcements
+              </h3>
+              
+              <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-gray-900">Welcome to the New Resources Hub</h4>
+                  <span className="text-xs font-bold text-gray-500 bg-gray-200 px-2 py-1 rounded-md">General</span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  We have updated our Resources hub to make it easier for you to find important forms and emergency plans. Check back here for future news and updates from DYAR!
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Render New Resource Tabs */}
-        {activeTabId !== 'rights' && activeNewTab && (
+        {activeTabId !== 'rights' && activeTabId !== 'announcements' && activeNewTab && (
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 border-b border-gray-100 pb-6">
               {activeNewTab.title}
