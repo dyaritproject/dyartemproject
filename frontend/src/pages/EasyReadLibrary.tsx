@@ -1,4 +1,6 @@
-import { BookOpen, Shield, PhoneCall, AlertCircle, Users, Activity, FileText, Download } from 'lucide-react';
+import { useState } from 'react';
+import { BookOpen, Shield, PhoneCall, AlertCircle, Users, Activity, FileText, X, Image as ImageIcon, ChevronRight } from 'lucide-react';
+import easyReadData from '../data/easyReadData.json';
 
 const easyReadDocs = [
   {
@@ -60,6 +62,58 @@ const easyReadDocs = [
 ];
 
 const EasyReadLibrary = () => {
+  const [selectedDoc, setSelectedDoc] = useState<any>(null);
+
+  const openDoc = (docMeta: any) => {
+    // Find the corresponding JSON data
+    const parsedData = easyReadData.find(d => docMeta.file.includes(d.title));
+    if (parsedData) {
+      setSelectedDoc({ ...parsedData, meta: docMeta });
+    }
+  };
+
+  const renderContent = (lines: string[]) => {
+    return lines.map((rawLine, idx) => {
+      // Clean up the 'd' prefix from RTF parsing artifact
+      let line = rawLine;
+      if (line.startsWith('d') || line.startsWith('b')) {
+        line = line.substring(1).trim();
+      }
+      
+      if (!line) return null;
+      if (line.includes('____________________')) return <hr key={idx} className="my-10 border-gray-200" />;
+
+      // Handle Image tags
+      if (line.includes('[IMAGE:') || line.includes('[ICON:') || line.includes('[HEADER-IMAGE:')) {
+        const altText = line.replace(/\[.*?:\s*/, '').replace(']', '');
+        return (
+          <div key={idx} className="my-8 bg-purple-50 rounded-2xl p-8 flex flex-col items-center justify-center border-2 border-purple-100 text-purple-400">
+            <ImageIcon size={48} className="mb-4 opacity-50" />
+            <p className="text-sm font-bold text-center text-purple-600/70 uppercase tracking-widest">{altText}</p>
+          </div>
+        );
+      }
+
+      // Handle Bullet points
+      if (line.startsWith('- ')) {
+        return (
+          <div key={idx} className="flex items-start gap-4 my-4">
+            <div className="w-3 h-3 rounded-full bg-[#6A0DAD] mt-2.5 shrink-0" />
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">{line.substring(2)}</p>
+          </div>
+        );
+      }
+
+      // Handle Headings (lines that are short and don't end in punctuation are usually headings in Easy Read)
+      if (line.length > 0 && line.length < 50 && !line.endsWith('.') && !line.endsWith('?') && !line.includes(':')) {
+        return <h3 key={idx} className="text-2xl md:text-3xl font-extrabold text-gray-900 mt-12 mb-6 tracking-tight">{line}</h3>;
+      }
+
+      // Regular paragraph
+      return <p key={idx} className="text-xl md:text-2xl text-gray-700 leading-relaxed my-6 font-medium">{line}</p>;
+    });
+  };
+
   return (
     <div className="font-sans text-gray-800 bg-gray-50 min-h-screen pb-20">
       
@@ -90,16 +144,52 @@ const EasyReadLibrary = () => {
               <p className="text-gray-600 font-medium mb-8 flex-1 leading-relaxed">{doc.desc}</p>
               
               <button 
-                onClick={() => alert(`Downloading ${doc.file} (In a real environment, this would download the RTF/PDF file)`)}
-                className="w-full py-4 bg-gray-100 hover:bg-[#6A0DAD] text-gray-800 hover:text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2 group"
+                onClick={() => openDoc(doc)}
+                className="w-full py-4 bg-purple-50 hover:bg-[#6A0DAD] text-[#6A0DAD] hover:text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2 group border border-purple-100"
               >
-                <Download size={20} className="group-hover:-translate-y-1 transition-transform" /> 
-                Download Document
+                Read Now
+                <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" /> 
               </button>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Full-Screen Document Viewer Modal */}
+      {selectedDoc && (
+        <div className="fixed inset-0 z-[100] flex flex-col bg-gray-50 animate-in fade-in duration-300">
+          
+          {/* Top Navigation Bar */}
+          <div className="h-20 bg-white border-b border-gray-200 px-6 sm:px-8 flex items-center justify-between shadow-sm shrink-0">
+            <div className="flex items-center gap-4">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${selectedDoc.meta.color.split(' ')[0]}`}>
+                {selectedDoc.meta.icon}
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-gray-900 leading-tight">{selectedDoc.meta.title}</h2>
+                <p className="text-sm font-medium text-gray-500">Easy Read Version</p>
+              </div>
+            </div>
+            
+            <button 
+              onClick={() => setSelectedDoc(null)}
+              className="w-12 h-12 bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-red-500 rounded-full flex items-center justify-center transition-colors"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          {/* Document Content */}
+          <div className="flex-1 overflow-y-auto">
+            <div className="max-w-4xl mx-auto px-4 sm:px-8 py-12 md:py-20">
+              <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-16">
+                {renderContent(selectedDoc.content)}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      )}
       
     </div>
   );
