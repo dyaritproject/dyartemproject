@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BookOpen, Shield, PhoneCall, AlertCircle, Users, Activity, FileText, X, Image as ImageIcon, ChevronRight } from 'lucide-react';
+import { useState, createElement } from 'react';
+import { BookOpen, Shield, PhoneCall, AlertCircle, Users, Activity, FileText, X, ChevronRight, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, AlertTriangle, ShieldCheck } from 'lucide-react';
 import easyReadData from '../data/easyReadData.json';
 
 const easyReadDocs = [
@@ -72,9 +72,27 @@ const EasyReadLibrary = () => {
     }
   };
 
+  const getIconForText = (text: string) => {
+    const lower = text.toLowerCase();
+    if (lower.includes('phone') || lower.includes('call')) return Phone;
+    if (lower.includes('email') || lower.includes('envelope')) return Mail;
+    if (lower.includes('money') || lower.includes('dollar') || lower.includes('$')) return DollarSign;
+    if (lower.includes('calendar') || lower.includes('date') || lower.includes('meeting')) return Calendar;
+    if (lower.includes('map') || lower.includes('location')) return MapPin;
+    if (lower.includes('building') || lower.includes('office')) return Building;
+    if (lower.includes('ear') || lower.includes('listen')) return Ear;
+    if (lower.includes('care') || lower.includes('support') || lower.includes('help')) return HandHeart;
+    if (lower.includes('safe') || lower.includes('protect')) return ShieldCheck;
+    if (lower.includes('alert') || lower.includes('emergency') || lower.includes('danger')) return AlertTriangle;
+    if (lower.includes('form') || lower.includes('paper') || lower.includes('write')) return FileText;
+    if (lower.includes('people') || lower.includes('person') || lower.includes('group') || lower.includes('family')) return Users;
+    if (lower.includes('check') || lower.includes('good') || lower.includes('yes')) return CheckCircle;
+    if (lower.includes('love') || lower.includes('happy')) return Heart;
+    return Info;
+  };
+
   const renderContent = (lines: string[]) => {
     return lines.map((rawLine, idx) => {
-      // Clean up the 'd' prefix from RTF parsing artifact
       let line = rawLine;
       if (line.startsWith('d') || line.startsWith('b')) {
         line = line.substring(1).trim();
@@ -82,14 +100,20 @@ const EasyReadLibrary = () => {
       
       if (!line) return null;
       if (line.includes('____________________')) return <hr key={idx} className="my-10 border-gray-200" />;
+      if (line.includes('DYAR Pty Ltd') || line.includes('An NDIS Service Provider')) return null;
 
       // Handle Image tags
       if (line.includes('[IMAGE:') || line.includes('[ICON:') || line.includes('[HEADER-IMAGE:')) {
         const altText = line.replace(/\[.*?:\s*/, '').replace(']', '');
+        const IconComponent = getIconForText(altText);
+        
         return (
-          <div key={idx} className="my-8 bg-purple-50 rounded-2xl p-8 flex flex-col items-center justify-center border-2 border-purple-100 text-purple-400">
-            <ImageIcon size={48} className="mb-4 opacity-50" />
-            <p className="text-sm font-bold text-center text-purple-600/70 uppercase tracking-widest">{altText}</p>
+          <div key={idx} className="my-10 flex flex-col items-center justify-center">
+            <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center text-[#6A0DAD] shadow-sm mb-4">
+              {createElement(IconComponent, { size: 48, strokeWidth: 1.5 })}
+            </div>
+            {/* Optional: we can hide the text description since the icon is visually conveying it now, or keep it subtle */}
+            {/* <p className="text-sm font-medium text-gray-400 max-w-sm text-center">{altText}</p> */}
           </div>
         );
       }
