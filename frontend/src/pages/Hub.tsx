@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookOpen, ChevronRight, FileText, Download, X, CheckCircle, Globe, ChevronLeft } from 'lucide-react';
+import { BookOpen, ChevronRight, FileText, Download, X, Globe, ChevronLeft, AlertTriangle } from 'lucide-react';
 import { cm1Data, CM1Article } from '../data/cm1Data';
 
 const languages = [
@@ -190,24 +190,30 @@ const Hub = () => {
             {/* Modal Content */}
             <div className="p-6 sm:p-10 overflow-y-auto flex-1 bg-white" dir={languages.find(l => l.code === selectedLang)?.dir}>
               
-              <div className="prose prose-lg prose-purple max-w-none text-gray-700 leading-relaxed mb-10">
-                <p className="text-2xl font-medium text-gray-900 mb-6 leading-relaxed">
-                  {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].content}
-                </p>
-              </div>
-
-              {/* Audit Compliance Box */}
-              <div className="bg-emerald-50 rounded-2xl p-6 md:p-8 border border-emerald-100 relative overflow-hidden" dir="ltr">
-                <div className="absolute -right-4 -bottom-4 opacity-10">
-                  <CheckCircle size={150} className="text-emerald-500" />
+              {/* Easy Read Formatted Content */}
+              <div className="bg-white rounded-2xl p-6 md:p-10 border-2 border-purple-50 shadow-sm max-w-3xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+                  <div className="w-24 h-24 shrink-0 bg-purple-50 rounded-2xl flex items-center justify-center text-[#6A0DAD] shadow-sm">
+                    <FileText size={48} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-extrabold text-gray-900 mb-4">Easy Read Summary</h3>
+                    <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
+                      {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].content}
+                    </p>
+                  </div>
                 </div>
-                <div className="relative z-10">
-                  <h3 className="text-lg font-bold text-emerald-900 mb-3 flex items-center gap-2 uppercase tracking-wide">
-                    <CheckCircle size={20} className="text-emerald-600" /> HDAA Audit Compliance Protocol
-                  </h3>
-                  <p className="text-emerald-800 leading-relaxed text-lg font-medium">
-                    {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].auditText}
-                  </p>
+
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-8 pt-8 border-t border-gray-100">
+                  <div className="w-24 h-24 shrink-0 flex items-center justify-center text-rose-600">
+                    <AlertTriangle size={64} strokeWidth={2} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Please note</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                      This information might discuss sensitive topics. If you feel upset or uncomfortable, please let us know. We will help you understand this information in a different way or provide support.
+                    </p>
+                  </div>
                 </div>
               </div>
               
