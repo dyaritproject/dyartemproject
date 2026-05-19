@@ -303,6 +303,47 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Compliance & Participant Rights Statements */}
+      <section className="py-16 bg-slate-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                <ShieldCheck size={20} className="text-blue-600" />
+              </div>
+              <h5 className="font-bold text-gray-900 text-base mb-2">Independent Advocacy</h5>
+              <p className="text-sm text-gray-600 leading-relaxed">If you require independent support to voice your needs or navigate your plan, you can locate a representative through the Australian Government's Disability Advocacy Finder, or contact National Disability Insurance Scheme Appeals.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center mb-4">
+                <AlertTriangle size={20} className="text-rose-600" />
+              </div>
+              <h5 className="font-bold text-gray-900 text-base mb-2">Direct Complaints</h5>
+              <p className="text-sm text-gray-600 leading-relaxed">You have the right to raise a concern or make a complaint at any time directly to the NDIS Quality and Safeguards Commission by calling <a href="tel:1800035544" className="font-semibold text-[#6A0DAD] hover:underline">1800 035 544</a>, emailing <a href="mailto:enquiries@ndiscommission.gov.au" className="font-semibold text-[#6A0DAD] hover:underline">enquiries@ndiscommission.gov.au</a>, or filling out an online complaint form.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center mb-4">
+                <DollarSign size={20} className="text-emerald-600" />
+              </div>
+              <h5 className="font-bold text-gray-900 text-base mb-2">Pricing &amp; Transparency</h5>
+              <p className="text-sm text-gray-600 leading-relaxed">DYAR Pty Ltd strictly adheres to the NDIS Pricing Arrangements and Price Limits. All services are billed transparently in accordance with the current NDIA support catalogue.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mb-4">
+                <Phone size={20} className="text-purple-600" />
+              </div>
+              <h5 className="font-bold text-gray-900 text-base mb-2">Alternative Communication</h5>
+              <p className="text-sm text-gray-600 leading-relaxed">For translating and interpreting assistance, please contact TIS National on <a href="tel:131450" className="font-semibold text-[#6A0DAD] hover:underline">131 450</a>. If you have a hearing or speech impairment, you can reach us via the National Relay Service (NRS).</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Service Modal Overlay */}
       {selectedServiceId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/40 backdrop-blur-sm" dir={currentDir}>
