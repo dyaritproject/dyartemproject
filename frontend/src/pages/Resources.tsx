@@ -67,10 +67,12 @@ const Resources = () => {
         </div>
       </section>
 
-      {/* Top Tabs Navigation */}
-      <div className="bg-white sticky top-0 z-40 border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto no-scrollbar py-4 gap-3 items-center" dir={currentDir}>
+      {/* Main Layout Area */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24 flex flex-col lg:flex-row gap-8" dir={currentDir}>
+        
+        {/* Sidebar Navigation */}
+        <div className="w-full lg:w-1/3 shrink-0">
+          <div className="sticky top-24 bg-white rounded-3xl border border-gray-100 shadow-sm p-4 flex flex-col gap-2">
             {topTabs.map(tab => (
               <button
                 key={tab.id}
@@ -78,10 +80,10 @@ const Resources = () => {
                   setActiveTabId(tab.id);
                   setExpandedItem(null);
                 }}
-                className={`px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all border-2 ${
+                className={`w-full text-left px-5 py-4 rounded-2xl text-sm font-bold transition-all ${
                   activeTabId === tab.id
-                    ? 'bg-[#6A0DAD] text-white border-[#6A0DAD] shadow-md'
-                    : 'bg-white text-gray-600 border-gray-200 hover:border-purple-300 hover:text-purple-700'
+                    ? 'bg-[#6A0DAD] text-white shadow-md'
+                    : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-700'
                 }`}
               >
                 {tab.title}
@@ -89,10 +91,9 @@ const Resources = () => {
             ))}
           </div>
         </div>
-      </div>
 
-      {/* Main Content Area */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-12" dir={currentDir}>
+        {/* Content Area */}
+        <div className="flex-1">
         
         {/* Render Participant Rights & Resources */}
         {activeTabId === 'rights' && (
@@ -190,6 +191,7 @@ const Resources = () => {
           </div>
         )}
 
+        </div>
       </div>
     </div>
   );
