@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Clock, MessageSquare } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, MessageSquare, ShieldCheck, Globe, Heart } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -81,18 +81,34 @@ const Contact = () => {
 
           {/* Action Cards */}
           <div className="flex flex-col gap-6 justify-center">
-            {/* NDIS Referral Card */}
-            <div className="bg-gradient-to-br from-[#1e1b4b] to-purple-900 rounded-3xl p-10 text-white relative overflow-hidden shadow-xl h-full flex flex-col justify-center">
+            {/* Free Consultation Card */}
+            <div className="bg-gradient-to-br from-[#1e1b4b] to-purple-900 rounded-3xl p-8 lg:p-10 text-white relative overflow-hidden shadow-xl h-full flex flex-col justify-center">
               <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                 <MessageSquare size={120} />
               </div>
-              <h3 className="text-3xl font-bold mb-4 relative z-10">Make an NDIS Referral</h3>
-              <p className="text-purple-200 mb-8 relative z-10 text-lg leading-relaxed">
-                Ready to engage our services? Our secure referral form is the fastest way to get started. It's fully encrypted to protect participant privacy.
+              <h3 className="text-3xl font-bold mb-4 relative z-10">Book a Free 30-Min Consultation</h3>
+              <p className="text-purple-200 mb-6 relative z-10 text-base leading-relaxed">
+                Contacting us has no cost and no obligation to use our services. We are here to listen and help you explore your options safely.
               </p>
-              <div className="mt-auto">
-                <a href="/referral" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-purple-900 bg-white hover:bg-gray-100 transition-all shadow-md active:scale-95 relative z-10 w-full sm:w-auto">
-                  Open Secure Referral Form
+              
+              <ul className="space-y-4 mb-8 relative z-10">
+                <li className="flex items-start text-sm text-purple-100 font-medium">
+                  <ShieldCheck size={18} className="text-emerald-400 mr-3 shrink-0 mt-0.5" /> 
+                  We strictly comply with the NDIS Quality and Safeguards Commission Code of Conduct.
+                </li>
+                <li className="flex items-start text-sm text-purple-100 font-medium">
+                  <Globe size={18} className="text-blue-400 mr-3 shrink-0 mt-0.5" /> 
+                  Free interpreter and translation services can be organised via TIS National.
+                </li>
+                <li className="flex items-start text-sm text-purple-100 font-medium">
+                  <Heart size={18} className="text-rose-400 mr-3 shrink-0 mt-0.5" /> 
+                  We accommodate gender preferences, specific times/days, religious needs, and the LGBTQIA+ community.
+                </li>
+              </ul>
+
+              <div className="mt-auto relative z-10">
+                <a href="mailto:hello@dyar.com.au?subject=Book%20Free%2030-Minute%20Consultation" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-purple-900 bg-white hover:bg-gray-100 transition-all shadow-md active:scale-95 w-full sm:w-auto">
+                  Book Free Consultation
                 </a>
               </div>
             </div>
