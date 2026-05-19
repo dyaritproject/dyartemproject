@@ -1,5 +1,5 @@
 import { useState, createElement } from 'react';
-import { BookOpen, ChevronRight, FileText, Download, X, Globe, ChevronLeft, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users } from 'lucide-react';
+import { BookOpen, ChevronRight, FileText, X, Globe, ChevronLeft, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users } from 'lucide-react';
 import { cm1Data, CM1Article } from '../data/cm1Data';
 import cm1EasyReadData from '../data/cm1EasyReadData.json';
 
@@ -13,13 +13,6 @@ const languages = [
 ];
 
 const Hub = () => {
-  const downloadableForms = [
-    { name: 'Participant Intake Form 2026', size: '1.2 MB', ext: 'PDF' },
-    { name: 'Incident Reporting Template', size: '450 KB', ext: 'DOCX' },
-    { name: 'Service Agreement Guide', size: '2.1 MB', ext: 'PDF' },
-    { name: 'Consent for Information Sharing', size: '1.8 MB', ext: 'PDF' }
-  ];
-
   const [selectedArticle, setSelectedArticle] = useState<CM1Article | null>(null);
   const [selectedLang, setSelectedLang] = useState('en');
 
@@ -173,42 +166,7 @@ const Hub = () => {
           </div>
         </div>
 
-        {/* Documents and Attachments Section */}
-        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Documents & Forms</h2>
-              <p className="text-gray-600 font-medium">Download standard templates, intake forms, and service agreements.</p>
-            </div>
-            <button className="px-6 py-3 bg-purple-50 text-[#6A0DAD] font-bold text-sm rounded-xl hover:bg-purple-100 transition-colors">
-              Request Specific Form
-            </button>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            {downloadableForms.map((doc, idx) => (
-              <div key={idx} className="flex items-center justify-between p-4 rounded-2xl border border-gray-100 hover:border-purple-200 hover:shadow-md transition-all group cursor-pointer bg-slate-50 hover:bg-white">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white border border-gray-100 rounded-xl flex items-center justify-center text-red-500 shadow-sm group-hover:scale-105 transition-transform">
-                    <FileText size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm">{doc.name}</h4>
-                    <p className="text-xs text-gray-500 font-medium mt-0.5">{doc.ext} • {doc.size}</p>
-                  </div>
-                </div>
-                <a 
-                  href="/sample-form.pdf" 
-                  download={`${doc.name}.${doc.ext.toLowerCase()}`}
-                  className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-[#6A0DAD] hover:text-white hover:border-[#6A0DAD] transition-all shadow-sm"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <Download size={18} />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
 
       </div>
 
