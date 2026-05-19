@@ -11,7 +11,7 @@ export const servicesTranslations = {
         title: 'Specialist Behaviour Support (PBS)',
         desc: 'Functional assessments and individualised PBS plans.',
         explanation: 'Our Positive Behaviour Support (PBS) involves comprehensive functional behavioural assessments to understand the reasons behind behaviours of concern. We then develop highly individualised PBS plans focused on improving your quality of life, reducing restrictive practices, and building positive skills.',
-        pricing: 'We charge in strict accordance with the NDIS Pricing Arrangements and Price Limits. Standard Specialist Behaviour Support is billed at $244.10 per hour (Item Number: 11_022_0110_7_3).',
+        pricing: 'We charge in strict accordance with the NDIS Pricing Arrangements and Price Limits. Standard Specialist Behaviour Support is billed at $232.99 per hour (Item Number: 11_022_0110_7_3).',
         faqs: [
           { q: 'Do I need specific funding for PBS?', a: 'Yes, you need Improved Relationships funding in your NDIS plan.' },
           { q: 'How long does an assessment take?', a: 'A standard functional assessment usually takes between 15 to 20 hours, including observation, interviews, and report writing.' }
@@ -40,7 +40,7 @@ export const servicesTranslations = {
         title: 'Psychosocial Recovery Coaching',
         desc: 'Supporting recovery and building resilience.',
         explanation: 'Our Recovery Coaches work collaboratively with participants living with a psychosocial disability. We help you design, plan, and implement a recovery plan, coordinating with your broader mental health support team.',
-        pricing: 'Billed strictly at the NDIS Price Limit, typically $101.42 per hour during standard weekday hours.',
+        pricing: 'Billed strictly at the NDIS Price Limit, typically $105.43 per hour during standard weekday hours.',
         faqs: [
           { q: 'Is this the same as Support Coordination?', a: 'It is similar, but specifically tailored with mental health and recovery expertise.' }
         ]
@@ -58,7 +58,7 @@ export const servicesTranslations = {
         title: 'Core Civic & Social Participation',
         desc: 'Community Access, group activities, and social inclusion.',
         explanation: 'We support you to actively participate in your community. Whether it is joining a local club, attending community events, or participating in group activities, we are here to help you build social networks and have fun.',
-        pricing: 'Billed at standard NDIS Core Support rates (e.g., $67.56/hr for standard weekday support).',
+        pricing: 'Billed at standard NDIS Core Support rates (e.g., $70.23/hr for standard weekday support).',
         faqs: [
           { q: 'Do you provide transport for these activities?', a: 'Yes, our support workers can provide transport. Transport costs are billed per kilometer according to NDIS limits.' }
         ]
@@ -67,7 +67,7 @@ export const servicesTranslations = {
         title: 'Core Support – Assistance with Daily Life',
         desc: 'Practical supports for everyday activities and independence.',
         explanation: 'Our compassionate support workers assist you with your daily personal activities. This includes help with personal hygiene, meal preparation, household tasks, and maintaining your home environment.',
-        pricing: 'Billed at standard NDIS Core Support rates (e.g., $67.56/hr for standard weekday support, with applicable penalty rates for weekends).',
+        pricing: 'Billed at standard NDIS Core Support rates (e.g., $70.23/hr for standard weekday support, with applicable penalty rates for weekends).',
         faqs: [
           { q: 'Can I choose my support worker?', a: 'Yes! We actively match you with support workers based on your preferences and personality.' }
         ]
@@ -95,7 +95,7 @@ export const servicesTranslations = {
         title: 'Help with Behaviour (PBS)',
         desc: 'Help to understand feelings and act in safe ways.',
         explanation: 'We help you understand why you feel angry or upset. We make a plan to help you feel happier and stay safe.',
-        pricing: 'We charge the exact price the NDIS tells us to charge. It usually costs $244.10 for one hour.',
+        pricing: 'We charge the exact price the NDIS tells us to charge. It usually costs $232.99 for one hour.',
         faqs: [
           { q: 'Do I need NDIS funding for this?', a: 'Yes, you need Improved Relationships funding.' },
           { q: 'Does it take a long time?', a: 'Yes, we will spend a lot of time talking with you to understand how you feel.' }
@@ -123,7 +123,7 @@ export const servicesTranslations = {
         title: 'Mental Health Coaching',
         desc: 'Help to feel better and strong in your mind.',
         explanation: 'We help you make a plan to feel better when you are sad or worried. We help you reach your goals.',
-        pricing: 'We charge the exact NDIS price. It usually costs $101.42 for one hour.',
+        pricing: 'We charge the exact NDIS price. It usually costs $105.43 for one hour.',
         faqs: [
           { q: 'Is this like support coordination?', a: 'Yes, but it is special for people with mental health needs.' }
         ]
@@ -141,7 +141,7 @@ export const servicesTranslations = {
         title: 'Going Out in the Community',
         desc: 'Help to go to clubs, events, and have fun.',
         explanation: 'We will go with you to do fun things outside your house. We can go to the shops, a club, or the park.',
-        pricing: 'We charge the exact NDIS price. It usually costs $67.56 for one hour on a weekday.',
+        pricing: 'We charge the exact NDIS price. It usually costs $70.23 for one hour on a weekday.',
         faqs: [
           { q: 'Can you drive me there?', a: 'Yes, we can drive you. There is an extra cost for the driving.' }
         ]
@@ -150,7 +150,7 @@ export const servicesTranslations = {
         title: 'Help at Home',
         desc: 'Help with cooking, cleaning, and personal care.',
         explanation: 'We come to your house to help you. We can help you cook food, clean the house, or take a shower.',
-        pricing: 'We charge the exact NDIS price. It usually costs $67.56 for one hour on a weekday.',
+        pricing: 'We charge the exact NDIS price. It usually costs $70.23 for one hour on a weekday.',
         faqs: [
           { q: 'Can I choose who comes to my house?', a: 'Yes! You can pick a worker that you like.' }
         ]
@@ -178,7 +178,7 @@ export const servicesTranslations = {
         title: 'دعم السلوك المتخصص (PBS)',
         desc: 'تقييمات وظيفية وخطط دعم سلوكي فردية.',
         explanation: 'يتضمن دعم السلوك الإيجابي لدينا تقييمات شاملة لفهم أسباب السلوكيات. نقوم بتطوير خطط فردية لتحسين نوعية حياتك.',
-        pricing: 'نفرض رسوماً وفقاً لحدود أسعار NDIS. تكلفة دعم السلوك المتخصص القياسي هي 244.10 دولار في الساعة.',
+        pricing: 'نفرض رسوماً وفقاً لحدود أسعار NDIS. تكلفة دعم السلوك المتخصص القياسي هي 232.99 دولار في الساعة.',
         faqs: [
           { q: 'هل أحتاج إلى تمويل محدد لـ PBS؟', a: 'نعم، تحتاج إلى تمويل تحسين العلاقات في خطة NDIS الخاصة بك.' },
           { q: 'كم يستغرق التقييم؟', a: 'يستغرق التقييم القياسي عادةً من 15 إلى 20 ساعة.' }
@@ -206,7 +206,7 @@ export const servicesTranslations = {
         title: 'تدريب التعافي النفسي والاجتماعي',
         desc: 'دعم التعافي وبناء المرونة.',
         explanation: 'يعمل مدربو التعافي لدينا معك لتصميم وتخطيط وتنفيذ خطة تعافي.',
-        pricing: 'يتم فوترته وفقاً للحد الأقصى لسعر NDIS، عادةً 101.42 دولار في الساعة.',
+        pricing: 'يتم فوترته وفقاً للحد الأقصى لسعر NDIS، عادةً 105.43 دولار في الساعة.',
         faqs: [
           { q: 'هل هذا نفس تنسيق الدعم؟', a: 'إنه مشابه، ولكنه مصمم خصيصاً للخبرة في مجال الصحة العقلية.' }
         ]
@@ -224,7 +224,7 @@ export const servicesTranslations = {
         title: 'المشاركة المدنية والاجتماعية',
         desc: 'الوصول إلى المجتمع والأنشطة الجماعية.',
         explanation: 'نحن ندعمك للمشاركة بنشاط في مجتمعك وبناء شبكات اجتماعية.',
-        pricing: 'يتم فوترته بمعدلات الدعم الأساسي القياسية لـ NDIS (مثلاً 67.56 دولار في الساعة).',
+        pricing: 'يتم فوترته بمعدلات الدعم الأساسي القياسية لـ NDIS (مثلاً 70.23 دولار في الساعة).',
         faqs: [
           { q: 'هل توفرون النقل لهذه الأنشطة؟', a: 'نعم، يمكن لعمال الدعم لدينا توفير وسائل النقل.' }
         ]
@@ -261,7 +261,7 @@ export const servicesTranslations = {
         title: 'پشتیبانی رفتاری تخصصی (PBS)',
         desc: 'ارزیابی‌های عملکردی و برنامه‌های حمایتی فردی.',
         explanation: 'این خدمات شامل ارزیابی‌های رفتاری برای درک دلایل رفتارهاست. ما برنامه‌های فردی برای بهبود کیفیت زندگی شما تهیه می‌کنیم.',
-        pricing: 'ما دقیقاً مطابق با محدودیت‌های قیمت NDIS هزینه دریافت می‌کنیم (حدود 244.10 دلار در ساعت).',
+        pricing: 'ما دقیقاً مطابق با محدودیت‌های قیمت NDIS هزینه دریافت می‌کنیم (حدود 232.99 دلار در ساعت).',
         faqs: [
           { q: 'آیا برای این کار به بودجه خاصی نیاز دارم؟', a: 'بله، به بودجه بهبود روابط نیاز دارید.' },
           { q: 'ارزیابی چقدر طول می‌کشد؟', a: 'یک ارزیابی استاندارد معمولاً بین 15 تا 20 ساعت طول می‌کشد.' }
@@ -289,7 +289,7 @@ export const servicesTranslations = {
         title: 'مربیگری بازیابی روانی-اجتماعی',
         desc: 'حمایت از بهبودی و ایجاد تاب‌آوری.',
         explanation: 'مربیان ما به شما در طراحی و اجرای یک برنامه بازیابی بهداشت روان کمک می‌کنند.',
-        pricing: 'هزینه طبق محدودیت NDIS، معمولاً 101.42 دلار در ساعت است.',
+        pricing: 'هزینه طبق محدودیت NDIS، معمولاً 105.43 دلار در ساعت است.',
         faqs: [
           { q: 'آیا این همان هماهنگی پشتیبانی است؟', a: 'مشابه است، اما مخصوص نیازهای بهداشت روان طراحی شده است.' }
         ]
@@ -307,7 +307,7 @@ export const servicesTranslations = {
         title: 'مشارکت مدنی و اجتماعی',
         desc: 'دسترسی به جامعه و فعالیت‌های گروهی.',
         explanation: 'ما از شما حمایت می‌کنیم تا در جامعه خود به طور فعال شرکت کنید.',
-        pricing: 'بر اساس نرخ‌های استاندارد پشتیبانی اصلی NDIS (مثلاً 67.56 دلار در ساعت).',
+        pricing: 'بر اساس نرخ‌های استاندارد پشتیبانی اصلی NDIS (مثلاً 70.23 دلار در ساعت).',
         faqs: [
           { q: 'آیا برای این فعالیت‌ها حمل و نقل ارائه می‌دهید؟', a: 'بله، کارکنان ما می‌توانند حمل و نقل را فراهم کنند.' }
         ]
@@ -340,12 +340,12 @@ export const servicesTranslations = {
     priceLabel: "定价结构",
     faqLabel: "常见问题",
     services: {
-      pbs: { title: '专家行为支持 (PBS)', desc: '功能评估和个性化 PBS 计划。', explanation: '我们的积极行为支持涉及行为评估以了解行为背后的原因。', pricing: '我们严格按照 NDIS 定价收费（标准费用为 $244.10/小时）。', faqs: [{q: '这需要特定资金吗？', a: '是的，您需要关系改善资金。'}] },
+      pbs: { title: '专家行为支持 (PBS)', desc: '功能评估和个性化 PBS 计划。', explanation: '我们的积极行为支持涉及行为评估以了解行为背后的原因。', pricing: '我们严格按照 NDIS 定价收费（标准费用为 $232.99/小时）。', faqs: [{q: '这需要特定资金吗？', a: '是的，您需要关系改善资金。'}] },
       sda: { title: '专家残疾人住宿 (SDA)', desc: '将参与者与合适的住房解决方案联系起来。', explanation: '我们协助参与者获得高度专业的住房。', pricing: '定价取决于住房类型，不高于 NDIS 基准率。', faqs: [{q: '谁有资格？', a: '具有极高支持需求的参与者。'}] },
       therapeutic: { title: '治疗支持', desc: '健康评估和循证干预。', explanation: '我们的治疗师提供治疗以帮助您获得技能。', pricing: '按照 NDIS 标准收费（$193.99/小时）。', faqs: [{q: '在哪里进行？', a: '在您家中、社区或我们的诊所。'}] },
-      recovery: { title: '心理社会康复辅导', desc: '支持康复。', explanation: '我们的康复教练帮助您设计和实施心理健康康复计划。', pricing: '按照 NDIS 限额收费（$101.42/小时）。', faqs: [{q: '这与支持协调相同吗？', a: '类似，但专长于心理健康。'}] },
+      recovery: { title: '心理社会康复辅导', desc: '支持康复。', explanation: '我们的康复教练帮助您设计和实施心理健康康复计划。', pricing: '按照 NDIS 限额收费（$105.43/小时）。', faqs: [{q: '这与支持协调相同吗？', a: '类似，但专长于心理健康。'}] },
       early: { title: '幼儿支持', desc: '对 9 岁以下儿童的早期干预。', explanation: '我们为发育迟缓的儿童提供早期干预支持。', pricing: '按照 NDIS 费率收费（$193.99/小时）。', faqs: [{q: '父母需要在这吗？', a: '是的，我们侧重于指导父母。'}] },
-      civic: { title: '社区参与', desc: '社区活动和小组活动。', explanation: '我们支持您积极参与社区活动。', pricing: '按照 NDIS 核心支持费率（$67.56/小时）。', faqs: [{q: '提供交通吗？', a: '是的，我们可以提供交通服务。'}] },
+      civic: { title: '社区参与', desc: '社区活动和小组活动。', explanation: '我们支持您积极参与社区活动。', pricing: '按照 NDIS 核心支持费率（$70.23/小时）。', faqs: [{q: '提供交通吗？', a: '是的，我们可以提供交通服务。'}] },
       core: { title: '核心支持 - 日常生活协助', desc: '日常活动的实际支持。', explanation: '我们的工作人员协助您完成日常个人活动。', pricing: '按照 NDIS 核心支持费率。', faqs: [{q: '我可以选择工作人员吗？', a: '可以，您可以根据偏好选择。'}] },
       transport: { title: '消耗品和交通', desc: '旅行协助。', explanation: '我们提供专业的交通协助。', pricing: '交通费为每公里 $1.00 加上工作人员的时间。', faqs: [{q: '我需要特定资金吗？', a: '通常需要，也可以使用核心资金。'}] }
     }
@@ -358,12 +358,12 @@ export const servicesTranslations = {
     priceLabel: "मूल्य निर्धारण",
     faqLabel: "अक्सर पूछे जाने वाले प्रश्न",
     services: {
-      pbs: { title: 'विशेषज्ञ व्यवहार समर्थन (PBS)', desc: 'कार्यात्मक मूल्यांकन और PBS योजनाएं।', explanation: 'हम व्यवहार को समझने के लिए मूल्यांकन करते हैं।', pricing: 'NDIS सीमा के अनुसार ($244.10/घंटा)।', faqs: [{q: 'क्या इसके लिए विशिष्ट धन की आवश्यकता है?', a: 'हां, बेहतर संबंध धन।'}] },
+      pbs: { title: 'विशेषज्ञ व्यवहार समर्थन (PBS)', desc: 'कार्यात्मक मूल्यांकन और PBS योजनाएं।', explanation: 'हम व्यवहार को समझने के लिए मूल्यांकन करते हैं।', pricing: 'NDIS सीमा के अनुसार ($232.99/घंटा)।', faqs: [{q: 'क्या इसके लिए विशिष्ट धन की आवश्यकता है?', a: 'हां, बेहतर संबंध धन।'}] },
       sda: { title: 'विशेषज्ञ विकलांगता आवास (SDA)', desc: 'आवास समाधान।', explanation: 'हम आवास खोजने में सहायता करते हैं।', pricing: 'NDIS बेंचमार्क के अनुसार।', faqs: [{q: 'कौन योग्य है?', a: 'अत्यधिक समर्थन आवश्यकता वाले।'}] },
       therapeutic: { title: 'चिकित्सीय सहायता', desc: 'स्वास्थ्य मूल्यांकन और हस्तक्षेप।', explanation: 'हम कौशल प्राप्त करने में मदद करने के लिए चिकित्सा प्रदान करते हैं।', pricing: 'NDIS मानक ($193.99/घंटा)।', faqs: [{q: 'कहाँ?', a: 'घर या क्लिनिक में।'}] },
-      recovery: { title: 'रिकवरी कोचिंग', desc: 'मानसिक स्वास्थ्य रिकवरी।', explanation: 'हम आपकी मानसिक स्वास्थ्य रिकवरी योजना में मदद करते हैं।', pricing: 'NDIS सीमा ($101.42/घंटा)।', faqs: [{q: 'क्या यह समन्वय के समान है?', a: 'समान, लेकिन मानसिक स्वास्थ्य पर केंद्रित है।'}] },
+      recovery: { title: 'रिकवरी कोचिंग', desc: 'मानसिक स्वास्थ्य रिकवरी।', explanation: 'हम आपकी मानसिक स्वास्थ्य रिकवरी योजना में मदद करते हैं।', pricing: 'NDIS सीमा ($105.43/घंटा)।', faqs: [{q: 'क्या यह समन्वय के समान है?', a: 'समान, लेकिन मानसिक स्वास्थ्य पर केंद्रित है।'}] },
       early: { title: 'बचपन का समर्थन', desc: '9 वर्ष से कम उम्र के बच्चों के लिए।', explanation: 'बच्चों के लिए प्रारंभिक हस्तक्षेप।', pricing: 'NDIS दर ($193.99/घंटा)।', faqs: [{q: 'क्या माता-पिता की आवश्यकता है?', a: 'हां।'}] },
-      civic: { title: 'सामुदायिक भागीदारी', desc: 'सामुदायिक पहुँच और गतिविधियाँ।', explanation: 'हम समुदाय में भाग लेने में मदद करते हैं।', pricing: 'NDIS दर ($67.56/घंटा)।', faqs: [{q: 'क्या परिवहन प्रदान किया जाता है?', a: 'हां।'}] },
+      civic: { title: 'सामुदायिक भागीदारी', desc: 'सामुदायिक पहुँच और गतिविधियाँ।', explanation: 'हम समुदाय में भाग लेने में मदद करते हैं।', pricing: 'NDIS दर ($70.23/घंटा)।', faqs: [{q: 'क्या परिवहन प्रदान किया जाता है?', a: 'हां।'}] },
       core: { title: 'मुख्य समर्थन', desc: 'दैनिक जीवन में सहायता।', explanation: 'दैनिक व्यक्तिगत गतिविधियों में सहायता।', pricing: 'NDIS दर।', faqs: [{q: 'क्या मैं अपना कार्यकर्ता चुन सकता हूँ?', a: 'हां।'}] },
       transport: { title: 'परिवहन', desc: 'यात्रा सहायता।', explanation: 'परिवहन सहायता प्रदान की जाती है।', pricing: '$1.00 प्रति किलोमीटर।', faqs: [{q: 'धन की आवश्यकता है?', a: 'हां।'}] }
     }
@@ -376,12 +376,12 @@ export const servicesTranslations = {
     priceLabel: "Cấu trúc giá",
     faqLabel: "Câu hỏi thường gặp",
     services: {
-      pbs: { title: 'Hỗ trợ Hành vi Chuyên gia (PBS)', desc: 'Đánh giá chức năng.', explanation: 'Chúng tôi đánh giá và lập kế hoạch hỗ trợ hành vi cá nhân.', pricing: 'Tính phí theo NDIS ($244.10/giờ).', faqs: [{q: 'Cần quỹ riêng?', a: 'Có.'}] },
+      pbs: { title: 'Hỗ trợ Hành vi Chuyên gia (PBS)', desc: 'Đánh giá chức năng.', explanation: 'Chúng tôi đánh giá và lập kế hoạch hỗ trợ hành vi cá nhân.', pricing: 'Tính phí theo NDIS ($232.99/giờ).', faqs: [{q: 'Cần quỹ riêng?', a: 'Có.'}] },
       sda: { title: 'Chỗ ở Đặc biệt (SDA)', desc: 'Giải pháp nhà ở.', explanation: 'Hỗ trợ tìm nhà ở chuyên biệt.', pricing: 'Theo tiêu chuẩn NDIS.', faqs: [{q: 'Ai đủ điều kiện?', a: 'Người có nhu cầu cao.'}] },
       therapeutic: { title: 'Hỗ trợ Trị liệu', desc: 'Can thiệp y tế.', explanation: 'Các nhà trị liệu giúp bạn đạt được kỹ năng.', pricing: 'Tính phí theo NDIS ($193.99/giờ).', faqs: [{q: 'Ở đâu?', a: 'Tại nhà hoặc phòng khám.'}] },
-      recovery: { title: 'Huấn luyện Phục hồi', desc: 'Phục hồi sức khỏe tâm thần.', explanation: 'Hỗ trợ kế hoạch phục hồi sức khỏe tâm thần.', pricing: 'Tính phí theo NDIS ($101.42/giờ).', faqs: [{q: 'Giống điều phối?', a: 'Tương tự nhưng chuyên về tâm thần.'}] },
+      recovery: { title: 'Huấn luyện Phục hồi', desc: 'Phục hồi sức khỏe tâm thần.', explanation: 'Hỗ trợ kế hoạch phục hồi sức khỏe tâm thần.', pricing: 'Tính phí theo NDIS ($105.43/giờ).', faqs: [{q: 'Giống điều phối?', a: 'Tương tự nhưng chuyên về tâm thần.'}] },
       early: { title: 'Hỗ trợ Trẻ em', desc: 'Dành cho trẻ dưới 9 tuổi.', explanation: 'Can thiệp sớm cho trẻ em.', pricing: 'Tính phí theo NDIS ($193.99/giờ).', faqs: [{q: 'Cần cha mẹ?', a: 'Có.'}] },
-      civic: { title: 'Tham gia Cộng đồng', desc: 'Hoạt động nhóm.', explanation: 'Hỗ trợ tham gia hoạt động cộng đồng.', pricing: 'Tính phí theo NDIS ($67.56/giờ).', faqs: [{q: 'Có xe buýt không?', a: 'Có.'}] },
+      civic: { title: 'Tham gia Cộng đồng', desc: 'Hoạt động nhóm.', explanation: 'Hỗ trợ tham gia hoạt động cộng đồng.', pricing: 'Tính phí theo NDIS ($70.23/giờ).', faqs: [{q: 'Có xe buýt không?', a: 'Có.'}] },
       core: { title: 'Hỗ trợ Cốt lõi', desc: 'Hỗ trợ hàng ngày.', explanation: 'Giúp đỡ vệ sinh và việc nhà.', pricing: 'Tính phí theo NDIS.', faqs: [{q: 'Có thể chọn người?', a: 'Có.'}] },
       transport: { title: 'Giao thông', desc: 'Hỗ trợ đi lại.', explanation: 'Hỗ trợ đi lại an toàn.', pricing: '$1.00 mỗi kilomet.', faqs: [{q: 'Cần quỹ?', a: 'Có.'}] }
     }
