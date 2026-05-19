@@ -1,25 +1,21 @@
 import { useState, useEffect } from 'react';
-import { Type, Sun, RotateCcw, Accessibility } from 'lucide-react';
+import { Type, Sun, RotateCcw, Accessibility, Link as LinkIcon, ImageOff, AlignLeft } from 'lucide-react';
 
 const AccessibilityToolbar = () => {
   const [open, setOpen] = useState(false);
   const [fontSize, setFontSize] = useState(100);
   const [highContrast, setHighContrast] = useState(false);
   const [dyslexiaFont, setDyslexiaFont] = useState(false);
+  const [highlightLinks, setHighlightLinks] = useState(false);
+  const [letterSpacing, setLetterSpacing] = useState(false);
+  const [hideImages, setHideImages] = useState(false);
 
   useEffect(() => {
     document.documentElement.style.fontSize = `${fontSize}%`;
   }, [fontSize]);
 
   useEffect(() => {
-    if (highContrast) {
-      document.body.classList.add('high-contrast');
-    } else {
-      document.body.classList.remove('high-contrast');
-    }
-  }, [highContrast]);
-
-  useEffect(() => {
+    document.body.classList.toggle('dyslexia-font', dyslexiaFont);
     if (dyslexiaFont) {
       document.body.style.fontFamily = "'OpenDyslexic', 'Comic Sans MS', cursive";
     } else {
@@ -27,22 +23,42 @@ const AccessibilityToolbar = () => {
     }
   }, [dyslexiaFont]);
 
+  useEffect(() => {
+    document.body.classList.toggle('highlight-links', highlightLinks);
+  }, [highlightLinks]);
+
+  useEffect(() => {
+    document.body.classList.toggle('letter-spacing-enabled', letterSpacing);
+  }, [letterSpacing]);
+
+  useEffect(() => {
+    document.body.classList.toggle('hide-images', hideImages);
+  }, [hideImages]);
+
   const reset = () => {
     setFontSize(100);
     setHighContrast(false);
     setDyslexiaFont(false);
+    setHighlightLinks(false);
+    setLetterSpacing(false);
+    setHideImages(false);
   };
 
   return (
     <>
+      {highContrast && (
+        <div className="fixed inset-0 pointer-events-none z-[99999]" style={{ backdropFilter: 'invert(1) hue-rotate(180deg) contrast(1.2)', WebkitBackdropFilter: 'invert(1) hue-rotate(180deg) contrast(1.2)' }}></div>
+      )}
+      
       <style>{`
-        .high-contrast { filter: contrast(1.5) brightness(1.1); }
-        .high-contrast a, .high-contrast button { outline: 2px solid #FFD700 !important; }
+        .highlight-links a, .highlight-links button { outline: 3px solid #FFD700 !important; outline-offset: 2px !important; text-decoration: underline !important; }
+        .letter-spacing-enabled * { letter-spacing: 0.1em !important; word-spacing: 0.2em !important; line-height: 1.8 !important; }
+        .hide-images img, .hide-images svg, .hide-images [style*="background-image"] { opacity: 0 !important; visibility: hidden !important; }
       `}</style>
 
       <div className="relative flex items-center">
         {open && (
-          <div className="absolute right-0 top-12 bg-white rounded-2xl shadow-xl border border-gray-100 p-4 w-52 animate-in fade-in slide-in-from-top-2 duration-200 z-[200]">
+          <div className="absolute right-0 top-12 bg-white rounded-2xl shadow-xl border border-gray-100 p-4 w-56 animate-in fade-in slide-in-from-top-2 duration-200 z-[200] max-h-[80vh] overflow-y-auto no-scrollbar">
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Accessibility</p>
 
             {/* Font Size */}
@@ -66,19 +82,46 @@ const AccessibilityToolbar = () => {
             {/* High Contrast */}
             <button
               onClick={() => setHighContrast(h => !h)}
-              className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all mb-2 ${highContrast ? 'bg-[#6A0DAD] text-white' : 'bg-gray-100 text-gray-700 hover:bg-purple-50'}`}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all mb-2 ${highContrast ? 'bg-[#6A0DAD] text-white shadow-md' : 'bg-gray-50 text-gray-700 hover:bg-purple-50'}`}
               aria-pressed={highContrast}
             >
-              <Sun size={14} /> High Contrast
+              <Sun size={16} /> High Contrast
+            </button>
+
+            {/* Highlight Links */}
+            <button
+              onClick={() => setHighlightLinks(h => !h)}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all mb-2 ${highlightLinks ? 'bg-[#6A0DAD] text-white shadow-md' : 'bg-gray-50 text-gray-700 hover:bg-purple-50'}`}
+              aria-pressed={highlightLinks}
+            >
+              <LinkIcon size={16} /> Highlight Links
+            </button>
+
+            {/* Letter Spacing */}
+            <button
+              onClick={() => setLetterSpacing(l => !l)}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all mb-2 ${letterSpacing ? 'bg-[#6A0DAD] text-white shadow-md' : 'bg-gray-50 text-gray-700 hover:bg-purple-50'}`}
+              aria-pressed={letterSpacing}
+            >
+              <AlignLeft size={16} /> Text Spacing
+            </button>
+
+            {/* Hide Images */}
+            <button
+              onClick={() => setHideImages(h => !h)}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all mb-2 ${hideImages ? 'bg-[#6A0DAD] text-white shadow-md' : 'bg-gray-50 text-gray-700 hover:bg-purple-50'}`}
+              aria-pressed={hideImages}
+            >
+              <ImageOff size={16} /> Hide Images
             </button>
 
             {/* Dyslexia Font */}
             <button
               onClick={() => setDyslexiaFont(d => !d)}
-              className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all mb-3 ${dyslexiaFont ? 'bg-[#6A0DAD] text-white' : 'bg-gray-100 text-gray-700 hover:bg-purple-50'}`}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all mb-4 ${dyslexiaFont ? 'bg-[#6A0DAD] text-white shadow-md' : 'bg-gray-50 text-gray-700 hover:bg-purple-50'}`}
               aria-pressed={dyslexiaFont}
             >
-              <Type size={14} /> Dyslexia Font
+              <Type size={16} /> Dyslexia Font
             </button>
 
             {/* Reset */}
