@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import WorkWithUs from './pages/WorkWithUs';
+import EasyReadLibrary from './pages/EasyReadLibrary';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
                   <Route path="/services" element={<Services />} />
                   <Route path="/hub" element={<Hub />} />
                   <Route path="/resources" element={<Resources />} />
+                  <Route path="/resources/easy-read" element={<EasyReadLibrary />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/referral" element={<Referral />} />
                   <Route path="/support" element={<Support />} />
