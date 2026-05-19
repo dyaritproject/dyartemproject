@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Clock, MessageSquare, ShieldCheck, Globe, Heart } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, MessageSquare, ShieldCheck, Globe, Heart, Users, DollarSign, Ear } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -86,7 +86,7 @@ const Contact = () => {
               <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                 <MessageSquare size={120} />
               </div>
-              <h3 className="text-3xl font-bold mb-4 relative z-10">Book a Free 30-Min Consultation</h3>
+              <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Book a Free 30-Min Consultation</h3>
               <p className="text-purple-200 mb-6 relative z-10 text-base leading-relaxed">
                 Contacting us has no cost and no obligation to use our services. We are here to listen and help you explore your options safely.
               </p>
@@ -169,10 +169,71 @@ const Contact = () => {
               Provide Feedback
             </a>
           </div>
-          </div>
-
         </div>
       </div>
+
+      {/* Participant Rights & Compliance Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">Participant Rights &amp; Compliance</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              We are committed to empowering you. Read about your rights, how to get an independent advocate, and our commitment to transparency.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-5 items-start">
+              <div className="w-12 h-12 rounded-xl bg-purple-50 text-[#6A0DAD] flex items-center justify-center shrink-0">
+                <Users size={24} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Independent Advocacy</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  If you require independent support to voice your needs or navigate your plan, you can locate a representative through the Australian Government's Disability Advocacy Finder, or contact National Disability Insurance Scheme Appeals.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+                <ShieldCheck size={24} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Direct Complaints</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  You have the right to raise a concern or make a complaint at any time directly to the NDIS Quality and Safeguards Commission by calling 1800 035 544, emailing <a href="mailto:enquiries@ndiscommission.gov.au" className="text-purple-600 hover:underline">enquiries@ndiscommission.gov.au</a>, or filling out an online complaint form.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                <DollarSign size={24} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Pricing &amp; Transparency</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  DYAR Pty Ltd strictly adheres to the NDIS Pricing Arrangements and Price Limits. All services are billed transparently in accordance with the current NDIA support catalogue.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Ear size={24} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Alternative Communication</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  For translating and interpreting assistance, please contact TIS National on 131 450. If you have a hearing or speech impairment, you can reach us via the National Relay Service (NRS).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
