@@ -30,6 +30,7 @@ const Navbar = () => {
             <Link to="/services" className={isActive('/services')}>Services</Link>
             <Link to="/hub" className={isActive('/hub')}>Knowledge Hub</Link>
             <Link to="/resources" className={isActive('/resources')}>Resources</Link>
+            <Link to="/announcements" className={isActive('/announcements')}>Announcements</Link>
             <Link to="/resources/easy-read" className={isActive('/resources/easy-read')}>Easy Read</Link>
             <Link to="/work-with-us" className={isActive('/work-with-us')}>Work with us</Link>
             <Link to="/contact" className={isActive('/contact')}>Contact</Link>
@@ -63,6 +64,7 @@ const Navbar = () => {
             <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/services')}`}>Services</Link>
             <Link to="/hub" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/hub')}`}>Knowledge Hub</Link>
             <Link to="/resources" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-2 rounded-lg text-base font-medium ${isActive('/resources')}`}>Resources</Link>
+            <Link to="/announcements" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-2 rounded-lg text-base font-medium ${isActive('/announcements')}`}>Announcements</Link>
             <Link to="/resources/easy-read" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-2 rounded-lg text-base font-medium ${isActive('/resources/easy-read')}`}>Easy Read</Link>
             <Link to="/work-with-us" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/work-with-us')}`}>Work with us</Link>
             <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/contact')}`}>Contact</Link>
