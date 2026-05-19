@@ -1,4 +1,4 @@
-import { Heart, Shield, Users, Activity, Target, BookOpen, Handshake, MapPin, Mail, Phone } from 'lucide-react';
+import { Heart, Shield, Users, Activity, Target, BookOpen, Handshake, MapPin, Mail, Phone, AlertTriangle } from 'lucide-react';
 
 const values = [
   {
@@ -147,14 +147,22 @@ const About = () => {
             </p>
           </div>
 
-          {/* Acknowledgement of Country */}
-          <div className="bg-[#1e1b4b] rounded-3xl p-10 border border-gray-800 text-white">
-            <h2 className="text-2xl font-bold text-purple-300 mb-6 flex items-center gap-3">
-              <MapPin className="text-purple-400" /> Acknowledgement of Country
+          {/* Conflict of Interest Declaration */}
+          <div className="bg-orange-50 rounded-3xl p-10 border border-orange-200 shadow-sm mt-8">
+            <h2 className="text-2xl font-bold text-orange-900 mb-6 flex items-center gap-3">
+              <AlertTriangle className="text-orange-600" size={28} /> Conflict of Interest Declaration
             </h2>
-            <p className="text-gray-300 leading-relaxed text-lg">
-              DYAR acknowledges the Whadjuk Noongar people as the Traditional Custodians of the land on which we work and live, and pays respect to their Elders past, present, and emerging. We recognise Aboriginal and Torres Strait Islander peoples' continuing connection to land, water, and community.
-            </p>
+            <div className="text-orange-900 leading-relaxed text-lg space-y-4">
+              <p>
+                <strong>Transparency Notice:</strong> Mehdi Dabire is the Founder and Director of DYAR Pty Ltd, and also serves as the Director of <strong>Dot Humanity</strong>.
+              </p>
+              <p>
+                To maintain the highest ethical standards and comply strictly with the NDIS Code of Conduct, a firm separation is enforced between the two entities. <strong>DYAR and Dot Humanity do not cross-refer participants to one another under any circumstances.</strong>
+              </p>
+              <p>
+                This policy ensures that all participants receive independent, unbiased support recommendations free from any conflict of interest.
+              </p>
+            </div>
           </div>
         </div>
 
