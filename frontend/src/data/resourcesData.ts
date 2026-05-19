@@ -49,16 +49,47 @@ export const resourceTranslations = {
         id: 'feedback',
         title: "Feedback & Complaints Process",
         content: `
-          <h4 class="font-bold text-gray-900 mb-2">Your Voice Matters</h4>
-          <p class="mb-4">We want to know if you are unhappy with our services, or if you have an idea on how we can do better. Making a complaint will never result in you losing your services or being treated poorly.</p>
-          <h4 class="font-bold text-gray-900 mb-2">How to Complain</h4>
-          <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li><strong>Tell our staff:</strong> You can tell any support worker or manager that you wish to make a complaint.</li>
-            <li><strong>Email us:</strong> complaints@dyar.com.au</li>
-            <li><strong>Call us:</strong> 0470 540 306</li>
+          <h4 class="font-bold text-gray-900 mb-2">Internal Feedback to DYAR</h4>
+          <p class="mb-6 text-gray-700">We want to know if you are unhappy with our services. You can tell any support worker, email <a href="mailto:complaints@dyar.com.au" class="text-purple-600 hover:underline">complaints@dyar.com.au</a>, or call 0470 540 306. Making a complaint will never result in you losing your services.</p>
+
+          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 mb-6">
+            <p class="mb-4 text-gray-800 font-medium">To lodge a direct, external complaint, you must direct it to the correct agency, as the NDIS Commission and the NDIA handle entirely different issues.</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1 text-sm text-gray-700">
+              <li>The <strong>NDIS Commission</strong> handles complaints regarding the safety, quality, and conduct of NDIS providers or workers.</li>
+              <li>The <strong>NDIA</strong> handles complaints regarding NDIS plans, funding, decisions, or the conduct of NDIA staff.</li>
+            </ul>
+          </div>
+
+          <h4 class="font-bold text-gray-900 mb-3">🏛️ Complaints to the NDIS Quality and Safeguards Commission</h4>
+          <p class="mb-3 text-sm text-gray-600">Contact the NDIS Commission if you are experiencing poor-quality, unsafe, or missing supports, or if a provider/worker is acting unfairly.</p>
+          <ul class="list-disc pl-5 mb-8 space-y-2 text-sm text-gray-700">
+            <li><strong>Online Form:</strong> Submit a complaint using the NDIS Commission Complaint Form.</li>
+            <li><strong>Phone:</strong> Call <strong>1800 035 544</strong> (free call from landlines).</li>
+            <li><strong>Hours:</strong> Monday to Friday. 7:30 am – 3:30 pm in WA; 9:00 am – 5:00 pm in all other states/territories.</li>
+            <li><strong>Email:</strong> Contact them directly via <a href="mailto:contactcentre@ndiscommission.gov.au" class="text-purple-600 hover:underline">contactcentre@ndiscommission.gov.au</a>.</li>
+            <li><strong>TTY / Relay:</strong> Call 133 677 or ask the National Relay Service for 1800 035 544.</li>
+            <li><strong>Mail:</strong> Send a letter to PO Box 210, Penrith NSW 2751.</li>
           </ul>
-          <p class="mb-4">We will listen to you, investigate the issue fairly, and tell you what we are going to do to fix it within a reasonable timeframe.</p>
-          <p>If you are not happy with how we handled your complaint, you can contact the <strong>NDIS Commission</strong> on 1800 035 544.</p>
+
+          <h4 class="font-bold text-gray-900 mb-3">📄 Complaints to the National Disability Insurance Agency (NDIA)</h4>
+          <p class="mb-3 text-sm text-gray-600">Contact the NDIA if you are unhappy with an internal funding decision, local area coordinators (LACs), or your experience with NDIA systems.</p>
+          <ul class="list-disc pl-5 mb-8 space-y-2 text-sm text-gray-700">
+            <li><strong>Online Form:</strong> Fill out the NDIA Feedback and Complaints Form.</li>
+            <li><strong>Phone:</strong> Call the NDIS National Contact Centre on <strong>1800 800 110</strong>.</li>
+            <li><strong>Hours:</strong> Monday to Friday, 8:00 am to 8:00 pm (local time).</li>
+            <li><strong>Email:</strong> Send your feedback directly to <a href="mailto:enquiries@ndis.gov.au" class="text-purple-600 hover:underline">enquiries@ndis.gov.au</a>.</li>
+            <li><strong>In Person:</strong> Visit your local NDIS office, Local Area Coordinator (LAC), or Early Childhood partner.</li>
+            <li><strong>Mail:</strong> Send a letter to NDIA, GPO Box 700, Canberra ACT 2601.</li>
+          </ul>
+
+          <h4 class="font-bold text-rose-600 mb-3">🚨 NDIS Fraud, Scams, and Emergencies</h4>
+          <ul class="list-disc pl-5 mb-8 space-y-2 text-sm text-gray-700">
+            <li><strong>Fraud & Overcharging:</strong> If you suspect a provider is overcharging or misusing NDIS plan money, call the NDIS Fraud Reporting and Scams Helpline on <strong>1800 650 717</strong> or email <a href="mailto:fraudreporting@ndis.gov.au" class="text-purple-600 hover:underline">fraudreporting@ndis.gov.au</a>.</li>
+            <li><strong>Emergencies:</strong> If an individual is in immediate danger or a crime has been committed, call emergency services on <strong>000</strong> immediately.</li>
+          </ul>
+
+          <h4 class="font-bold text-gray-900 mb-3">⚖️ Escalating Your Complaint</h4>
+          <p class="text-sm text-gray-700">If you have already lodged a complaint with either the NDIA or the NDIS Commission and are unhappy with how it was handled, you can escalate the matter to the Commonwealth Ombudsman by calling <strong>1300 362 072</strong>. Always ask for a complaint reference number from the NDIS/NDIA before contacting the Ombudsman.</p>
         `
       },
       {
