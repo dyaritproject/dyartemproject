@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Type, Sun, RotateCcw, ChevronUp, Accessibility } from 'lucide-react';
+import { Type, Sun, RotateCcw, Accessibility } from 'lucide-react';
 
 const AccessibilityToolbar = () => {
   const [open, setOpen] = useState(false);

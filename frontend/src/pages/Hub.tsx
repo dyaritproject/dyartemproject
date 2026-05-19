@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookOpen, Calendar, ChevronRight, FileText, Download, PlayCircle, X, CheckCircle, Globe, ChevronLeft } from 'lucide-react';
+import { BookOpen, ChevronRight, FileText, Download, X, CheckCircle, Globe, ChevronLeft } from 'lucide-react';
 import { cm1Data, CM1Article } from '../data/cm1Data';
 
 const languages = [
@@ -12,6 +12,13 @@ const languages = [
 ];
 
 const Hub = () => {
+  const downloadableForms = [
+    { name: 'Participant Intake Form 2026', size: '1.2 MB', ext: 'PDF' },
+    { name: 'Incident Reporting Template', size: '450 KB', ext: 'DOCX' },
+    { name: 'Service Agreement Guide', size: '2.1 MB', ext: 'PDF' },
+    { name: 'Consent for Information Sharing', size: '1.8 MB', ext: 'PDF' }
+  ];
+
   const [selectedArticle, setSelectedArticle] = useState<CM1Article | null>(null);
   const [selectedLang, setSelectedLang] = useState('en');
   const [currentPage, setCurrentPage] = useState(1);
