@@ -388,5 +388,79 @@ export const cm1Data: CM1Article[] = [
         auditText: 'Cuộc kiểm toán của chúng tôi chứng minh một hệ thống quản lý khiếu nại mạnh mẽ và dễ tiếp cận. Người tham gia được thông báo về quyền của họ trong việc báo cáo các vấn đề lên Ủy ban Chất lượng và An toàn NDIS.'
       }
     }
+  },
+  {
+    id: 'cm1-11',
+    category: 'Code of Conduct & Safety',
+    color: 'from-rose-500 to-red-600',
+    translations: {
+      en: {
+        title: '11. NDIS Code of Conduct',
+        content: 'All our workers must follow the NDIS Code of Conduct. This means acting with respect, providing safe supports, and never exploiting or harming you.',
+        auditText: 'DYAR enforces strict adherence to the NDIS Code of Conduct. All staff are trained and bound by these ethical and professional standards.'
+      },
+      zh: {
+        title: '11. NDIS 行为准则',
+        content: '我们所有的工作人员都必须遵守 NDIS 行为准则。这意味着要以尊重的态度行事，提供安全的支持，并且绝不剥削或伤害您。',
+        auditText: 'DYAR enforces strict adherence to the NDIS Code of Conduct. All staff are trained and bound by these ethical and professional standards.'
+      },
+      ar: {
+        title: '11. مدونة قواعد السلوك الخاصة بـ NDIS',
+        content: 'يجب على جميع عاملينا اتباع مدونة قواعد السلوك الخاصة بـ NDIS. هذا يعني التصرف باحترام، وتقديم الدعم الآمن، وعدم استغلالك أو إيذائك أبدًا.',
+        auditText: 'DYAR enforces strict adherence to the NDIS Code of Conduct. All staff are trained and bound by these ethical and professional standards.'
+      },
+      hi: {
+        title: '11. NDIS आचार संहिता',
+        content: 'हमारे सभी कार्यकर्ताओं को NDIS आचार संहिता का पालन करना चाहिए। इसका मतलब है सम्मान के साथ काम करना, सुरक्षित सहायता प्रदान करना, और कभी भी आपका शोषण या नुकसान नहीं पहुंचाना।',
+        auditText: 'DYAR enforces strict adherence to the NDIS Code of Conduct. All staff are trained and bound by these ethical and professional standards.'
+      },
+      fa: {
+        title: '۱۱. آیین‌نامه رفتار NDIS',
+        content: 'همه کارکنان ما باید از آیین‌نامه رفتار NDIS پیروی کنند. این به معنای رفتار با احترام، ارائه حمایت‌های ایمن و هرگز استثمار یا آسیب نرساندن به شما است.',
+        auditText: 'DYAR enforces strict adherence to the NDIS Code of Conduct. All staff are trained and bound by these ethical and professional standards.'
+      },
+      vi: {
+        title: '11. Quy tắc Ứng xử NDIS',
+        content: 'Tất cả nhân viên của chúng tôi phải tuân theo Quy tắc Ứng xử NDIS. Điều này có nghĩa là hành động với sự tôn trọng, cung cấp các hỗ trợ an toàn và không bao giờ bóc lột hoặc làm hại bạn.',
+        auditText: 'DYAR enforces strict adherence to the NDIS Code of Conduct. All staff are trained and bound by these ethical and professional standards.'
+      }
+    }
+  },
+  {
+    id: 'cm1-12',
+    category: 'Code of Conduct & Safety',
+    color: 'from-orange-500 to-amber-600',
+    translations: {
+      en: {
+        title: '12. Reportable Incidents',
+        content: 'If something serious or dangerous happens, we must report it to the NDIS Commission to keep you safe and investigate properly.',
+        auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
+      },
+      zh: {
+        title: '12. 须报告的事件',
+        content: '如果发生严重或危险的情况，我们必须向 NDIS 委员会报告，以确保您的安全并进行适当调查。',
+        auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
+      },
+      ar: {
+        title: '12. الحوادث الواجب الإبلاغ عنها',
+        content: 'إذا حدث شيء خطير أو خطير، يجب علينا إبلاغ لجنة NDIS للحفاظ على سلامتك والتحقيق فيه بشكل صحيح.',
+        auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
+      },
+      hi: {
+        title: '12. रिपोर्ट करने योग्य घटनाएँ',
+        content: 'यदि कुछ गंभीर या खतरनाक होता है, तो हमें आपको सुरक्षित रखने और ठीक से जांच करने के लिए NDIS आयोग को इसकी रिपोर्ट करनी होगी।',
+        auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
+      },
+      fa: {
+        title: '۱۲. حوادث قابل گزارش',
+        content: 'اگر اتفاق جدی یا خطرناکی رخ دهد، ما باید آن را به کمیسیون NDIS گزارش دهیم تا شما را ایمن نگه داریم و به درستی بررسی کنیم.',
+        auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
+      },
+      vi: {
+        title: '12. Các Sự cố Cần Báo cáo',
+        content: 'Nếu có điều gì đó nghiêm trọng hoặc nguy hiểm xảy ra, chúng tôi phải báo cáo cho Ủy ban NDIS để giữ an toàn cho bạn và điều tra kỹ lưỡng.',
+        auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
+      }
+    }
   }
 ];

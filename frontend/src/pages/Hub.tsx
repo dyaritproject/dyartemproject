@@ -40,8 +40,7 @@ const Hub = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         {/* Articles Grid / Pagination View */}
         <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">NDIS Core Module 1 (CM1): Rights &amp; Responsibilities</h2>
+          <div className="flex items-center justify-end mb-8">
             <div className="text-sm font-bold text-[#6A0DAD]">Page {currentPage} of {totalPages}</div>
           </div>
 
