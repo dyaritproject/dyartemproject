@@ -30,6 +30,7 @@ const Navbar = () => {
             <Link to="/services" className={isActive('/services')}>Services</Link>
             <Link to="/hub" className={isActive('/hub')}>Knowledge Hub</Link>
             <Link to="/resources" className={isActive('/resources')}>Resources</Link>
+            <Link to="/work-with-us" className={isActive('/work-with-us')}>Work with us</Link>
             <Link to="/contact" className={isActive('/contact')}>Contact</Link>
             <div className="ml-2 flex items-center">
               <AccessibilityToolbar />
@@ -61,6 +62,7 @@ const Navbar = () => {
             <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/services')}`}>Services</Link>
             <Link to="/hub" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/hub')}`}>Knowledge Hub</Link>
             <Link to="/resources" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/resources')}`}>Resources</Link>
+            <Link to="/work-with-us" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/work-with-us')}`}>Work with us</Link>
             <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/contact')}`}>Contact</Link>
             <div className="pt-4 px-3">
               <Link to="/referral" onClick={() => setIsMobileMenuOpen(false)} className="w-full flex items-center justify-center px-6 py-3 text-base font-bold rounded-xl text-white bg-purple-600 shadow-md">

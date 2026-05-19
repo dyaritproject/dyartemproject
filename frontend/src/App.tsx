@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import WorkWithUs from './pages/WorkWithUs';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/referral" element={<Referral />} />
                   <Route path="/support" element={<Support />} />
+                  <Route path="/work-with-us" element={<WorkWithUs />} />
                 </Routes>
               </main>
               <Footer />
