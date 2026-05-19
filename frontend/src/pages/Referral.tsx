@@ -97,7 +97,8 @@ const Referral = () => {
     pref_language: 'English',
     interpreter: 'No',
     consent_aware: false,
-    consent_share: false
+    consent_share: false,
+    consent_contact: false
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -177,6 +178,7 @@ const Referral = () => {
 - Interpreter Required: ${formData.interpreter} (Language: ${formData.pref_language})
 - Participant Aware: ${formData.consent_aware ? 'YES' : 'NO'}
 - Consent to Share Info: ${formData.consent_share ? 'YES' : 'NO'}
+- Consent to Contact & Send Service Agreement: ${formData.consent_contact ? 'YES' : 'NO'}
     `.trim();
   };
 
@@ -538,6 +540,13 @@ const Referral = () => {
                 <input type="checkbox" name="consent_share" checked={formData.consent_share} onChange={handleChange} className="w-6 h-6 mt-0.5 rounded text-emerald-600 focus:ring-emerald-500" />
                 <span className="text-base font-medium text-emerald-900">
                   Consent is granted to share clinical information with DYAR for the purpose of intake assessment.
+                </span>
+              </label>
+
+              <label className="flex items-start gap-4 cursor-pointer p-2 hover:bg-emerald-100/50 rounded-lg transition-colors">
+                <input type="checkbox" name="consent_contact" checked={formData.consent_contact} onChange={handleChange} className="w-6 h-6 mt-0.5 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span className="text-base font-medium text-emerald-900">
+                  Consent is granted to contact the participant (or nominee) and send the Service Agreement and Consent forms.
                 </span>
               </label>
             </div>
