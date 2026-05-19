@@ -1,14 +1,7 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Activity, Users, ShieldCheck, Plus, CheckCircle, Phone, Mail, AlertTriangle } from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle, Phone, Mail, AlertTriangle } from 'lucide-react';
 
 const Home = () => {
-  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
-
-  const handleFlip = (index: number) => {
-    setFlippedIndex(flippedIndex === index ? null : index);
-  };
-
   const services = [
     { name: 'Specialist Behaviour Support (PBS)', desc: 'Functional assessments and individualised PBS plans.' },
     { name: 'Specialist Disability Accommodation (SDA)', desc: 'Connecting participants to appropriate housing solutions.' },
@@ -81,103 +74,6 @@ const Home = () => {
               <p className="text-sm text-gray-500 italic">
                 Please note: Participation is entirely voluntary. Any feedback provided directly to HDAA remains strictly confidential and will have absolutely no impact on the continuity, funding, or quality of your supports with DYAR.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Expertise Flip Cards */}
-      <section className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 transition-all duration-700 ${flippedIndex !== null ? 'blur-[2px] opacity-30 pointer-events-none' : ''}`}>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-              Our Core <span className="text-[#6A0DAD]">Expertise</span>.
-            </h2>
-            <p className="text-slate-900 max-w-3xl mx-auto text-lg leading-relaxed font-bold">
-              Specialised services designed around your unique needs and goals.
-              We provide the clinical expertise and coordination required to safely manage your NDIS plan.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto relative items-start" style={{ perspective: '1000px' }}>
-            {/* Community Access Flip Card */}
-            <div
-              className={`relative transition-all duration-500 h-[480px] w-full cursor-pointer ${flippedIndex === 0 ? 'z-50' : 'z-10'} ${flippedIndex === 1 ? 'blur-[1px] opacity-40 pointer-events-none' : ''}`}
-              style={{ transformStyle: 'preserve-3d', transform: flippedIndex === 0 ? 'rotateY(180deg)' : 'none' }}
-              onClick={() => handleFlip(0)}
-            >
-              <div className="absolute inset-0 bg-white p-8 md:p-10 shadow-sm border border-gray-100 hover:border-purple-200 transition-all duration-500 flex flex-col items-center text-center justify-center rounded-3xl" style={{ backfaceVisibility: 'hidden' }}>
-                <div className="absolute top-6 right-6">
-                  <span className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold border shadow-sm tracking-wide bg-[#F0FDF4] text-[#166534] border-[#DCFCE7]">Core Support</span>
-                </div>
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-emerald-50 text-emerald-600 shadow-inner">
-                  <Users size={32} />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 px-4 leading-tight">Core Civic &amp; Social Participation</h3>
-                <p className="text-sm text-slate-800 font-bold leading-relaxed max-w-xs mb-8">
-                  Meaningful community access, group activities, and social inclusion supports.
-                </p>
-                <button className="w-full py-4 bg-[#6A0DAD] text-white font-bold text-sm rounded-xl hover:bg-purple-800 transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3">
-                  <span>View Features</span><Plus size={16} />
-                </button>
-              </div>
-              <div className="absolute inset-0 bg-white p-8 md:p-10 shadow-xl border border-purple-100 transition-all duration-500 flex flex-col items-center text-center rounded-3xl overflow-y-auto" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Meaningful Community Engagement.</h3>
-                <div className="text-sm text-slate-900 leading-relaxed font-bold mb-8 flex-grow">
-                  We support participants to actively engage in their community, build social networks, and participate in recreational or civic activities that align with their personal goals.
-                </div>
-                <ul className="text-left w-full space-y-3 mb-8">
-                  {['Supported Group Activities', '1:1 Community Access', 'Social Skill Building', 'Recreational Outings'].map((item, i) => (
-                    <li key={i} className="flex items-start text-sm font-medium text-gray-700">
-                      <CheckCircle size={16} className="text-emerald-500 mt-0.5 mr-2 shrink-0" /> {item}
-                    </li>
-                  ))}
-                </ul>
-                <button className="mt-auto min-h-[44px] w-full py-3 flex items-center justify-center text-[12px] font-bold text-purple-700 hover:text-white hover:bg-purple-600 rounded-xl border border-purple-200 transition-all"
-                  onClick={(e) => { e.stopPropagation(); handleFlip(0); }}>
-                  Acknowledge &amp; close
-                </button>
-              </div>
-            </div>
-
-            {/* PBS Flip Card */}
-            <div
-              className={`relative transition-all duration-500 h-[480px] w-full cursor-pointer ${flippedIndex === 1 ? 'z-50' : 'z-10'} ${flippedIndex === 0 ? 'blur-[1px] opacity-40 pointer-events-none' : ''}`}
-              style={{ transformStyle: 'preserve-3d', transform: flippedIndex === 1 ? 'rotateY(180deg)' : 'none' }}
-              onClick={() => handleFlip(1)}
-            >
-              <div className="absolute inset-0 bg-white p-8 md:p-10 shadow-sm border border-gray-100 hover:border-purple-200 transition-all duration-500 flex flex-col items-center text-center justify-center rounded-3xl" style={{ backfaceVisibility: 'hidden' }}>
-                <div className="absolute top-6 right-6">
-                  <span className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold border shadow-sm tracking-wide bg-[#F3E8FF] text-[#6B21A8] border-[#E9D5FF]">Clinical Service</span>
-                </div>
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-purple-50 text-purple-600 shadow-inner">
-                  <Activity size={32} />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 px-4 leading-tight">Positive Behaviour Support</h3>
-                <p className="text-sm text-slate-800 font-bold leading-relaxed max-w-xs mb-8">
-                  Evidence-based strategies to improve quality of life and decrease behaviours of concern.
-                </p>
-                <button className="w-full py-4 bg-[#6A0DAD] text-white font-bold text-sm rounded-xl hover:bg-purple-800 transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3">
-                  <span>View Features</span><Plus size={16} />
-                </button>
-              </div>
-              <div className="absolute inset-0 bg-white p-8 md:p-10 shadow-xl border border-purple-100 transition-all duration-500 flex flex-col items-center text-center rounded-3xl overflow-y-auto" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Functional Assessment &amp; Planning.</h3>
-                <div className="text-sm text-slate-900 leading-relaxed font-bold mb-8 flex-grow">
-                  Our practitioners use evidence-based frameworks to understand why challenging behaviours occur. We focus on proactive strategies that create supportive environments tailored entirely to the individual.
-                </div>
-                <ul className="text-left w-full space-y-3 mb-8">
-                  {['Functional Behaviour Assessments', 'Individualised PBS Plans', 'Restrictive Practice Reduction', 'Stakeholder Training'].map((item, i) => (
-                    <li key={i} className="flex items-start text-sm font-medium text-gray-700">
-                      <CheckCircle size={16} className="text-purple-500 mt-0.5 mr-2 shrink-0" /> {item}
-                    </li>
-                  ))}
-                </ul>
-                <button className="mt-auto min-h-[44px] w-full py-3 flex items-center justify-center text-[12px] font-bold text-purple-700 hover:text-white hover:bg-purple-600 rounded-xl border border-purple-200 transition-all"
-                  onClick={(e) => { e.stopPropagation(); handleFlip(1); }}>
-                  Acknowledge &amp; close
-                </button>
-              </div>
             </div>
           </div>
         </div>
