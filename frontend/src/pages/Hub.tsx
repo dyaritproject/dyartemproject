@@ -255,11 +255,13 @@ const Hub = () => {
               
               {(() => {
                 const richData = cm1EasyReadData.find(d => {
-                  const enTitle = selectedArticle.translations.en.title;
-                  // Handle partial matches for titles
-                  if (enTitle.includes('Reportable Incidents') && d.title.includes('Reportable Incidents')) return true;
-                  if (enTitle.includes('Code of Conduct') && d.title.includes('Code of Conduct')) return true;
-                  return d.title.includes(enTitle);
+                  const enTitle = selectedArticle.translations.en.title.replace(/^[0-9.]+\s*/, '').toLowerCase().trim();
+                  const dTitle = d.title.replace(/^[0-9—\s]+/, '').toLowerCase().trim();
+                  
+                  if (enTitle.includes('reportable incidents') && dTitle.includes('reportable incidents')) return true;
+                  if (enTitle.includes('code of conduct') && dTitle.includes('code of conduct')) return true;
+                  
+                  return dTitle === enTitle || dTitle.includes(enTitle);
                 });
 
                 if (richData && selectedLang === 'en') {
