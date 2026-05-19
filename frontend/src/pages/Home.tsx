@@ -217,6 +217,7 @@ const Home = () => {
       {/* How to Access Our Services */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight" dir={currentDir}>
               {t.title} <span className="text-[#6A0DAD]">{t.titleHL}</span>
@@ -248,26 +249,59 @@ const Home = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s1Title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{t.s1Desc}</p>
               <div className={`hidden md:block absolute top-8 ${currentDir === 'rtl' ? 'right-[60%]' : 'left-[60%]'} w-[80%] border-t-2 border-dashed border-purple-200 -z-10`}></div>
+=======
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">How to Access Our <span className="text-[#6A0DAD]">Services</span></h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              We make it simple and stress-free to start your journey with us.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div className="relative text-center">
+              <div className="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">1</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Free Consultation</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Reach out for a free, no-obligation chat to discuss your needs and how we can support your NDIS goals.</p>
+              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-purple-200 -z-10"></div>
+>>>>>>> 20d01c0caf1d93b732cf11134d598f550defc699
             </div>
             {/* Step 2 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">2</div>
+<<<<<<< HEAD
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s2Title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{t.s2Desc}</p>
               <div className={`hidden md:block absolute top-8 ${currentDir === 'rtl' ? 'right-[60%]' : 'left-[60%]'} w-[80%] border-t-2 border-dashed border-blue-200 -z-10`}></div>
+=======
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Intake & Planning</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">We work together to create a personalized service agreement and support plan tailored entirely to you.</p>
+              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-blue-200 -z-10"></div>
+>>>>>>> 20d01c0caf1d93b732cf11134d598f550defc699
             </div>
             {/* Step 3 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">3</div>
+<<<<<<< HEAD
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s3Title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{t.s3Desc}</p>
               <div className={`hidden md:block absolute top-8 ${currentDir === 'rtl' ? 'right-[60%]' : 'left-[60%]'} w-[80%] border-t-2 border-dashed border-emerald-200 -z-10`}></div>
+=======
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Service Delivery</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Our qualified practitioners begin delivering high-quality, compassionate, and evidence-based supports.</p>
+              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-emerald-200 -z-10"></div>
+>>>>>>> 20d01c0caf1d93b732cf11134d598f550defc699
             </div>
             {/* Step 4 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">4</div>
+<<<<<<< HEAD
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s4Title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{t.s4Desc}</p>
+=======
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Feedback & Review</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">We regularly check in to ensure you are happy. We value your feedback as a gift to continuously improve.</p>
+>>>>>>> 20d01c0caf1d93b732cf11134d598f550defc699
             </div>
           </div>
         </div>
