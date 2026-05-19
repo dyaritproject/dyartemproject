@@ -52,6 +52,33 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Participant Rights & Compliance Statements */}
+        <div className="border-t border-white/10 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-400 text-xs leading-relaxed mb-4">
+            
+            <div>
+              <h5 className="font-bold text-gray-300 text-sm mb-2">Independent Advocacy</h5>
+              <p>If you require independent support to voice your needs or navigate your plan, you can locate a representative through the Australian Government's Disability Advocacy Finder, or contact National Disability Insurance Scheme Appeals.</p>
+            </div>
+
+            <div>
+              <h5 className="font-bold text-gray-300 text-sm mb-2">Direct Complaints</h5>
+              <p>You have the right to raise a concern or make a complaint at any time directly to the NDIS Quality and Safeguards Commission by calling 1800 035 544 or filling out an online complaint form.</p>
+            </div>
+
+            <div>
+              <h5 className="font-bold text-gray-300 text-sm mb-2">Pricing &amp; Transparency</h5>
+              <p>DYAR Pty Ltd strictly adheres to the NDIS Pricing Arrangements and Price Limits. All services are billed transparently in accordance with the current NDIA support catalogue.</p>
+            </div>
+
+            <div>
+              <h5 className="font-bold text-gray-300 text-sm mb-2">Alternative Communication Access</h5>
+              <p>For translating and interpreting assistance, please contact TIS National on 131 450. If you have a hearing or speech impairment, you can reach us via the National Relay Service (NRS).</p>
+            </div>
+
+          </div>
+        </div>
+
         {/* Acknowledgement of Country */}
         <div className="border-t border-white/10 py-8">
           <div className="bg-white/5 rounded-2xl px-6 py-5 mb-6">
