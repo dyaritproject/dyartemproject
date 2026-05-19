@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const isActive = (path: string) => {
-    return location.pathname === path ? "text-purple-700 font-bold" : "text-gray-600 hover:text-purple-600 font-medium";
+    return location.pathname === path ? "text-sm whitespace-nowrap text-purple-700 font-bold" : "text-sm whitespace-nowrap text-gray-600 hover:text-purple-600 font-medium";
   };
 
   return (
@@ -24,7 +24,7 @@ const Navbar = () => {
 
           
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
             <Link to="/" className={isActive('/')}>Home</Link>
             <Link to="/about" className={isActive('/about')}>About</Link>
             <Link to="/services" className={isActive('/services')}>Services</Link>
@@ -37,13 +37,13 @@ const Navbar = () => {
             <div className="ml-2 flex items-center">
               <AccessibilityToolbar />
             </div>
-            <Link to="/referral" className="ml-2 inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
+            <Link to="/referral" className="ml-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 text-sm font-bold rounded-xl text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-all active:scale-95">
               Make a Referral
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2">
             <AccessibilityToolbar />
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -57,7 +57,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 animate-fade-in">
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 animate-fade-in">
           <div className="px-4 pt-2 pb-6 space-y-1">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/')}`}>Home</Link>
             <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base ${isActive('/about')}`}>About</Link>
