@@ -26,7 +26,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '1. Person-Centred Supports',
-        content: 'Each participant accesses supports that promote, uphold and respect their legal and human rights and is enabled to exercise informed choice and control.',
+        content: 'We will always put you first and make sure you have the choice and control over the services you receive.',
         auditText: 'DYAR ensures that all support plans are developed in collaboration with the participant. Our audit history demonstrates a strict adherence to individualised planning.'
       },
       zh: {
@@ -63,7 +63,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '2. Individual Values and Beliefs',
-        content: 'Each participant accesses supports that respect their culture, diversity, values and beliefs.',
+        content: 'We respect your culture, religion, and beliefs, and we will make sure our services reflect what is important to you.',
         auditText: 'All DYAR staff undergo mandatory cultural competency training. Assessments explicitly record and incorporate the cultural and religious preferences of participants.'
       },
       zh: {
@@ -100,7 +100,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '3. Privacy and Dignity',
-        content: 'Each participant accesses supports that respect and protect their dignity and right to privacy.',
+        content: 'We will always protect your privacy, keep your information safe, and treat you with dignity and respect.',
         auditText: 'DYAR utilizes secure AWS databases for all client records. Staff adhere to strict confidentiality agreements, and consent is documented prior to any information sharing.'
       },
       zh: {
@@ -137,7 +137,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '4. Independence and Informed Choice',
-        content: 'Each participant is supported to make informed choices, exercise control and maximise their independence relating to the supports provided.',
+        content: 'We will help you make your own choices about your care and support you to be as independent as possible.',
         auditText: 'Participants are provided with accessible information (including easy-read formats and interpreters) to ensure decisions about their care are fully informed.'
       },
       zh: {
@@ -174,7 +174,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '5. Freedom from Violence, Abuse, Neglect and Exploitation',
-        content: 'Each participant accesses supports free from violence, abuse, neglect, exploitation or discrimination.',
+        content: 'We will keep you safe. We have a zero-tolerance policy for any kind of violence, abuse, neglect, or exploitation.',
         auditText: 'DYAR maintains a zero-tolerance policy. Incident management systems are audited regularly, and all staff are rigorously screened via NDIS Worker Screening Checks.'
       },
       zh: {
@@ -211,7 +211,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '6. Freedom of Expression',
-        content: 'Each participant’s right to freely express their views and to be heard is respected.',
+        content: 'We will listen to you. You have the right to share your thoughts, and we will always take your views seriously.',
         auditText: 'DYAR provides multiple avenues for participant expression, including feedback forms, clinical reviews, and anonymous surveys, ensuring all voices are integrated into service design.'
       },
       zh: {
@@ -248,7 +248,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '7. Supported Decision Making',
-        content: 'Participants are supported to make decisions and be involved in decisions that affect them.',
+        content: 'We will help you make decisions that affect your life. If you need support from an advocate or family member, we will include them.',
         auditText: 'Our clinical practices emphasize supported decision-making frameworks, where guardians or advocates are involved only with the participant’s explicit consent.'
       },
       zh: {
@@ -285,7 +285,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '8. Risk Management and Dignity of Risk',
-        content: 'Participants are supported to understand risks and make informed decisions, embracing the dignity of risk.',
+        content: 'We will help you try new things safely. We respect your right to take reasonable risks to live the life you want.',
         auditText: 'Comprehensive risk assessments are conducted, but we fundamentally respect the participant’s right to make choices that involve reasonable risk, as per NDIS Practice Standards.'
       },
       zh: {
@@ -322,7 +322,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '9. Cultural Safety and Inclusion',
-        content: 'Services are delivered in a way that provides cultural safety for Aboriginal and Torres Strait Islander participants and participants from culturally and linguistically diverse (CALD) backgrounds.',
+        content: 'We provide a safe and welcoming space for Aboriginal and Torres Strait Islander people and people from all cultural backgrounds.',
         auditText: 'DYAR actively implements our Reconciliation Action Plan and tailored language supports to guarantee culturally safe service delivery environments.'
       },
       zh: {
@@ -359,7 +359,7 @@ export const cm1Data: CM1Article[] = [
     translations: {
       en: {
         title: '10. Transparent Feedback and Complaints',
-        content: 'Participants have the right to provide feedback and make complaints without fear of adverse consequences, and to have these matters resolved fairly and promptly.',
+        content: 'If you are unhappy, please tell us. We welcome your feedback and complaints so we can fix the problem and do better.',
         auditText: 'Our audit demonstrates a robust, accessible complaints management system. Participants are informed of their right to escalate matters to the NDIS Quality and Safeguards Commission.'
       },
       zh: {

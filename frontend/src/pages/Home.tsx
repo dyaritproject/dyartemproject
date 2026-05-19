@@ -8,7 +8,6 @@ const Home = () => {
     { name: 'Therapeutic Supports', desc: 'Allied health assessments and evidence-based interventions.' },
     { name: 'Psychosocial Recovery Coaching', desc: 'Supporting recovery and building resilience.' },
     { name: 'Early Childhood Supports', desc: 'Early intervention for children under 9 with developmental needs.' },
-    { name: 'High Intensity Daily Personal Activities', desc: 'Complex personal care delivered by trained practitioners.' },
     { name: 'Core Civic & Social Participation', desc: 'Community Access, group activities, and social inclusion.' },
     { name: 'Core Support – Assistance with Daily Life', desc: 'Practical supports for everyday activities and independence.' },
     { name: 'Consumables & Transport', desc: 'Essential consumable supports and travel assistance.' },
@@ -103,6 +102,48 @@ const Home = () => {
             <Link to="/referral" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-[#6A0DAD] hover:bg-purple-800 shadow-lg transition-all active:scale-95">
               Contact Our Team <ArrowRight size={20} className="ml-2" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Access Our Services */}
+      <section className="py-24 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">How to Access Our <span className="text-[#6A0DAD]">Services</span></h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              We make it simple and stress-free to start your journey with us.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div className="relative text-center">
+              <div className="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">1</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Free Consultation</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Reach out for a free, no-obligation chat to discuss your needs and how we can support your NDIS goals.</p>
+              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-purple-200 -z-10"></div>
+            </div>
+            {/* Step 2 */}
+            <div className="relative text-center">
+              <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">2</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Intake & Planning</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">We work together to create a personalized service agreement and support plan tailored entirely to you.</p>
+              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-blue-200 -z-10"></div>
+            </div>
+            {/* Step 3 */}
+            <div className="relative text-center">
+              <div className="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">3</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Service Delivery</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Our qualified practitioners begin delivering high-quality, compassionate, and evidence-based supports.</p>
+              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-emerald-200 -z-10"></div>
+            </div>
+            {/* Step 4 */}
+            <div className="relative text-center">
+              <div className="w-16 h-16 mx-auto bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">4</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Feedback & Review</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">We regularly check in to ensure you are happy. We value your feedback as a gift to continuously improve.</p>
+            </div>
           </div>
         </div>
       </section>
