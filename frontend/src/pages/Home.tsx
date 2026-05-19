@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, CheckCircle, Phone, Mail, AlertTriangle, Globe } from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle, Phone, Mail, AlertTriangle, Globe, X, DollarSign, HelpCircle, Info } from 'lucide-react';
+import { servicesTranslations } from '../data/servicesData';
 
 const stepTranslations = {
   en: {
@@ -108,18 +109,22 @@ const languages = [
 
 const Home = () => {
   const [selectedLang, setSelectedLang] = useState('en');
-  const t = stepTranslations[selectedLang as keyof typeof stepTranslations];
-  const currentDir = languages.find(l => l.code === selectedLang)?.dir || 'ltr';
-  const services = [
-    { name: 'Specialist Behaviour Support (PBS)', desc: 'Functional assessments and individualised PBS plans.' },
-    { name: 'Specialist Disability Accommodation (SDA)', desc: 'Connecting participants to appropriate housing solutions.' },
-    { name: 'Therapeutic Supports', desc: 'Allied health assessments and evidence-based interventions.' },
-    { name: 'Psychosocial Recovery Coaching', desc: 'Supporting recovery and building resilience.' },
-    { name: 'Early Childhood Supports', desc: 'Early intervention for children under 9 with developmental needs.' },
-    { name: 'Core Civic & Social Participation', desc: 'Community Access, group activities, and social inclusion.' },
-    { name: 'Core Support – Assistance with Daily Life', desc: 'Practical supports for everyday activities and independence.' },
-    { name: 'Consumables & Transport', desc: 'Essential consumable supports and travel assistance.' },
-  ];
+  const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
+
+  const stepT = stepTranslations[selectedLang as keyof typeof stepTranslations] || stepTranslations.en;
+  const serviceT = servicesTranslations[selectedLang as keyof typeof servicesTranslations] || servicesTranslations.en;
+  const currentDir = ['ar', 'fa'].includes(selectedLang) ? 'rtl' : 'ltr';
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (selectedServiceId) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedServiceId]);
+
 
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen">
@@ -195,15 +200,22 @@ const Home = () => {
               DYAR delivers a comprehensive suite of professional supports tailored to your unique NDIS plan.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-purple-200 hover:shadow-md transition-all">
-                <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                  <CheckCircle size={16} className="text-purple-600" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" dir={currentDir}>
+            {Object.entries(serviceT.services).map(([id, service]) => (
+              <button 
+                key={id} 
+                onClick={() => setSelectedServiceId(id)}
+                className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-purple-300 hover:shadow-lg transition-all text-left group outline-none focus:ring-2 focus:ring-purple-500"
+              >
+                <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mb-4 group-hover:bg-[#6A0DAD] transition-colors">
+                  <CheckCircle size={20} className="text-[#6A0DAD] group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 leading-tight">{service.name}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{service.desc}</p>
-              </div>
+                <h3 className="font-bold text-gray-900 mb-2 leading-tight group-hover:text-[#6A0DAD] transition-colors">{service.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed mb-4">{service.desc}</p>
+                <span className="text-xs font-bold text-purple-600 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn More <ArrowRight size={12} />
+                </span>
+              </button>
             ))}
           </div>
           <div className="text-center mt-10">
@@ -219,10 +231,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight" dir={currentDir}>
-              {t.title} <span className="text-[#6A0DAD]">{t.titleHL}</span>
+              {stepT.title} <span className="text-[#6A0DAD]">{stepT.titleHL}</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg" dir={currentDir}>
-              {t.subtitle}
+              {stepT.subtitle}
             </p>
           </div>
 
@@ -245,33 +257,96 @@ const Home = () => {
             {/* Step 1 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">1</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s1Title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.s1Desc}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{stepT.s1Title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{stepT.s1Desc}</p>
               <div className={`hidden md:block absolute top-8 ${currentDir === 'rtl' ? 'right-[60%]' : 'left-[60%]'} w-[80%] border-t-2 border-dashed border-purple-200 -z-10`}></div>
             </div>
             {/* Step 2 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">2</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s2Title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.s2Desc}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{stepT.s2Title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{stepT.s2Desc}</p>
               <div className={`hidden md:block absolute top-8 ${currentDir === 'rtl' ? 'right-[60%]' : 'left-[60%]'} w-[80%] border-t-2 border-dashed border-blue-200 -z-10`}></div>
             </div>
             {/* Step 3 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">3</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s3Title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.s3Desc}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{stepT.s3Title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{stepT.s3Desc}</p>
               <div className={`hidden md:block absolute top-8 ${currentDir === 'rtl' ? 'right-[60%]' : 'left-[60%]'} w-[80%] border-t-2 border-dashed border-emerald-200 -z-10`}></div>
             </div>
             {/* Step 4 */}
             <div className="relative text-center">
               <div className="w-16 h-16 mx-auto bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10">4</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t.s4Title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.s4Desc}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{stepT.s4Title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{stepT.s4Desc}</p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Service Modal Overlay */}
+      {selectedServiceId && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/40 backdrop-blur-sm" dir={currentDir}>
+          <div className="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 px-6 py-5 flex items-center justify-between z-10">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 pr-8">
+                {serviceT.services[selectedServiceId as keyof typeof serviceT.services]?.title}
+              </h3>
+              <button 
+                onClick={() => setSelectedServiceId(null)}
+                className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition-colors absolute top-4 right-4 rtl:left-4 rtl:right-auto"
+                aria-label={serviceT.closeBtn}
+              >
+                <X size={20} />
+              </button>
+            </div>
+            
+            {/* Modal Body */}
+            <div className="p-6 md:p-8 space-y-8">
+              {/* Explanation Block */}
+              <div className="bg-purple-50/50 rounded-2xl p-6 border border-purple-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <Info size={18} className="text-purple-600" />
+                  <h4 className="font-bold text-purple-900 uppercase tracking-wider text-xs">Overview</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  {serviceT.services[selectedServiceId as keyof typeof serviceT.services]?.explanation}
+                </p>
+              </div>
+
+              {/* Pricing Block */}
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <DollarSign size={20} className="text-emerald-600" />
+                  <h4 className="font-bold text-gray-900 text-lg">{serviceT.priceLabel}</h4>
+                </div>
+                <p className="text-gray-600 leading-relaxed bg-gray-50 p-5 rounded-xl border border-gray-100">
+                  {serviceT.services[selectedServiceId as keyof typeof serviceT.services]?.pricing}
+                </p>
+              </div>
+
+              {/* FAQ Block */}
+              <div>
+                <div className="flex items-center gap-2 mb-5 border-b border-gray-100 pb-3">
+                  <HelpCircle size={20} className="text-blue-600" />
+                  <h4 className="font-bold text-gray-900 text-lg">{serviceT.faqLabel}</h4>
+                </div>
+                <div className="space-y-4">
+                  {serviceT.services[selectedServiceId as keyof typeof serviceT.services]?.faqs.map((faq, idx) => (
+                    <div key={idx} className="bg-white">
+                      <p className="font-bold text-gray-900 mb-1">{faq.q}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed pl-4 border-l-2 border-blue-200">{faq.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
