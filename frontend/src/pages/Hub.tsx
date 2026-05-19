@@ -1,6 +1,6 @@
 import { useState, createElement } from 'react';
-import { BookOpen, ChevronRight, FileText, X, Globe, ChevronLeft, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users } from 'lucide-react';
-import { cm1Data, CM1Article } from '../data/cm1Data';
+import { BookOpen, ChevronRight, FileText, Globe, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users, Plus, Minus } from 'lucide-react';
+import { cm1Data } from '../data/cm1Data';
 import cm1EasyReadData from '../data/cm1EasyReadData.json';
 
 const languages = [
@@ -18,12 +18,36 @@ const modalTranslations = {
   ar: { summaryTitle: 'ملخص القراءة السهلة', noteTitle: 'يرجى الملاحظة', noteText: 'قد تناقش هذه المعلومات مواضيع حساسة. إذا شعرت بالانزعاج أو عدم الارتياح، يرجى إخبارنا. سنساعدك على فهم هذه المعلومات بطريقة مختلفة أو تقديم الدعم.', readEasyEnglish: 'اقرأ نسخة الإنجليزية السهلة' },
   hi: { summaryTitle: 'आसान पठन सारांश', noteTitle: 'कृपया ध्यान दें', noteText: 'यह जानकारी संवेदनशील विषयों पर चर्चा कर सकती है। यदि आप परेशान या असहज महसूस करते हैं, तो कृपया हमें बताएं। हम इस जानकारी को अलग तरीके से समझने में आपकी मदद करेंगे या सहायता प्रदान करेंगे।', readEasyEnglish: 'आसान अंग्रेजी संस्करण पढ़ें' },
   fa: { summaryTitle: 'خلاصه خواندن آسان', noteTitle: 'لطفا توجه داشته باشید', noteText: 'این اطلاعات ممکن است در مورد موضوعات حساس بحث کند. اگر احساس ناراحتی می کنید، لطفا به ما اطلاع دهید. ما به شما کمک می کنیم این اطلاعات را به روشی متفاوت درک کنید یا پشتیبانی ارائه دهیم.', readEasyEnglish: 'نسخه انگلیسی آسان را بخوانید' },
-  vi: { summaryTitle: 'Tóm tắt Dễ Đọc', noteTitle: 'Xin lưu ý', noteText: 'Thông tin này có thể thảo luận về các chủ đề nhạy cảm. Nếu bạn cảm thấy khó chịu hoặc không thoải mái, vui lòng cho chúng tôi biết. Chúng tôi sẽ giúp bạn hiểu thông tin này theo cách khác hoặc cung cấp hỗ trợ.', readEasyEnglish: 'Đọc Phiên bản Tiếng Anh Dễ hiểu' }
+  vi: { summaryTitle: 'Tóm tắt Dễ Đọc', noteTitle: 'Xin lưu ý', noteText: 'Thông vị này có thể thảo luận về các chủ đề nhạy cảm. Nếu bạn cảm thấy khó chịu hoặc không thoải mái, vui lòng cho chúng tôi biết. Chúng tôi sẽ giúp bạn hiểu thông tin này theo cách khác hoặc cung cấp hỗ trợ.', readEasyEnglish: 'Đọc Phiên bản Tiếng Anh Dễ hiểu' }
 };
 
+const blogPosts = [
+  {
+    id: 1,
+    title: 'NDIS Commission Releases New Practice Standards',
+    date: 'May 18, 2026',
+    category: 'Compliance',
+    excerpt: 'The NDIS Quality and Safeguards Commission has released updated guidelines focusing on participant safety and positive behaviour support strategies.',
+  },
+  {
+    id: 2,
+    title: 'NDIA Price Guide Updates 2026-2027',
+    date: 'May 10, 2026',
+    category: 'Funding',
+    excerpt: 'Key changes to the upcoming NDIA support catalogue, including adjustments to therapy rates and community participation limits.',
+  },
+  {
+    id: 3,
+    title: 'Understanding the New Worker Screening Requirements',
+    date: 'May 2, 2026',
+    category: 'Workforce',
+    excerpt: 'A comprehensive breakdown of the mandatory NDIS Worker Screening Check and what it means for DYAR providers and participants.',
+  }
+];
+
 const Hub = () => {
-  const [selectedArticle, setSelectedArticle] = useState<CM1Article | null>(null);
   const [selectedLang, setSelectedLang] = useState('en');
+  const [expandedCM1, setExpandedCM1] = useState<string | null>(null);
 
   const getIconForText = (text: string) => {
     const lower = text.toLowerCase();
@@ -73,205 +97,166 @@ const Hub = () => {
         return (
           <div key={idx} className="flex items-start gap-4 my-4">
             <div className="w-3 h-3 rounded-full bg-[#6A0DAD] mt-2.5 shrink-0" />
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">{line.substring(2)}</p>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">{line.substring(2)}</p>
           </div>
         );
       }
 
       if (line.length > 0 && line.length < 50 && !line.endsWith('.') && !line.endsWith('?') && !line.includes(':')) {
-        return <h3 key={idx} className="text-2xl md:text-3xl font-extrabold text-gray-900 mt-12 mb-6 tracking-tight">{line}</h3>;
+        return <h3 key={idx} className="text-xl md:text-2xl font-extrabold text-gray-900 mt-12 mb-6 tracking-tight">{line}</h3>;
       }
 
-      return <p key={idx} className="text-xl md:text-2xl text-gray-700 leading-relaxed my-6 font-medium">{line}</p>;
+      return <p key={idx} className="text-lg md:text-xl text-gray-700 leading-relaxed my-6 font-medium">{line}</p>;
     });
   };
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2;
-
-  const totalPages = Math.ceil(cm1Data.length / itemsPerPage);
-  const currentItems = cm1Data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-
   return (
-    <div className="font-sans text-gray-800 bg-slate-50 min-h-screen pb-20">
-      <section className="relative bg-gradient-to-b from-[#FAF5FF] to-slate-50 pt-24 pb-16 border-b border-gray-100">
+    <div className="font-sans text-gray-800 bg-[#F8F9FA] min-h-screen pb-20">
+      {/* Header Section */}
+      <section className="relative bg-gradient-to-b from-[#FAF5FF] to-[#F8F9FA] pt-24 pb-16 border-b border-gray-100">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#6A0DAD 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">Knowledge <span className="text-[#6A0DAD]">Hub</span> & Blog</h1>
-          <p className="text-lg md:text-xl text-gray-600 font-medium max-w-2xl mx-auto">Latest updates, educational resources, and downloadable forms regarding the NDIS and Positive Behaviour Support.</p>
+          <p className="text-lg md:text-xl text-gray-600 font-medium max-w-2xl mx-auto">Latest updates, educational resources, and easy-read NDIS guidelines.</p>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        {/* Articles Grid / Pagination View */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        
+        {/* Blog Section */}
         <div className="mb-16">
-          <div className="flex items-center justify-end mb-8">
-            <div className="text-sm font-bold text-[#6A0DAD]">Page {currentPage} of {totalPages}</div>
+          <div className="flex items-center gap-3 mb-8 border-b border-gray-200 pb-4">
+            <div className="w-10 h-10 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center">
+              <BookOpen size={20} strokeWidth={2} />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Latest NDIS News & Updates</h2>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {currentItems.map((item, idx) => (
-              <div 
-                key={item.id} 
-                onClick={() => { setSelectedArticle(item); setSelectedLang('en'); }} 
-                className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1"
-              >
-                <div className={`h-48 bg-gradient-to-br ${item.color} flex items-center justify-center relative overflow-hidden shrink-0`}>
-                  <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
-                  <BookOpen size={64} className="text-white/30 transform group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-[10px] font-bold text-white bg-black/20 rounded-full uppercase tracking-wider backdrop-blur-md">
-                      CM1 Principle {(currentPage - 1) * 2 + idx + 1}
-                    </span>
-                  </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {blogPosts.map(post => (
+              <div key={post.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-lg hover:border-purple-200 transition-all cursor-pointer flex flex-col h-full group">
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">{post.category}</span>
+                  <span className="text-xs text-gray-500 font-medium">{post.date}</span>
                 </div>
-                <div className="p-8 md:p-10 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-[#6A0DAD] transition-colors">
-                      {item.translations.en.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6 text-base leading-relaxed line-clamp-3">
-                      {item.translations.en.content}
-                    </p>
-                  </div>
-                  <button className="inline-flex items-center text-[#6A0DAD] font-bold text-sm hover:text-purple-800 transition-colors mt-auto group/btn">
-                    Read Easy English Version
-                    <ChevronRight size={16} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#6A0DAD] transition-colors">{post.title}</h3>
+                <p className="text-sm text-gray-600 mb-6 leading-relaxed flex-1">{post.excerpt}</p>
+                <button className="text-sm font-bold text-purple-600 flex items-center group-hover:text-purple-800 transition-colors">
+                  Read Article <ChevronRight size={16} className="ml-1" />
+                </button>
               </div>
             ))}
           </div>
-
-          {/* Pagination Controls */}
-          <div className="flex items-center justify-center gap-2 mt-10">
-            <button 
-              disabled={currentPage === 1}
-              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-              className="w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 text-gray-600 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200 disabled:opacity-50 disabled:pointer-events-none transition-all"
-            >
-              <ChevronLeft size={18} />
-            </button>
-            
-            <div className="flex items-center gap-1">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentPage(i + 1)}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all ${currentPage === i + 1 ? 'bg-[#6A0DAD] text-white shadow-md' : 'text-gray-600 hover:bg-gray-100'}`}
-                >
-                  {i + 1}
-                </button>
-              ))}
-            </div>
-
-            <button 
-              disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-              className="w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 text-gray-600 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200 disabled:opacity-50 disabled:pointer-events-none transition-all"
-            >
-              <ChevronRight size={18} />
-            </button>
-          </div>
         </div>
 
-
-
-      </div>
-
-      {/* Article Reading Modal */}
-      {selectedArticle && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedArticle(null)}></div>
-          <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col animate-in fade-in zoom-in duration-300">
-            {/* Modal Header */}
-            <div className={`h-32 sm:h-40 bg-gradient-to-br ${selectedArticle.color} relative shrink-0`}>
-              <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
-              <button 
-                onClick={() => setSelectedArticle(null)}
-                className="absolute top-4 right-4 w-10 h-10 bg-black/20 hover:bg-black/40 text-white rounded-full flex items-center justify-center transition-colors z-10"
-              >
-                <X size={20} />
-              </button>
-              <div className="absolute bottom-6 left-6 right-6 sm:bottom-6 sm:left-8 sm:right-8">
-                <span className="inline-block px-3 py-1 mb-2 text-[10px] font-bold text-white bg-white/20 backdrop-blur-md rounded-full uppercase tracking-wider border border-white/20">
-                  {selectedArticle.category}
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight drop-shadow-md" dir={languages.find(l => l.code === selectedLang)?.dir}>
-                  {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].title}
-                </h2>
+        {/* CM1 Principles Accordion Section */}
+        <div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-gray-200 pb-4">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center">
+                  <ShieldCheck size={20} strokeWidth={2} />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Core Principles & Easy Read</h2>
               </div>
+              <p className="text-gray-600 ml-13">Explore the 12 Core Module 1 principles in your preferred language.</p>
             </div>
             
             {/* Language Selector */}
-            <div className="bg-gray-50 border-b border-gray-200 px-6 sm:px-8 py-3 flex items-center gap-2 overflow-x-auto no-scrollbar shrink-0">
-              <Globe size={18} className="text-gray-400 mr-2 shrink-0" />
-              {languages.map(lang => (
-                <button
-                  key={lang.code}
-                  onClick={() => setSelectedLang(lang.code)}
-                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${selectedLang === lang.code ? 'bg-[#6A0DAD] text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'}`}
-                >
-                  {lang.name}
-                </button>
-              ))}
-            </div>
-
-            {/* Modal Content */}
-            <div className="p-6 sm:p-10 overflow-y-auto flex-1 bg-white" dir={languages.find(l => l.code === selectedLang)?.dir}>
-              
-              {(() => {
-                const richData = cm1EasyReadData.find(d => {
-                  const enTitle = selectedArticle.translations.en.title.replace(/^[0-9.]+\s*/, '').toLowerCase().trim();
-                  const dTitle = d.title.replace(/^[0-9—\s]+/, '').toLowerCase().trim();
-                  
-                  if (enTitle.includes('reportable incidents') && dTitle.includes('reportable incidents')) return true;
-                  if (enTitle.includes('code of conduct') && dTitle.includes('code of conduct')) return true;
-                  
-                  return dTitle === enTitle || dTitle.includes(enTitle);
-                });
-
-                if (richData && selectedLang === 'en') {
-                  return (
-                    <div className="bg-white rounded-3xl p-6 md:p-12 border-2 border-purple-50 shadow-sm max-w-3xl mx-auto">
-                      {renderContent(richData.content)}
-                    </div>
-                  );
-                }
-
-                return (
-                  <div className="bg-white rounded-2xl p-6 md:p-10 border-2 border-purple-50 shadow-sm max-w-3xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-                      <div className="w-24 h-24 shrink-0 bg-purple-50 rounded-2xl flex items-center justify-center text-[#6A0DAD] shadow-sm">
-                        <FileText size={48} strokeWidth={1.5} />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-extrabold text-gray-900 mb-4">{modalTranslations[selectedLang as keyof typeof modalTranslations].summaryTitle}</h3>
-                        <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
-                          {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].content}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row items-center md:items-start gap-8 pt-8 border-t border-gray-100">
-                      <div className="w-24 h-24 shrink-0 flex items-center justify-center text-rose-600">
-                        <AlertTriangle size={64} strokeWidth={2} />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{modalTranslations[selectedLang as keyof typeof modalTranslations].noteTitle}</h3>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
-                          {modalTranslations[selectedLang as keyof typeof modalTranslations].noteText}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })()}
-              
+            <div className="flex overflow-x-auto no-scrollbar pb-2">
+              <div className="flex items-center gap-2 bg-white p-1.5 rounded-xl border border-gray-200 shadow-sm">
+                <Globe size={18} className="text-gray-400 mx-2 shrink-0" />
+                {languages.map(lang => (
+                  <button
+                    key={lang.code}
+                    onClick={() => setSelectedLang(lang.code)}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-bold whitespace-nowrap transition-all ${selectedLang === lang.code ? 'bg-[#6A0DAD] text-white shadow-sm' : 'text-gray-600 hover:bg-gray-100'}`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
+
+          <div className="space-y-4">
+            {cm1Data.map((item, idx) => {
+              const isExpanded = expandedCM1 === item.id;
+              
+              // Find the rich data for the easy read content if English
+              const richData = cm1EasyReadData.find(d => {
+                const enTitle = item.translations.en.title.replace(/^[0-9.]+\s*/, '').toLowerCase().trim();
+                const dTitle = d.title.replace(/^[0-9—\s]+/, '').toLowerCase().trim();
+                if (enTitle.includes('reportable incidents') && dTitle.includes('reportable incidents')) return true;
+                if (enTitle.includes('code of conduct') && dTitle.includes('code of conduct')) return true;
+                return dTitle === enTitle || dTitle.includes(enTitle);
+              });
+
+              return (
+                <div key={item.id} className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${isExpanded ? 'border-purple-300 shadow-md' : 'border-gray-200 hover:border-purple-200 shadow-sm'}`}>
+                  <button
+                    onClick={() => setExpandedCM1(isExpanded ? null : item.id)}
+                    className={`w-full flex items-center justify-between p-5 md:p-6 text-left transition-colors ${isExpanded ? 'bg-purple-50/50' : 'bg-white'}`}
+                  >
+                    <div className="flex items-center gap-4 pr-4">
+                      <div className={`w-10 h-10 shrink-0 rounded-xl flex items-center justify-center font-bold text-lg transition-colors ${isExpanded ? 'bg-[#6A0DAD] text-white' : 'bg-gray-100 text-gray-500'}`}>
+                        {idx + 1}
+                      </div>
+                      <span className="font-bold text-lg md:text-xl text-gray-900 leading-tight">
+                        {item.translations.en.title.replace(/^[0-9.]+\s*/, '')}
+                      </span>
+                    </div>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${isExpanded ? 'bg-purple-200 text-purple-700' : 'bg-gray-100 text-gray-500'}`}>
+                      {isExpanded ? <Minus size={18} /> : <Plus size={18} />}
+                    </div>
+                  </button>
+                  
+                  <div className={`transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className="p-6 md:p-8 bg-white border-t border-gray-100">
+                      
+                      <div dir={languages.find(l => l.code === selectedLang)?.dir}>
+                        {selectedLang === 'en' && richData ? (
+                          <div className="max-w-3xl mx-auto">
+                            {renderContent(richData.content)}
+                          </div>
+                        ) : (
+                          <div className="bg-gray-50 rounded-2xl p-6 md:p-10 border border-gray-100 max-w-3xl mx-auto">
+                            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
+                              <div className="w-20 h-20 shrink-0 bg-purple-100 rounded-2xl flex items-center justify-center text-[#6A0DAD]">
+                                <FileText size={40} strokeWidth={1.5} />
+                              </div>
+                              <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">{modalTranslations[selectedLang as keyof typeof modalTranslations].summaryTitle}</h3>
+                                <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
+                                  {item.translations[selectedLang as keyof typeof item.translations]?.content || item.translations.en.content}
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 pt-8 border-t border-gray-200">
+                              <div className="w-20 h-20 shrink-0 flex items-center justify-center text-rose-500">
+                                <AlertTriangle size={50} strokeWidth={2} />
+                              </div>
+                              <div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">{modalTranslations[selectedLang as keyof typeof modalTranslations].noteTitle}</h3>
+                                <p className="text-base text-gray-600 leading-relaxed">
+                                  {modalTranslations[selectedLang as keyof typeof modalTranslations].noteText}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      )}
+
+      </div>
     </div>
   );
 };
