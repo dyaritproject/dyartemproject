@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, Globe, AlertTriangle } from 'lucide-react';
+import { languages, resourceTranslations } from '../data/resourcesData';
 
-const tabsData = [
+const newResourcesTabs = [
   {
     id: 'emp',
     title: 'Emergency Management Plan (EMP)',
     accordions: [
-      { title: 'Emergency Management Plan (EMP)', content: '<p class="text-gray-600">Details about the Emergency Management Plan will be displayed here.</p>' },
-      { title: 'Templates', content: '<p class="text-gray-600">Downloadable templates will be available here.</p>' },
-      { title: 'FAQ', content: '<p class="text-gray-600">Frequently asked questions will go here.</p>' },
-      { title: 'Form to be completed', content: '<p class="text-gray-600">Required forms will be listed here.</p>' },
+      { id: 'emp-1', title: 'Emergency Management Plan (EMP)', content: '<p>Content coming soon...</p>' },
+      { id: 'emp-2', title: 'Templates', content: '<p>Content coming soon...</p>' },
+      { id: 'emp-3', title: 'FAQ', content: '<p>Content coming soon...</p>' },
+      { id: 'emp-4', title: 'Form to be completed', content: '<p>Content coming soon...</p>' },
     ]
   },
   { id: 'contact', title: 'Emergency Contact Details', accordions: [] },
@@ -23,67 +24,120 @@ const tabsData = [
 ];
 
 const Resources = () => {
-  const [activeTab, setActiveTab] = useState('emp');
-  const [expandedAccordion, setExpandedAccordion] = useState<number | null>(null);
+  const [selectedLang, setSelectedLang] = useState('en');
+  const [activeTabId, setActiveTabId] = useState('rights');
+  const [expandedItem, setExpandedItem] = useState<string | null>(null);
+  
+  const t = resourceTranslations[selectedLang as keyof typeof resourceTranslations] || resourceTranslations.en;
+  const currentDir = ['ar', 'fa'].includes(selectedLang) ? 'rtl' : 'ltr';
 
-  const activeTabData = tabsData.find(t => t.id === activeTab);
+  // Construct the Top Tabs array
+  const topTabs = [
+    { id: 'rights', title: `${t.pageTitle} ${t.pageTitleHL}` },
+    ...newResourcesTabs.map(item => ({
+      id: item.id,
+      title: item.title
+    }))
+  ];
 
-  const toggleAccordion = (index: number) => {
-    setExpandedAccordion(expandedAccordion === index ? null : index);
+  const toggleItem = (id: string) => {
+    setExpandedItem(expandedItem === id ? null : id);
   };
 
-  return (
-    <div className="font-sans bg-[#F8F9FA] min-h-screen pt-24 pb-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <h1 className="text-3xl font-extrabold text-black mb-8 tracking-tight">
-          Resources Hub
-        </h1>
+  const activeNewTab = newResourcesTabs.find(tab => tab.id === activeTabId);
 
-        {/* Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          {tabsData.map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => {
-                setActiveTab(tab.id);
-                setExpandedAccordion(null);
-              }}
-              className={`px-5 py-3 text-sm font-bold transition-all whitespace-nowrap ${
-                activeTab === tab.id
-                  ? 'bg-[#6BCB77] text-white shadow-sm'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {tab.title}
-            </button>
-          ))}
+  return (
+    <div className="font-sans text-gray-800 bg-white min-h-screen pb-24">
+      {/* Header Area */}
+      <section className="relative bg-gradient-to-b from-[#FAF5FF] to-white pt-20 pb-8 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-bold tracking-wide border border-purple-100 mb-6">
+              <AlertTriangle size={15} />
+              <span>Participant Empowerment Hub</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6" dir={currentDir}>
+              {t.pageTitle} <span className="text-[#6A0DAD]">{t.pageTitleHL}</span>
+            </h1>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto" dir={currentDir}>
+              {t.pageSubtitle}
+            </p>
+
+            {/* Language Selector */}
+            <div className="flex justify-center overflow-x-auto no-scrollbar pb-2">
+              <div className="flex items-center gap-2 bg-gray-50 p-2 rounded-2xl border border-gray-200">
+                <Globe size={18} className="text-gray-400 mx-2 shrink-0" />
+                {languages.map(lang => (
+                  <button
+                    key={lang.code}
+                    onClick={() => setSelectedLang(lang.code)}
+                    className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${selectedLang === lang.code ? 'bg-[#6A0DAD] text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'}`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Main Layout Area */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24 flex flex-col lg:flex-row gap-8" dir={currentDir}>
+        
+        {/* Sidebar Navigation */}
+        <div className="w-full lg:w-1/3 shrink-0">
+          <div className="sticky top-24 bg-white rounded-3xl border border-gray-100 shadow-sm p-4 flex flex-col gap-2">
+            {topTabs.map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setActiveTabId(tab.id);
+                  setExpandedItem(null);
+                }}
+                className={`w-full text-left px-5 py-4 rounded-2xl text-sm font-bold transition-all ${
+                  activeTabId === tab.id
+                    ? 'bg-[#6A0DAD] text-white shadow-md'
+                    : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-700'
+                }`}
+              >
+                {tab.title}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Accordions */}
-        <div className="bg-transparent">
-          {activeTabData?.accordions && activeTabData.accordions.length > 0 ? (
-            <div className="space-y-0">
-              {activeTabData.accordions.map((item, index) => {
-                const isExpanded = expandedAccordion === index;
+        {/* Content Area */}
+        <div className="flex-1">
+        
+        {/* Render Participant Rights & Resources */}
+        {activeTabId === 'rights' && (
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 border-b border-gray-100 pb-6">
+              {t.pageTitle} {t.pageTitleHL}
+            </h2>
+            <div className="space-y-4">
+              {t.categories.map((item) => {
+                const isExpanded = expandedItem === item.id;
                 return (
                   <div 
-                    key={index} 
-                    className="border border-gray-200 bg-[#F8F9FA] overflow-hidden -mt-px first:mt-0"
+                    key={item.id} 
+                    className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isExpanded ? 'border-purple-300 shadow-sm' : 'border-gray-200 hover:border-purple-200'}`}
                   >
                     <button
-                      onClick={() => toggleAccordion(index)}
-                      className="w-full flex items-center justify-start p-4 text-left transition-colors hover:bg-gray-50"
+                      onClick={() => toggleItem(item.id)}
+                      className={`w-full flex items-center justify-between p-5 text-left transition-colors ${isExpanded ? 'bg-purple-50 text-purple-900' : 'bg-white text-gray-800'}`}
                     >
-                      <div className="mr-3 text-black font-bold">
-                        {isExpanded ? <Minus size={16} strokeWidth={3} /> : <Plus size={16} strokeWidth={3} />}
+                      <span className="font-bold text-base pr-4">{item.title}</span>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${isExpanded ? 'bg-purple-200 text-purple-700' : 'bg-gray-100 text-gray-500'}`}>
+                        {isExpanded ? <Minus size={18} /> : <Plus size={18} />}
                       </div>
-                      <span className="font-medium text-[15px] text-gray-900">{item.title}</span>
                     </button>
-                    <div className={`transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100 border-t border-gray-200' : 'max-h-0 opacity-0'}`}>
-                      <div className="p-6 bg-white">
+                    <div className={`transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="p-6 pt-0 bg-purple-50 border-t border-purple-100">
                         <div 
-                          className="text-gray-700 leading-relaxed text-sm"
+                          className="mt-4 text-gray-700 leading-relaxed text-base"
                           dangerouslySetInnerHTML={{ __html: item.content }}
                         />
                       </div>
@@ -92,13 +146,51 @@ const Resources = () => {
                 );
               })}
             </div>
-          ) : (
-            <div className="p-8 text-center bg-white border border-gray-200 text-gray-500 text-sm italic">
-              Content for {activeTabData?.title} is coming soon.
-            </div>
-          )}
-        </div>
+          </div>
+        )}
 
+        {/* Render New Resource Tabs */}
+        {activeTabId !== 'rights' && activeNewTab && (
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 border-b border-gray-100 pb-6">
+              {activeNewTab.title}
+            </h2>
+            {activeNewTab.accordions.length > 0 ? (
+              <div className="space-y-4">
+                {activeNewTab.accordions.map((item) => {
+                  const isExpanded = expandedItem === item.id;
+                  
+                  return (
+                    <div key={item.id} className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isExpanded ? 'border-purple-300 shadow-sm' : 'border-gray-200 hover:border-purple-200'}`}>
+                      <button
+                        onClick={() => toggleItem(item.id)}
+                        className={`w-full flex items-center justify-between p-5 text-left transition-colors ${isExpanded ? 'bg-purple-50 text-purple-900' : 'bg-white text-gray-800'}`}
+                      >
+                        <span className="font-bold text-base pr-4">{item.title}</span>
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${isExpanded ? 'bg-purple-200 text-purple-700' : 'bg-gray-100 text-gray-500'}`}>
+                          {isExpanded ? <Minus size={18} /> : <Plus size={18} />}
+                        </div>
+                      </button>
+                      <div className={`transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className="p-6 pt-0 bg-purple-50 border-t border-purple-100">
+                          <div className="mt-4 text-gray-700 leading-relaxed text-base">
+                            <div dangerouslySetInnerHTML={{ __html: item.content }} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="p-8 text-center bg-purple-50 rounded-2xl border border-purple-100 text-purple-800 text-sm font-medium">
+                Content for {activeNewTab.title} is coming soon.
+              </div>
+            )}
+          </div>
+        )}
+
+        </div>
       </div>
     </div>
   );

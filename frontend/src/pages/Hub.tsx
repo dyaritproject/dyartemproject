@@ -12,6 +12,15 @@ const languages = [
   { code: 'vi', name: 'Tiếng Việt (Vietnamese)', dir: 'ltr' }
 ];
 
+const modalTranslations = {
+  en: { summaryTitle: 'Easy Read Summary', noteTitle: 'Please note', noteText: 'This information might discuss sensitive topics. If you feel upset or uncomfortable, please let us know. We will help you understand this information in a different way or provide support.', readEasyEnglish: 'Read Easy English Version' },
+  zh: { summaryTitle: '简易阅读摘要', noteTitle: '请注意', noteText: '此信息可能涉及敏感话题。如果您感到不安或不适，请告诉我们。我们将帮助您以不同方式理解此信息，或提供支持。', readEasyEnglish: '阅读简易英文版' },
+  ar: { summaryTitle: 'ملخص القراءة السهلة', noteTitle: 'يرجى الملاحظة', noteText: 'قد تناقش هذه المعلومات مواضيع حساسة. إذا شعرت بالانزعاج أو عدم الارتياح، يرجى إخبارنا. سنساعدك على فهم هذه المعلومات بطريقة مختلفة أو تقديم الدعم.', readEasyEnglish: 'اقرأ نسخة الإنجليزية السهلة' },
+  hi: { summaryTitle: 'आसान पठन सारांश', noteTitle: 'कृपया ध्यान दें', noteText: 'यह जानकारी संवेदनशील विषयों पर चर्चा कर सकती है। यदि आप परेशान या असहज महसूस करते हैं, तो कृपया हमें बताएं। हम इस जानकारी को अलग तरीके से समझने में आपकी मदद करेंगे या सहायता प्रदान करेंगे।', readEasyEnglish: 'आसान अंग्रेजी संस्करण पढ़ें' },
+  fa: { summaryTitle: 'خلاصه خواندن آسان', noteTitle: 'لطفا توجه داشته باشید', noteText: 'این اطلاعات ممکن است در مورد موضوعات حساس بحث کند. اگر احساس ناراحتی می کنید، لطفا به ما اطلاع دهید. ما به شما کمک می کنیم این اطلاعات را به روشی متفاوت درک کنید یا پشتیبانی ارائه دهیم.', readEasyEnglish: 'نسخه انگلیسی آسان را بخوانید' },
+  vi: { summaryTitle: 'Tóm tắt Dễ Đọc', noteTitle: 'Xin lưu ý', noteText: 'Thông tin này có thể thảo luận về các chủ đề nhạy cảm. Nếu bạn cảm thấy khó chịu hoặc không thoải mái, vui lòng cho chúng tôi biết. Chúng tôi sẽ giúp bạn hiểu thông tin này theo cách khác hoặc cung cấp hỗ trợ.', readEasyEnglish: 'Đọc Phiên bản Tiếng Anh Dễ hiểu' }
+};
+
 const Hub = () => {
   const [selectedArticle, setSelectedArticle] = useState<CM1Article | null>(null);
   const [selectedLang, setSelectedLang] = useState('en');
@@ -237,7 +246,7 @@ const Hub = () => {
                         <FileText size={48} strokeWidth={1.5} />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-extrabold text-gray-900 mb-4">Easy Read Summary</h3>
+                        <h3 className="text-2xl font-extrabold text-gray-900 mb-4">{modalTranslations[selectedLang as keyof typeof modalTranslations].summaryTitle}</h3>
                         <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
                           {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].content}
                         </p>
@@ -249,9 +258,9 @@ const Hub = () => {
                         <AlertTriangle size={64} strokeWidth={2} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Please note</h3>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{modalTranslations[selectedLang as keyof typeof modalTranslations].noteTitle}</h3>
                         <p className="text-lg text-gray-600 leading-relaxed font-medium">
-                          This information might discuss sensitive topics. If you feel upset or uncomfortable, please let us know. We will help you understand this information in a different way or provide support.
+                          {modalTranslations[selectedLang as keyof typeof modalTranslations].noteText}
                         </p>
                       </div>
                     </div>
