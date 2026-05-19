@@ -22,10 +22,10 @@ const Hub = () => {
   const [selectedArticle, setSelectedArticle] = useState<CM1Article | null>(null);
   const [selectedLang, setSelectedLang] = useState('en');
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 1;
+  const itemsPerPage = 2;
 
   const totalPages = Math.ceil(cm1Data.length / itemsPerPage);
-  const currentItem = cm1Data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)[0];
+  const currentItems = cm1Data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
     <div className="font-sans text-gray-800 bg-slate-50 min-h-screen pb-20">
@@ -45,36 +45,38 @@ const Hub = () => {
             <div className="text-sm font-bold text-[#6A0DAD]">Page {currentPage} of {totalPages}</div>
           </div>
 
-          <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
-            {currentItem && (
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {currentItems.map((item, idx) => (
               <div 
-                key={currentItem.id} 
-                onClick={() => { setSelectedArticle(currentItem); setSelectedLang('en'); }} 
-                className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col md:flex-row cursor-pointer hover:-translate-y-1"
+                key={item.id} 
+                onClick={() => { setSelectedArticle(item); setSelectedLang('en'); }} 
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1"
               >
-                <div className={`md:w-1/3 min-h-[250px] bg-gradient-to-br ${currentItem.color} flex items-center justify-center relative overflow-hidden`}>
+                <div className={`h-48 bg-gradient-to-br ${item.color} flex items-center justify-center relative overflow-hidden shrink-0`}>
                   <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
                   <BookOpen size={64} className="text-white/30 transform group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 text-[10px] font-bold text-white bg-black/20 rounded-full uppercase tracking-wider backdrop-blur-md">
-                      CM1 Principle {currentPage}
+                      CM1 Principle {(currentPage - 1) * 2 + idx + 1}
                     </span>
                   </div>
                 </div>
-                <div className="p-8 md:p-10 flex-1 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-[#6A0DAD] transition-colors">
-                    {currentItem.translations.en.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 text-base leading-relaxed line-clamp-3">
-                    {currentItem.translations.en.content}
-                  </p>
+                <div className="p-8 md:p-10 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-[#6A0DAD] transition-colors">
+                      {item.translations.en.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-base leading-relaxed line-clamp-3">
+                      {item.translations.en.content}
+                    </p>
+                  </div>
                   <button className="inline-flex items-center text-[#6A0DAD] font-bold text-sm hover:text-purple-800 transition-colors mt-auto group/btn">
-                    Read Translation &amp; Audit Protocol
+                    Read Easy English Version
                     <ChevronRight size={16} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>
-            )}
+            ))}
           </div>
 
           {/* Pagination Controls */}
