@@ -1,5 +1,8 @@
 export const servicesTranslations = {
   en: {
+    sectionTitle: "Our",
+    sectionTitleHL: "Services",
+    sectionSubtitle: "DYAR delivers a comprehensive suite of professional supports tailored to your unique NDIS plan.",
     closeBtn: "Close",
     priceLabel: "Pricing Structure",
     faqLabel: "Frequently Asked Questions",
@@ -81,6 +84,9 @@ export const servicesTranslations = {
     }
   },
   easy: {
+    sectionTitle: "Our",
+    sectionTitleHL: "Services",
+    sectionSubtitle: "We offer many different types of help to support you in your everyday life.",
     closeBtn: "Close",
     priceLabel: "How Much It Costs",
     faqLabel: "Questions People Ask",
@@ -161,6 +167,9 @@ export const servicesTranslations = {
     }
   },
   ar: {
+    sectionTitle: "خدماتنا",
+    sectionTitleHL: "",
+    sectionSubtitle: "تقدم DYAR مجموعة شاملة من الدعم المهني المصمم خصيصاً لخطة NDIS الخاصة بك.",
     closeBtn: "إغلاق",
     priceLabel: "هيكل التسعير",
     faqLabel: "الأسئلة المتداولة",
@@ -241,6 +250,9 @@ export const servicesTranslations = {
     }
   },
   fa: {
+    sectionTitle: "خدمات",
+    sectionTitleHL: "ما",
+    sectionSubtitle: "DYAR مجموعه جامعی از پشتیبانی‌های حرفه‌ای را متناسب با برنامه NDIS شما ارائه می‌دهد.",
     closeBtn: "بستن",
     priceLabel: "ساختار قیمت‌گذاری",
     faqLabel: "سوالات متداول",
@@ -321,6 +333,9 @@ export const servicesTranslations = {
     }
   },
   zh: {
+    sectionTitle: "我们的",
+    sectionTitleHL: "服务",
+    sectionSubtitle: "DYAR 提供全面的专业支持，为您的 NDIS 计划量身定制。",
     closeBtn: "关闭",
     priceLabel: "定价结构",
     faqLabel: "常见问题",
@@ -336,6 +351,9 @@ export const servicesTranslations = {
     }
   },
   hi: {
+    sectionTitle: "हमारी",
+    sectionTitleHL: "सेवाएं",
+    sectionSubtitle: "DYAR आपकी NDIS योजना के अनुरूप पेशेवर समर्थन प्रदान करता है।",
     closeBtn: "बंद करें",
     priceLabel: "मूल्य निर्धारण",
     faqLabel: "अक्सर पूछे जाने वाले प्रश्न",
@@ -351,6 +369,9 @@ export const servicesTranslations = {
     }
   },
   vi: {
+    sectionTitle: "Dịch vụ",
+    sectionTitleHL: "Của Chúng Tôi",
+    sectionSubtitle: "DYAR cung cấp các hỗ trợ chuyên nghiệp phù hợp với kế hoạch NDIS của bạn.",
     closeBtn: "Đóng",
     priceLabel: "Cấu trúc giá",
     faqLabel: "Câu hỏi thường gặp",
