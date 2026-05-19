@@ -11,21 +11,24 @@ def parse_rtf_to_json(directory):
         with open(path, 'r', encoding='utf-8', errors='ignore') as file:
             content = file.read()
             
-        # Clean RTF tags (very basic)
-        text = re.sub(r'\\[a-z0-9]+\s?', '', content)
+        # Replace \par with newlines and \bullet with -
+        text = content.replace('\\par', '\n').replace('\\bullet', '-')
+        
+        # Strip all other RTF tags
+        text = re.sub(r'\\[a-z0-9]+\s?(-?[0-9]+)?', '', text)
         text = re.sub(r'[{}]', '', text)
-        text = text.replace('\r\n', '\n').replace('\n\n', '\n')
         
-        # We'll just store the raw text and clean it up a bit
-        lines = [line.strip() for line in text.split('\n') if line.strip()]
+        # Clean up some common artifacts
+        text = text.replace('Calibri;', '')
         
-        # Simple extraction
+        lines = [line.strip() for line in text.split('\n') if line.strip() and not line.startswith('DYAR Pty Ltd')]
+        
         title = f.replace('DYAR Easy-Read — ', '').replace('.rtf', '')
         
         docs.append({
             'id': f'er-{idx}',
             'title': title,
-            'raw_text': lines
+            'content': lines
         })
         
     with open('../frontend/src/data/easyReadData.json', 'w') as out:
