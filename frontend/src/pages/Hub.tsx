@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { BookOpen, ChevronRight, FileText, Download, X, Globe, ChevronLeft, AlertTriangle } from 'lucide-react';
+import { useState, createElement } from 'react';
+import { BookOpen, ChevronRight, FileText, Download, X, Globe, ChevronLeft, AlertTriangle, Phone, Mail, DollarSign, Calendar, MapPin, Building, Ear, HandHeart, CheckCircle, Heart, Info, ShieldCheck, Users } from 'lucide-react';
 import { cm1Data, CM1Article } from '../data/cm1Data';
+import cm1EasyReadData from '../data/cm1EasyReadData.json';
 
 const languages = [
   { code: 'en', name: 'English', dir: 'ltr' },
@@ -21,6 +22,68 @@ const Hub = () => {
 
   const [selectedArticle, setSelectedArticle] = useState<CM1Article | null>(null);
   const [selectedLang, setSelectedLang] = useState('en');
+
+  const getIconForText = (text: string) => {
+    const lower = text.toLowerCase();
+    if (lower.includes('phone') || lower.includes('call')) return Phone;
+    if (lower.includes('email') || lower.includes('envelope')) return Mail;
+    if (lower.includes('money') || lower.includes('dollar') || lower.includes('$')) return DollarSign;
+    if (lower.includes('calendar') || lower.includes('date') || lower.includes('meeting')) return Calendar;
+    if (lower.includes('map') || lower.includes('location')) return MapPin;
+    if (lower.includes('building') || lower.includes('office')) return Building;
+    if (lower.includes('ear') || lower.includes('listen')) return Ear;
+    if (lower.includes('care') || lower.includes('support') || lower.includes('help')) return HandHeart;
+    if (lower.includes('safe') || lower.includes('protect')) return ShieldCheck;
+    if (lower.includes('alert') || lower.includes('emergency') || lower.includes('danger')) return AlertTriangle;
+    if (lower.includes('form') || lower.includes('paper') || lower.includes('write')) return FileText;
+    if (lower.includes('people') || lower.includes('person') || lower.includes('group') || lower.includes('family')) return Users;
+    if (lower.includes('check') || lower.includes('good') || lower.includes('yes')) return CheckCircle;
+    if (lower.includes('love') || lower.includes('happy')) return Heart;
+    return Info;
+  };
+
+  const renderContent = (lines: string[]) => {
+    return lines.map((rawLine, idx) => {
+      let line = rawLine;
+      if (line.startsWith('d') || line.startsWith('b')) {
+        line = line.substring(1).trim();
+      }
+      
+      if (!line) return null;
+      if (line.includes('____________________')) return <hr key={idx} className="my-10 border-gray-200" />;
+      if (line.includes('DYAR Pty Ltd') || line.includes('An NDIS Service Provider')) return null;
+      if (line.includes('CM1 PRINCIPLE')) return null;
+
+      if (line.includes('[IMAGE:') || line.includes('[ICON:') || line.includes('[HEADER-IMAGE:')) {
+        const altText = line.replace(/\[.*?:\s*/, '').replace(']', '');
+        const IconComponent = getIconForText(altText);
+        
+        return (
+          <div key={idx} className="my-10 flex flex-col items-center justify-center">
+            <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center text-[#6A0DAD] shadow-sm mb-4">
+              {createElement(IconComponent, { size: 48, strokeWidth: 1.5 })}
+            </div>
+          </div>
+        );
+      }
+
+      if (line.startsWith('- ')) {
+        return (
+          <div key={idx} className="flex items-start gap-4 my-4">
+            <div className="w-3 h-3 rounded-full bg-[#6A0DAD] mt-2.5 shrink-0" />
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">{line.substring(2)}</p>
+          </div>
+        );
+      }
+
+      if (line.length > 0 && line.length < 50 && !line.endsWith('.') && !line.endsWith('?') && !line.includes(':')) {
+        return <h3 key={idx} className="text-2xl md:text-3xl font-extrabold text-gray-900 mt-12 mb-6 tracking-tight">{line}</h3>;
+      }
+
+      return <p key={idx} className="text-xl md:text-2xl text-gray-700 leading-relaxed my-6 font-medium">{line}</p>;
+    });
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 2;
 
@@ -190,32 +253,51 @@ const Hub = () => {
             {/* Modal Content */}
             <div className="p-6 sm:p-10 overflow-y-auto flex-1 bg-white" dir={languages.find(l => l.code === selectedLang)?.dir}>
               
-              {/* Easy Read Formatted Content */}
-              <div className="bg-white rounded-2xl p-6 md:p-10 border-2 border-purple-50 shadow-sm max-w-3xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-                  <div className="w-24 h-24 shrink-0 bg-purple-50 rounded-2xl flex items-center justify-center text-[#6A0DAD] shadow-sm">
-                    <FileText size={48} strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-extrabold text-gray-900 mb-4">Easy Read Summary</h3>
-                    <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
-                      {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].content}
-                    </p>
-                  </div>
-                </div>
+              {(() => {
+                const richData = cm1EasyReadData.find(d => {
+                  const enTitle = selectedArticle.translations.en.title;
+                  // Handle partial matches for titles
+                  if (enTitle.includes('Reportable Incidents') && d.title.includes('Reportable Incidents')) return true;
+                  if (enTitle.includes('Code of Conduct') && d.title.includes('Code of Conduct')) return true;
+                  return d.title.includes(enTitle);
+                });
 
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-8 pt-8 border-t border-gray-100">
-                  <div className="w-24 h-24 shrink-0 flex items-center justify-center text-rose-600">
-                    <AlertTriangle size={64} strokeWidth={2} />
+                if (richData && selectedLang === 'en') {
+                  return (
+                    <div className="bg-white rounded-3xl p-6 md:p-12 border-2 border-purple-50 shadow-sm max-w-3xl mx-auto">
+                      {renderContent(richData.content)}
+                    </div>
+                  );
+                }
+
+                return (
+                  <div className="bg-white rounded-2xl p-6 md:p-10 border-2 border-purple-50 shadow-sm max-w-3xl mx-auto">
+                    <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+                      <div className="w-24 h-24 shrink-0 bg-purple-50 rounded-2xl flex items-center justify-center text-[#6A0DAD] shadow-sm">
+                        <FileText size={48} strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-extrabold text-gray-900 mb-4">Easy Read Summary</h3>
+                        <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
+                          {selectedArticle.translations[selectedLang as keyof typeof selectedArticle.translations].content}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row items-center md:items-start gap-8 pt-8 border-t border-gray-100">
+                      <div className="w-24 h-24 shrink-0 flex items-center justify-center text-rose-600">
+                        <AlertTriangle size={64} strokeWidth={2} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Please note</h3>
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                          This information might discuss sensitive topics. If you feel upset or uncomfortable, please let us know. We will help you understand this information in a different way or provide support.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Please note</h3>
-                    <p className="text-lg text-gray-600 leading-relaxed font-medium">
-                      This information might discuss sensitive topics. If you feel upset or uncomfortable, please let us know. We will help you understand this information in a different way or provide support.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                );
+              })()}
               
             </div>
           </div>
