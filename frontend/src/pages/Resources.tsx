@@ -508,6 +508,28 @@ const newResourcesTabs = [
               </div>
             </div>
 
+            <!-- Gamma: Money-Related Triggers -->
+            <div class="rounded-2xl border-2 border-blue-900 overflow-hidden">
+              <div class="bg-blue-900 px-6 py-3 flex items-center gap-3">
+                <span class="text-white text-lg">💰</span>
+                <div>
+                  <h4 class="text-white font-black text-base tracking-wide">Understanding Money-Related Triggers in Behaviour Support</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-0.5">Interactive Training Presentation</p>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-4">
+                <div class="rounded-xl overflow-hidden shadow-sm">
+                  <iframe
+                    src="https://gamma.app/embed/1gxrmkrl392ccko"
+                    style="width: 100%; height: 450px; border: none; display: block;"
+                    allow="fullscreen"
+                    title="Understanding Money-Related Triggers in Behaviour Support">
+                  </iframe>
+                </div>
+                <p class="text-gray-500 text-xs mt-2 text-center">Use fullscreen mode for the best experience. Navigate slides using the arrows inside the presentation.</p>
+              </div>
+            </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
               <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
@@ -823,6 +845,28 @@ const newResourcesTabs = [
               </div>
             </div>
 
+            <!-- Gamma: Legal & Administrative Orders WA -->
+            <div class="rounded-2xl border-2 border-rose-800 overflow-hidden">
+              <div class="bg-rose-800 px-6 py-3 flex items-center gap-3">
+                <span class="text-white text-lg">⚖️</span>
+                <div>
+                  <h4 class="text-white font-black text-base tracking-wide">Legal &amp; Administrative Orders for NDIS Participants — Western Australia</h4>
+                  <p class="text-rose-200 text-xs font-semibold mt-0.5">Interactive Training Presentation</p>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-4">
+                <div class="rounded-xl overflow-hidden shadow-sm">
+                  <iframe
+                    src="https://gamma.app/embed/yqfyrold4msgl6u"
+                    style="width: 100%; height: 450px; border: none; display: block;"
+                    allow="fullscreen"
+                    title="Understanding Legal and Administrative Orders for NDIS Participants in Western Australia">
+                  </iframe>
+                </div>
+                <p class="text-gray-500 text-xs mt-2 text-center">Use fullscreen mode for the best experience. Navigate slides using the arrows inside the presentation.</p>
+              </div>
+            </div>
+
             <!-- MODULE 6: Quick Reference -->
             <div>
               <div class="flex items-center gap-3 mb-4">
@@ -869,6 +913,51 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">How to raise concerns and report incidents</span></li>
               </ul>
             </div>
+
+            <!-- Gamma Presentation Embed -->
+            <div class="rounded-2xl border-2 border-blue-800 overflow-hidden">
+              <div class="bg-blue-800 px-6 py-3 flex items-center gap-3">
+                <span class="text-white text-lg">🎯</span>
+                <div>
+                  <h4 class="text-white font-black text-base tracking-wide">NDIS Person Centred Approach</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-0.5">Interactive Training Presentation</p>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-4">
+                <div class="rounded-xl overflow-hidden shadow-sm" style="position: relative; width: 100%; padding-top: 0;">
+                  <iframe 
+                    src="https://gamma.app/embed/la1tdomfsrcjb1q" 
+                    style="width: 100%; height: 450px; border: none; display: block;" 
+                    allow="fullscreen" 
+                    title="NDIS Person Centred Approach">
+                  </iframe>
+                </div>
+                <p class="text-gray-500 text-xs mt-2 text-center">Use fullscreen mode for the best experience. Navigate slides using the arrows inside the presentation.</p>
+              </div>
+            </div>
+
+            <!-- Gamma Presentation 2 -->
+            <div class="rounded-2xl border-2 border-blue-800 overflow-hidden">
+              <div class="bg-blue-800 px-6 py-3 flex items-center gap-3">
+                <span class="text-white text-lg">💬</span>
+                <div>
+                  <h4 class="text-white font-black text-base tracking-wide">Communication with People with Disabilities</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-0.5">Interactive Training Presentation</p>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-4">
+                <div class="rounded-xl overflow-hidden shadow-sm">
+                  <iframe 
+                    src="https://gamma.app/embed/g8r0rn9rlrxi5d7" 
+                    style="width: 100%; height: 450px; border: none; display: block;" 
+                    allow="fullscreen" 
+                    title="Communication with People with Disabilities">
+                  </iframe>
+                </div>
+                <p class="text-gray-500 text-xs mt-2 text-center">Use fullscreen mode for the best experience. Navigate slides using the arrows inside the presentation.</p>
+              </div>
+            </div>
+
             <a href="https://www.ndiscommission.gov.au/workers/training-and-education/worker-orientation-module" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-sm">
               🔗 Access via NDIS Commission Website
             </a>
