@@ -130,6 +130,83 @@ const newResourcesTabs = [
 
             </div>
 
+
+            <!-- MODULE SECTION: Environmental Strategies -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-purple-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">2</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Environmental Strategies</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">Environments can have significant influences on mental states, well-being, engagement, and physical health. By shaping the environment, we can improve quality of life and reduce behaviours of concern.</p>
+
+              <!-- SLIDE CARD: Home Environment -->
+              <div class="rounded-2xl border-2 border-blue-900 overflow-hidden">
+                <div class="bg-blue-900 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🏠 Home Environment</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-1">By shaping the home environment to be engaging and calming on the nervous system, behaviours of concern can be reduced. Giving options and choices can help to personalise the home and make the participant feel more comfortable in this environment.</p>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Engaging items and activities</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Considering the participant's interests, include items and activities in the home that they may enjoy and are likely to engage with. This could include TV, touchscreen devices, and simple games.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Talk to the participant and find out what things they may enjoy having in the home. Take them to the shops and look at different toys, games, or other items that may make the home more pleasant and engaging.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Explore what sensory items may suit the participant. This could include soft and fluffy items, weighted blankets, or fidget toys.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Place these items in locations around the home where the participant sees them regularly and is able to access them when they want to.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Offer sensory items or activities to engage in if it is a stressful time, triggers are present, or you notice the first signs of escalation.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Music</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Talk to the participant to discover their music preferences. Show an interest in their taste and ask if you can listen to some of their preferences together. Introduce them to music similar to their taste or that you feel they may enjoy.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Ask the participant if they would mind if you played some music. If they agree, play music that is likely to be calming or uplifting such as classical, downtempo, ambient, or pop.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">If playing music in the home is disruptive to others, organise a set of headphones for the participant.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Decoration</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Adding colour to the home can improve mood and make the space more interesting. This can be done with furniture, blankets, pots, and trinkets.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Include items in the home that are related to the participant's interests (e.g. models of motorbikes, and posters).</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Add photos to the home of people or things the participant likes, including photos of the participant themselves.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Nature in the home</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Including natural items in the home can be calming. Caring for plants can have multiple benefits including feelings of purpose/meaning, connection to nature, inspiration, and interest.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Houseplants can be added to improve air quality and decorate the home.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">A garden bed can be filled with plants — shopping and planting could be a good activity to do with the participant.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Support the participant to assist in caring for plants if necessary.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">If out in nature with the participant, pieces of nature can be collected to decorate the home (sticks, shells, feathers, etc).</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
               <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
