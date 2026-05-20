@@ -438,7 +438,7 @@ const newResourcesTabs = [
                     </li>
                     <li class="flex items-start gap-3">
                       <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
-                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Acknowledge His Feelings:</strong> Validate their emotions without necessarily agreeing with the behaviour. Phrases like <em>"I can see you're upset"</em> or <em>"It sounds like this is really frustrating for you"</em> can be helpful.</p>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Acknowledge Their Feelings:</strong> Validate their emotions without necessarily agreeing with the behaviour. Phrases like <em>"I can see you're upset"</em> or <em>"It sounds like this is really frustrating for you"</em> can be helpful.</p>
                     </li>
                     <li class="flex items-start gap-3">
                       <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">5</span>
