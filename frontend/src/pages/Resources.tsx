@@ -316,6 +316,99 @@ const newResourcesTabs = [
               </div>
             </div>
 
+
+            <!-- MODULE SECTION: Appendix B — Triggers -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-purple-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">4</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Understanding Triggers</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">In PBS, understanding triggers is crucial for effectively analysing and formulating interventions for behaviours of concern. Triggers are specific events, situations, or environmental factors that precede or provoke a behaviour, providing critical insights into why a behaviour occurs. By identifying these triggers through careful observation and assessment, PBS practitioners can develop targeted strategies that prevent the occurrence of challenging behaviours by altering environmental conditions or teaching alternative, more adaptive responses.</p>
+
+              <!-- 3-Column Trigger Table -->
+              <div class="rounded-2xl border-2 border-blue-900 overflow-hidden">
+                <div class="bg-blue-900 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🔍 Types of Triggers</h4>
+                </div>
+
+                <!-- Table Header -->
+                <div class="grid grid-cols-3 divide-x divide-gray-200 bg-purple-50 border-b border-gray-200">
+                  <div class="px-5 py-3"><span class="font-black text-gray-900 text-sm">Trigger Type</span></div>
+                  <div class="px-5 py-3"><span class="font-black text-gray-900 text-sm">What It Is</span></div>
+                  <div class="px-5 py-3"><span class="font-black text-gray-900 text-sm">Impact</span></div>
+                </div>
+
+                <div class="divide-y divide-gray-100">
+
+                  <!-- Environmental -->
+                  <div class="grid grid-cols-3 divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4">
+                      <span class="font-black text-gray-800 text-sm">Environmental</span>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Environmental triggers encompass various physical and situational aspects of the surroundings that can elicit behavioural responses. These include sensory stimuli such as loud noises, bright lighting, and crowded spaces, as well as other factors like room temperature, decor, or the presence of certain individuals or objects.</p>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Individuals sensitive to these triggers may experience heightened anxiety, distress, or even physical discomfort, leading to a range of behaviours aimed at managing their environment. This could involve seeking isolation, becoming confrontational, or attempting to modify the environment to reduce discomfort. Non-sensory elements like a cluttered room or an unfamiliar setting can also trigger confusion or disorientation.</p>
+                    </div>
+                  </div>
+
+                  <!-- Stimulatory -->
+                  <div class="grid grid-cols-3 divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4">
+                      <span class="font-black text-gray-800 text-sm">Stimulatory</span>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Stimulatory triggers include both overstimulation and under-stimulation. Overstimulation occurs from excessive sensory or cognitive stimuli, such as loud music or intense activities. Under-stimulation happens due to a lack of engagement or boredom, often in monotonous settings.</p>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Both types can disrupt emotional balance. Overstimulation may lead to anxiety, restlessness, or impulsive behaviours aimed at escaping the excessive input. Under-stimulation can cause restlessness, dissatisfaction, or depression, prompting individuals to seek new stimuli or exhibit irritability to alleviate feelings of boredom.</p>
+                    </div>
+                  </div>
+
+                  <!-- Social -->
+                  <div class="grid grid-cols-3 divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4">
+                      <span class="font-black text-gray-800 text-sm">Social</span>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Interactions with others that can provoke a certain behaviour. This could be criticism, teasing, or even a specific person whose presence is unsettling.</p>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Negative social interactions can lead to feelings of anger, sadness, or withdrawal, influencing behaviours aimed at escaping or confronting the social stressors.</p>
+                    </div>
+                  </div>
+
+                  <!-- Emotional -->
+                  <div class="grid grid-cols-3 divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4">
+                      <span class="font-black text-gray-800 text-sm">Emotional</span>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Internal emotional responses that set off a particular behaviour. Examples include feelings of failure, rejection, or abandonment.</p>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Emotional triggers can lead to defensive or protective behaviours, such as aggression or isolation, as ways to cope with painful emotions.</p>
+                    </div>
+                  </div>
+
+                  <!-- Physical -->
+                  <div class="grid grid-cols-3 divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4">
+                      <span class="font-black text-gray-800 text-sm">Physical</span>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Physical sensations or conditions that can lead to specific behaviours, such as pain, hunger, or fatigue.</p>
+                    </div>
+                    <div class="bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Discomfort might prompt behaviours that seek relief, such as eating, resting, or using medication.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
               <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
