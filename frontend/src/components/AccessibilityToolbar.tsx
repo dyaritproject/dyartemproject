@@ -37,13 +37,21 @@ const AccessibilityToolbar = () => {
         fontSize, highContrast, dyslexiaFont, grayscale, highlightLinks, textSpacing, hideImages
       }));
     } catch {}
+
+    // Apply font size to html element
     document.documentElement.style.fontSize = `${fontSize}%`;
-    document.body.classList.toggle('a11y-high-contrast', highContrast);
-    document.body.classList.toggle('a11y-dyslexia', dyslexiaFont);
-    document.body.classList.toggle('a11y-grayscale', grayscale);
-    document.body.classList.toggle('a11y-highlight-links', highlightLinks);
-    document.body.classList.toggle('a11y-text-spacing', textSpacing);
-    document.body.classList.toggle('a11y-hide-images', hideImages);
+
+    // Build combined filter for html element
+    const filters: string[] = [];
+    if (highContrast) filters.push('contrast(2)');
+    if (grayscale) filters.push('grayscale(1)');
+    document.documentElement.style.filter = filters.length ? filters.join(' ') : '';
+
+    // Class-based features on html element (overrides everything including Tailwind)
+    document.documentElement.classList.toggle('a11y-dyslexia', dyslexiaFont);
+    document.documentElement.classList.toggle('a11y-highlight-links', highlightLinks);
+    document.documentElement.classList.toggle('a11y-text-spacing', textSpacing);
+    document.documentElement.classList.toggle('a11y-hide-images', hideImages);
   }, [fontSize, highContrast, dyslexiaFont, grayscale, highlightLinks, textSpacing, hideImages]);
 
   // Reading guide tracker

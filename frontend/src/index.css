@@ -97,45 +97,40 @@ select::-ms-expand {
 /* Accessibility Classes */
 /* ===================== */
 
-/* High Contrast */
-.a11y-high-contrast {
-  filter: contrast(2);
-}
-
-/* Grayscale */
-.a11y-grayscale {
-  filter: grayscale(1);
-}
+/* High Contrast — applied via inline style filter on html element */
+/* Grayscale    — applied via inline style filter on html element */
 
 /* Dyslexia-friendly font */
-.a11y-dyslexia,
-.a11y-dyslexia * {
+html.a11y-dyslexia body,
+html.a11y-dyslexia * {
   font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, cursive !important;
-  letter-spacing: 0.05em;
-  word-spacing: 0.15em;
+  letter-spacing: 0.05em !important;
+  word-spacing: 0.15em !important;
 }
 
 /* Increased text spacing */
-.a11y-text-spacing * {
+html.a11y-text-spacing body *,
+html.a11y-text-spacing * {
   letter-spacing: 0.12em !important;
   word-spacing: 0.25em !important;
   line-height: 1.9 !important;
 }
 
-/* Highlight links */
-.a11y-highlight-links a,
-.a11y-highlight-links button {
+/* Highlight all links and buttons */
+html.a11y-highlight-links a,
+html.a11y-highlight-links button,
+html.a11y-highlight-links [role="button"] {
   background: #FFD700 !important;
   color: #000 !important;
   outline: 2px solid #333 !important;
   outline-offset: 1px !important;
   border-radius: 3px !important;
-  padding: 0 2px !important;
+  padding: 2px 4px !important;
   text-decoration: underline !important;
 }
 
 /* Hide images */
-.a11y-hide-images img {
+html.a11y-hide-images img {
   visibility: hidden !important;
 }
 
