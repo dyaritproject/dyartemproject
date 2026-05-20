@@ -530,6 +530,28 @@ const newResourcesTabs = [
               </div>
             </div>
 
+            <!-- Gamma: Behavioural Escalation Cycle -->
+            <div class="rounded-2xl border-2 border-blue-900 overflow-hidden">
+              <div class="bg-blue-900 px-6 py-3 flex items-center gap-3">
+                <span class="text-white text-lg">📈</span>
+                <div>
+                  <h4 class="text-white font-black text-base tracking-wide">Understanding the Behavioural Escalation Cycle</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-0.5">Interactive Training Presentation</p>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-4">
+                <div class="rounded-xl overflow-hidden shadow-sm">
+                  <iframe
+                    src="https://gamma.app/embed/4kvgqgpv3abv8wo"
+                    style="width: 100%; height: 450px; border: none; display: block;"
+                    allow="fullscreen"
+                    title="Understanding the Behavioural Escalation Cycle">
+                  </iframe>
+                </div>
+                <p class="text-gray-500 text-xs mt-2 text-center">Use fullscreen mode for the best experience. Navigate slides using the arrows inside the presentation.</p>
+              </div>
+            </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
               <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
