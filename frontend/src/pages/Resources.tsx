@@ -53,11 +53,6 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Meet NDIS Quality & Safeguards Commission requirements for behaviour support</span></li>
               </ul>
             </div>
-            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
-              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">4–6 hours</span></span>
-              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Workbook</span></span>
-              <span class="font-bold text-gray-500">🏅 Certificate: <span class="text-gray-800">Yes — on completion</span></span>
-            </div>
           </div>
         `, 
         pdf: '/documents/resources/training/PBS-Training-Module.pdf', 
@@ -96,11 +91,6 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Contribute to reducing and eliminating restrictive practices over time</span></li>
               </ul>
             </div>
-            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
-              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">3–4 hours</span></span>
-              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Case Studies</span></span>
-              <span class="font-bold text-gray-500">🏅 Certificate: <span class="text-gray-800">Yes — on completion</span></span>
-            </div>
           </div>
         `, 
         pdf: '/documents/resources/training/Restrictive-Practices-Training.pdf', 
@@ -123,11 +113,6 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">Supported decision making and person-centred practice</span></li>
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">How to raise concerns and report incidents</span></li>
               </ul>
-            </div>
-            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
-              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">90 minutes</span></span>
-              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Online (NDIS Commission portal)</span></span>
-              <span class="font-bold text-gray-500">🏅 Certificate: <span class="text-gray-800">Yes — completion certificate required</span></span>
             </div>
             <a href="https://www.ndiscommission.gov.au/workers/training-and-education/worker-orientation-module" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-sm">
               🔗 Access via NDIS Commission Website
@@ -155,11 +140,6 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span><span class="text-gray-700">Whistleblower protections for staff who report</span></li>
               </ul>
             </div>
-            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
-              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">2 hours</span></span>
-              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Scenario Exercises</span></span>
-              <span class="font-bold text-gray-500">🔄 Renewal: <span class="text-gray-800">Every 2 years</span></span>
-            </div>
           </div>
         `, 
         pdf: '/documents/resources/training/Safeguarding-Mandatory-Reporting.pdf', 
@@ -183,11 +163,6 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0"></span><span class="text-gray-700">Addressing unconscious bias in service delivery</span></li>
               </ul>
             </div>
-            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
-              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">2–3 hours</span></span>
-              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Reflection Activities</span></span>
-              <span class="font-bold text-gray-500">🔄 Renewal: <span class="text-gray-800">Annually</span></span>
-            </div>
           </div>
         `, 
         pdf: '/documents/resources/training/Cultural-Safety-Training.pdf', 
@@ -210,11 +185,6 @@ const newResourcesTabs = [
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Injury prevention for workers — posture, technique, fatigue management</span></li>
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Incident reporting for near-misses and injuries</span></li>
               </ul>
-            </div>
-            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
-              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">3 hours (includes practical)</span></span>
-              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Online theory + In-person practical</span></span>
-              <span class="font-bold text-gray-500">🔄 Renewal: <span class="text-gray-800">Every 3 years</span></span>
             </div>
           </div>
         `, 
