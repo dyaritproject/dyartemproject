@@ -38,24 +38,28 @@ function App() {
           {/* Public pages — with navbar and footer */}
           <Route path="/*" element={
             <div className="app-container">
+              {/* Toolbar sits OUTSIDE #page-content so filters never affect it */}
               <AccessibilityToolbar />
-              <Navbar />
-              <main id="main-content" className="main-content">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/hub" element={<Hub />} />
-                  <Route path="/resources" element={<Resources />} />
-                  <Route path="/resources/easy-read" element={<EasyReadLibrary />} />
-                  <Route path="/announcements" element={<Announcements />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/referral" element={<Referral />} />
-                  <Route path="/support" element={<Support />} />
-                  <Route path="/work-with-us" element={<WorkWithUs />} />
-                </Routes>
-              </main>
-              <Footer />
+              {/* All filtered content lives inside #page-content */}
+              <div id="page-content" className="flex flex-col min-h-screen">
+                <Navbar />
+                <main id="main-content" className="main-content">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/hub" element={<Hub />} />
+                    <Route path="/resources" element={<Resources />} />
+                    <Route path="/resources/easy-read" element={<EasyReadLibrary />} />
+                    <Route path="/announcements" element={<Announcements />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/referral" element={<Referral />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/work-with-us" element={<WorkWithUs />} />
+                  </Routes>
+                </main>
+                <Footer />
+              </div>
             </div>
           } />
         </Routes>

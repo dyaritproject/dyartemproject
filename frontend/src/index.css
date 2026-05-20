@@ -97,29 +97,28 @@ select::-ms-expand {
 /* Accessibility Classes */
 /* ===================== */
 
-/* High Contrast — applied via inline style filter on html element */
-/* Grayscale    — applied via inline style filter on html element */
+/* High Contrast & Grayscale — applied as inline filter on #page-content */
 
 /* Dyslexia-friendly font */
-html.a11y-dyslexia body,
-html.a11y-dyslexia * {
+#page-content.a11y-dyslexia,
+#page-content.a11y-dyslexia * {
   font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, cursive !important;
   letter-spacing: 0.05em !important;
   word-spacing: 0.15em !important;
 }
 
 /* Increased text spacing */
-html.a11y-text-spacing body *,
-html.a11y-text-spacing * {
+#page-content.a11y-text-spacing,
+#page-content.a11y-text-spacing * {
   letter-spacing: 0.12em !important;
   word-spacing: 0.25em !important;
   line-height: 1.9 !important;
 }
 
 /* Highlight all links and buttons */
-html.a11y-highlight-links a,
-html.a11y-highlight-links button,
-html.a11y-highlight-links [role="button"] {
+#page-content.a11y-highlight-links a,
+#page-content.a11y-highlight-links button,
+#page-content.a11y-highlight-links [role="button"] {
   background: #FFD700 !important;
   color: #000 !important;
   outline: 2px solid #333 !important;
@@ -130,7 +129,7 @@ html.a11y-highlight-links [role="button"] {
 }
 
 /* Hide images */
-html.a11y-hide-images img {
+#page-content.a11y-hide-images img {
   visibility: hidden !important;
 }
 
@@ -149,21 +148,4 @@ html.a11y-hide-images img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Skip to main content link */
-.skip-to-main {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 9999;
-  background: #6A0DAD;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  font-weight: 700;
-  border-radius: 0 0 8px 8px;
-}
-.skip-to-main:focus {
-  left: 50%;
-  transform: translateX(-50%);
 }
