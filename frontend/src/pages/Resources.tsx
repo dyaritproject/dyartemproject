@@ -28,31 +28,113 @@ const newResourcesTabs = [
         id: 'train-pbs', 
         title: '🧠 Positive Behaviour Support (PBS)', 
         content: `
-          <div class="space-y-6">
+          <div class="space-y-8">
+
             <div class="bg-purple-50 border border-purple-100 rounded-2xl p-5">
               <p class="text-purple-900 font-semibold leading-relaxed">Positive Behaviour Support (PBS) is a person-centred framework that focuses on improving quality of life and understanding the reasons behind behaviours of concern — not just managing them. All DYAR practitioners delivering behaviour support must complete this training.</p>
             </div>
+
+            <!-- MODULE SECTION: Preventative Strategies -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
-              <ul class="space-y-2">
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">The foundations and values of Positive Behaviour Support</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Functional Behaviour Assessment (FBA) and what drives behaviour</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Developing and implementing a Behaviour Support Plan (BSP)</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Proactive strategies vs reactive strategies</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Dignity of Risk and least restrictive practice principles</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">NDIS Practice Standards — Behaviour Support module</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Documenting, monitoring and reviewing the BSP</span></li>
-              </ul>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-purple-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">1</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Preventative Strategies</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">Preventative strategies are strategies that we can use <strong>before</strong> the behaviour happens — also known as proactive strategies. Through the use of preventative strategies, we can avoid potential incidents and create more enriched and fulfilled lives.</p>
+
+              <!-- SLIDE CARD: Health and Wellbeing -->
+              <div class="rounded-2xl border-2 border-blue-900 overflow-hidden mb-4">
+                <div class="bg-blue-900 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🏥 Health and Wellbeing</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-1">When addressing difficulties in regulating negative emotions, a holistic approach that includes both health and psychological assessment is essential. Here is a structured strategy:</p>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-center">
+                      <span class="font-black text-gray-800 text-sm">Heath and psychological evaluation</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-gray-700 text-sm leading-relaxed">A thorough evaluation by a General Practitioner (GP) and/or Practitioner is crucial to understand the participant's overall health and psychological state. This evaluation will help identify any underlying health issues or psychological conditions, such as anxiety or depression, that may be impacting their behaviour.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-center">
+                      <span class="font-black text-gray-800 text-sm">Development of a tailored care plan</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-gray-700 text-sm leading-relaxed">A care treatment plan should be created, focusing on specific conditions identified during the assessment. This plan should offer tailored strategies and interventions suitable for the participant's needs.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Medication assessment and management</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="font-bold text-blue-900 shrink-0">a)</span><span class="leading-relaxed">A review of the participant's medication should be conducted, considering its effectiveness and side effects. This includes understanding how the medication is administered and its impact on their overall health.</span></li>
+                        <li class="flex items-start gap-2"><span class="font-bold text-blue-900 shrink-0">b)</span><span class="leading-relaxed">A comprehensive medication management plan should be developed, providing clear instructions on how to administer these medications effectively.</span></li>
+                        <li class="flex items-start gap-2"><span class="font-bold text-blue-900 shrink-0">c)</span><span class="leading-relaxed">Regular reviews of the participant's medication should be conducted, ideally every six months. This ensures that their treatment remains effective and is adjusted according to any changes in their condition or new developments in medical research.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Nutrition and physical activity</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-gray-700 text-sm leading-relaxed">In consultation with the GP, a balanced diet and exercise program should be developed. This should be designed to improve overall health and potentially mitigate some of the symptoms experienced.</p>
+                      <p class="text-gray-700 text-sm leading-relaxed mt-2">A healthy lifestyle can have a significant impact on mental health and emotional regulation.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- SLIDE CARD: Relationship Management -->
+              <div class="rounded-2xl border-2 border-blue-900 overflow-hidden">
+                <div class="bg-blue-900 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🤝 Relationship Management and Conflict Resolution</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-1">Relationship management and conflict resolution are effective in managing concerning behaviours. These strategies, when practised consistently, can significantly enhance relationship management and conflict resolution abilities, leading to more harmonious and productive interactions.</p>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Effective communication</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Encourage open, honest, and respectful communication. It's important to listen actively and validate others' feelings while expressing your own needs and perspectives clearly.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Use <strong>"I" statements</strong> to express feelings without placing blame — such as <em>"I feel upset when..."</em> instead of <em>"You make me upset."</em></span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Empathy and understanding</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Try to understand the participant's perspective. Empathy involves putting yourself in their shoes and acknowledging their feelings and viewpoints, even if you don't agree with them.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
-            <div>
-              <h4 class="font-bold text-gray-900 mb-3 text-base">✅ Learning Outcomes</h4>
-              <ul class="space-y-2">
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Understand why behaviour is communication and how to respond appropriately</span></li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Apply the PBS framework to real-world support scenarios</span></li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Confidently contribute to and implement a Behaviour Support Plan</span></li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Meet NDIS Quality & Safeguards Commission requirements for behaviour support</span></li>
-              </ul>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+              <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
+              <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
             </div>
+
           </div>
         `, 
         pdf: '/documents/resources/training/PBS-Training-Module.pdf', 
