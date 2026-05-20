@@ -522,39 +522,334 @@ const newResourcesTabs = [
         id: 'train-rp', 
         title: '🔒 Restrictive Practices', 
         content: `
-          <div class="space-y-6">
+          <div class="space-y-8">
+
             <div class="bg-rose-50 border border-rose-100 rounded-2xl p-5">
-              <p class="text-rose-900 font-semibold leading-relaxed">Restrictive practices are a last resort. All DYAR support workers and practitioners must understand the legal obligations, authorisation requirements, and the strict reporting and monitoring framework that governs their use under the NDIS.</p>
+              <p class="text-rose-900 font-semibold leading-relaxed">Restrictive practices are a <strong>last resort</strong>. All DYAR support workers and practitioners must understand the legal obligations, authorisation requirements, and the strict reporting and monitoring framework that governs their use under the NDIS Quality and Safeguards Commission.</p>
             </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">⚠️</span>
               <p class="text-amber-800 text-sm font-semibold">This training is mandatory for any staff member involved in delivering supports to participants who have a Behaviour Support Plan that includes a regulated restrictive practice.</p>
             </div>
+
+            <!-- MODULE 1: What is a Restrictive Practice? -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
-              <ul class="space-y-2">
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Definition and types of regulated restrictive practices (chemical, mechanical, physical, environmental, seclusion)</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">The legal framework — NDIS Act, State/Territory authorisation requirements</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">When a restrictive practice can and cannot be used</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">The role of the Behaviour Support Practitioner and NDIS Commission</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Reporting obligations — reportable incidents and NDIS Commission notifications</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Transitioning away from restrictive practices — reduction plans</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Supporting participants and families through the process</span></li>
-              </ul>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">1</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">What is a Restrictive Practice?</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">Source: NDIS Quality and Safeguards Commission — Understanding behaviour support and restrictive practices</p>
+
+              <div class="rounded-2xl border-2 border-rose-800 overflow-hidden">
+                <div class="bg-rose-800 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🔒 Definition</h4>
+                </div>
+                <div class="bg-white px-6 py-5 space-y-4 text-sm text-gray-700 leading-relaxed">
+                  <p>A <strong>restrictive practice</strong> is any action that limits a person's human rights or freedom of movement. They are sometimes used to keep a person with disability or others safe.</p>
+                  <p>Restrictive practices can have <strong>serious human rights impacts</strong> and should only be used as a <strong>last resort</strong> to prevent harm to the person or others.</p>
+                  <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+                    <p class="font-black text-red-800 text-sm mb-2">Restrictive practices do NOT:</p>
+                    <ul class="space-y-1">
+                      <li class="flex items-start gap-2"><span class="text-red-600 font-bold shrink-0">✗</span><span>Result in lasting positive change</span></li>
+                      <li class="flex items-start gap-2"><span class="text-red-600 font-bold shrink-0">✗</span><span>Meet the person's needs or improve their quality of life</span></li>
+                      <li class="flex items-start gap-2"><span class="text-red-600 font-bold shrink-0">✗</span><span>Address the reasons for the behaviour — and can sometimes make it worse</span></li>
+                    </ul>
+                  </div>
+                  <p>NDIS participants subject to restrictive practices <strong>must have a Behaviour Support Plan in place</strong>. When restrictive practices are used, they must be implemented within a PBS framework, with robust safeguards and a focus on <strong>reducing and eliminating their use</strong>.</p>
+                </div>
+              </div>
             </div>
+
+            <!-- MODULE 2: 5 Types of Regulated Restrictive Practices -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-3 text-base">✅ Learning Outcomes</h4>
-              <ul class="space-y-2">
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Identify the 5 types of regulated restrictive practices and when each applies</span></li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Understand the authorisation and reporting obligations for your state</span></li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Know your responsibilities when a restrictive practice is in a BSP</span></li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Contribute to reducing and eliminating restrictive practices over time</span></li>
-              </ul>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">2</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">The 5 Types of Regulated Restrictive Practices</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">The NDIS Commission regulates 5 types of restrictive practices. All 5 must be authorised and documented in a Behaviour Support Plan.</p>
+
+              <div class="rounded-2xl border-2 border-rose-800 overflow-hidden">
+                <div class="bg-rose-800 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">📋 Regulated Restrictive Practices</h4>
+                  <p class="text-rose-200 text-xs font-semibold mt-1">Source: NDIS Quality and Safeguards Commission</p>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-rose-50 px-5 py-4 flex flex-col justify-center">
+                      <span class="text-2xl mb-1">🚪</span>
+                      <span class="font-black text-rose-900 text-sm">1. Seclusion</span>
+                    </div>
+                    <div class="col-span-3 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">A person is left alone in a room or place and is not allowed to leave. For example, a door may be locked, or the person may be told they cannot leave — or believe they cannot leave even if the door is open.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-rose-50 px-5 py-4 flex flex-col justify-center">
+                      <span class="text-2xl mb-1">💊</span>
+                      <span class="font-black text-rose-900 text-sm">2. Chemical Restraint</span>
+                    </div>
+                    <div class="col-span-3 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">A person is given medicine to stop or reduce their behaviour. This does not include medication prescribed for a diagnosed health condition.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-rose-50 px-5 py-4 flex flex-col justify-center">
+                      <span class="text-2xl mb-1">🔗</span>
+                      <span class="font-black text-rose-900 text-sm">3. Mechanical Restraint</span>
+                    </div>
+                    <div class="col-span-3 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Equipment or a device is used to stop or reduce a person's behaviour. It may limit how the person moves or uses part of their body.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-rose-50 px-5 py-4 flex flex-col justify-center">
+                      <span class="text-2xl mb-1">✋</span>
+                      <span class="font-black text-rose-900 text-sm">4. Physical Restraint</span>
+                    </div>
+                    <div class="col-span-3 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">A person, or part of their body, is held so they cannot move freely. This is done to stop or reduce behaviour. This does not include the use of physical guides to assist movement.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-rose-50 px-5 py-4 flex flex-col justify-center">
+                      <span class="text-2xl mb-1">🚧</span>
+                      <span class="font-black text-rose-900 text-sm">5. Environmental Restraint</span>
+                    </div>
+                    <div class="col-span-3 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">A person is stopped from having or doing certain things. It can also mean being stopped from going to certain places in their home or community.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             </div>
+
+            <!-- MODULE 3: High Risk Practices — Never Use -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">3</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">High Risk Practices — Never Permitted</h3>
+              </div>
+
+              <div class="rounded-2xl border-2 border-red-700 overflow-hidden">
+                <div class="bg-red-700 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🚫 High Risk Practices</h4>
+                </div>
+                <div class="bg-white px-6 py-5 space-y-4 text-sm text-gray-700 leading-relaxed">
+                  <p>Some practices place people with disability at a <strong>high risk of harm</strong>. This harm can include serious long-term physical or mental injury. In some cases, it can even lead to death.</p>
+                  <p>For example, some types of physical restraint and harsh punishment may be considered <strong>abuse or neglect</strong>. These practices must never be used. In some states and territories, these practices are against the law.</p>
+                  <div class="bg-red-50 border-2 border-red-300 rounded-xl p-4">
+                    <p class="font-black text-red-800 text-sm">The NDIS Commission clearly states that practices which place NDIS participants at a high risk of harm must <u>not</u> be used. If these practices occur, the NDIS Commission will take compliance action — including issuing banning orders and infringement notices.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MODULE 4: Authorisation Requirements -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">4</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Authorisation Requirements</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">Before any regulated restrictive practice can be used, it must be properly authorised. Authorisation requirements vary by state and territory.</p>
+
+              <div class="rounded-2xl border-2 border-rose-800 overflow-hidden">
+                <div class="bg-rose-800 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">✅ Authorisation Checklist</h4>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Behaviour Support Plan</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">The participant must have a current, NDIS Commission–approved Behaviour Support Plan (BSP) that includes the specific restrictive practice. Using a restrictive practice without an approved BSP is an <strong>unauthorised restrictive practice</strong> and is a reportable incident.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">State/Territory Authorisation Body</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Each state and territory has its own authorisation body (e.g. VCAT in Victoria, NCAT in NSW, QCAT in Queensland). The implementing provider must ensure the appropriate authorisation has been obtained before using any regulated restrictive practice.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Consent</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Where possible, informed consent must be obtained from the participant or their authorised representative (guardian, nominee). The participant's wishes must be respected and documented.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Registered Provider</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Only registered NDIS providers can implement regulated restrictive practices. Unregistered providers must never use restrictive practices. If an unregistered provider is using restrictive practices, this must be reported to the NDIS Commission immediately at <strong>behavioursupport@ndiscommission.gov.au</strong>.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- MODULE 5: Reporting Requirements -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">5</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Reporting Requirements</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">There are two reporting streams for restrictive practices. Knowing which applies is critical to your legal compliance obligations.</p>
+
+              <!-- Authorised = Monthly Reporting -->
+              <div class="rounded-2xl border-2 border-blue-800 overflow-hidden mb-4">
+                <div class="bg-blue-800 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">📅 Authorised Restrictive Practices — Monthly Reporting</h4>
+                  <p class="text-blue-200 text-xs font-semibold mt-1">For restrictive practices that ARE included in an approved Behaviour Support Plan</p>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Who must report?</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">The <strong>implementing provider</strong> — that is, the registered NDIS provider delivering the support to the participant — must submit monthly reports to the NDIS Commission via the provider portal.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">What to report?</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-800 font-bold shrink-0">•</span><span>Each use of the regulated restrictive practice during the reporting period</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-800 font-bold shrink-0">•</span><span>The type of restrictive practice used</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-800 font-bold shrink-0">•</span><span>The date and duration of each use</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-800 font-bold shrink-0">•</span><span>The name of the participant</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">When to report?</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Monthly reports must be submitted by the <strong>last business day of each calendar month</strong> for the preceding month. Reports must be submitted even if the restrictive practice was not used during the reporting period (nil returns required).</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Why monthly reports matter</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">Monthly reporting data is used by the NDIS Commission to monitor whether restrictive practices are being reduced over time, and to identify where additional support or oversight may be needed. Failure to report is a breach of NDIS registration conditions.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Unauthorised = Reportable Incident -->
+              <div class="rounded-2xl border-2 border-red-700 overflow-hidden">
+                <div class="bg-red-700 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🚨 Unauthorised Restrictive Practices — Reportable Incident</h4>
+                  <p class="text-red-200 text-xs font-semibold mt-1">For restrictive practices used WITHOUT authorisation or outside the approved BSP</p>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">What makes it unauthorised?</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-red-700 font-bold shrink-0">•</span><span>The participant does not have an approved Behaviour Support Plan</span></li>
+                        <li class="flex items-start gap-2"><span class="text-red-700 font-bold shrink-0">•</span><span>The practice is not included or documented in the existing BSP</span></li>
+                        <li class="flex items-start gap-2"><span class="text-red-700 font-bold shrink-0">•</span><span>The required state/territory authorisation has not been obtained</span></li>
+                        <li class="flex items-start gap-2"><span class="text-red-700 font-bold shrink-0">•</span><span>The BSP has expired and has not been renewed</span></li>
+                        <li class="flex items-start gap-2"><span class="text-red-700 font-bold shrink-0">•</span><span>An unregistered provider is using any restrictive practice</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Reporting timeframes</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start gap-2">
+                          <span class="font-bold text-red-700 shrink-0 w-20">Within 24 hrs</span>
+                          <span class="leading-relaxed">Notify the NDIS Commission via the registered provider portal for all reportable incidents involving unauthorised restrictive practices.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="font-bold text-red-700 shrink-0 w-20">Within 5 days</span>
+                          <span class="leading-relaxed">Submit a full written report with details of the incident, contributing factors, and actions taken or planned.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">What happens next?</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <p class="text-sm text-gray-700 leading-relaxed">The NDIS Commission will review the report and may investigate. Providers may be required to submit a Corrective Action Plan. Repeated unauthorised use may result in compliance action, including suspension or cancellation of registration.</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-red-50 px-6 py-4">
+                    <p class="text-sm font-black text-red-800">⚡ Remember: Using a restrictive practice while waiting for a BSP to be developed is automatically classed as an unauthorised restrictive practice and must be reported as a reportable incident — even if a BSP is being worked on.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- MODULE 6: Quick Reference -->
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">6</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Quick Reference — Key Contacts & Resources</h3>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                  <p class="font-black text-gray-900 text-sm mb-2">📧 Behaviour Support Enquiries</p>
+                  <p class="text-sm text-gray-700">behavioursupport@ndiscommission.gov.au</p>
+                </div>
+                <div class="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                  <p class="font-black text-gray-900 text-sm mb-2">🚨 Emergency</p>
+                  <p class="text-sm text-gray-700">If a participant's life is at risk — call <strong>000</strong> immediately.</p>
+                </div>
+                <div class="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                  <p class="font-black text-gray-900 text-sm mb-2">📋 NDIS Commission Portal</p>
+                  <p class="text-sm text-gray-700">Submit monthly reports and reportable incidents via the registered provider portal.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-        `, 
-        pdf: '/documents/resources/training/Restrictive-Practices-Training.pdf', 
-        docx: '/documents/resources/training/Restrictive-Practices-Training.docx' 
+        `,
+        pdf: '/documents/resources/training/Restrictive-Practices-Training.pdf',
+        docx: '/documents/resources/training/Restrictive-Practices-Training.docx'
       },
       { 
         id: 'train-ndis-orientation', 
