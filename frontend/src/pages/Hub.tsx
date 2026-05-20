@@ -193,7 +193,7 @@ const Hub = () => {
                 </div>
                 <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Core Principles & Easy Read</h2>
               </div>
-              <p className="text-gray-600 ml-13">Explore the 12 Core Module 1 principles in your preferred language.</p>
+              <p className="text-gray-600 ml-13">Explore the 13 Core Module 1 principles in your preferred language.</p>
             </div>
             
             {/* Language Selector */}

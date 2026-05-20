@@ -462,5 +462,42 @@ export const cm1Data: CM1Article[] = [
         auditText: 'DYAR maintains a comprehensive Incident Management System. All reportable incidents are tracked, investigated, and reported to the NDIS Commission within mandatory timeframes.'
       }
     }
+  },
+  {
+    id: 'cm1-13',
+    category: 'Rights & Responsibilities',
+    color: 'from-violet-500 to-purple-600',
+    translations: {
+      en: {
+        title: '13. Dignity of Risk',
+        content: 'You have the right to take reasonable risks in your life. Making choices — even ones that carry some risk — is part of living a full and meaningful life. We will support you to understand the risks, plan safely, and make the decisions that are right for you.',
+        auditText: 'DYAR upholds the Dignity of Risk principle by embedding it into all individual support plans. Our teams are trained to balance duty of care with each participant\'s fundamental right to autonomy, self-determination, and the freedom to live life on their own terms.'
+      },
+      zh: {
+        title: '13. 风险尊严',
+        content: '您有权在生活中承担合理的风险。做出选择——即使是带有一定风险的选择——是过上充实而有意义的生活的一部分。我们将支持您了解风险、安全规划，并做出适合您的决定。',
+        auditText: 'DYAR 通过将风险尊严原则融入所有个人支持计划来维护这一原则。我们的团队经过培训，能够在照护责任与每位参与者自主权、自决权和按自己方式生活的基本权利之间取得平衡。'
+      },
+      ar: {
+        title: '13. كرامة المخاطرة',
+        content: 'لديك الحق في تحمل مخاطر معقولة في حياتك. اتخاذ الخيارات — حتى تلك التي تنطوي على بعض المخاطر — هو جزء من العيش حياة كاملة وذات معنى. سندعمك لفهم المخاطر والتخطيط بأمان واتخاذ القرارات المناسبة لك.',
+        auditText: 'تدعم DYAR مبدأ كرامة المخاطرة من خلال دمجه في جميع خطط الدعم الفردية. يتم تدريب فرقنا على الموازنة بين واجب الرعاية والحق الأساسي لكل مشارك في الاستقلالية وتقرير المصير وحرية العيش وفق شروطهم الخاصة.'
+      },
+      hi: {
+        title: '13. जोखिम की गरिमा',
+        content: 'आपको अपने जीवन में उचित जोखिम उठाने का अधिकार है। विकल्प चुनना — यहाँ तक कि वे विकल्प जो कुछ जोखिम के साथ आते हैं — एक पूर्ण और सार्थक जीवन जीने का हिस्सा है। हम आपको जोखिमों को समझने, सुरक्षित रूप से योजना बनाने और आपके लिए सही निर्णय लेने में सहायता करेंगे।',
+        auditText: 'DYAR जोखिम की गरिमा के सिद्धांत को सभी व्यक्तिगत सहायता योजनाओं में शामिल करके इसे बनाए रखता है। हमारी टीमों को देखभाल के कर्तव्य और प्रत्येक प्रतिभागी के स्वायत्तता, आत्मनिर्णय और अपनी शर्तों पर जीवन जीने की स्वतंत्रता के मौलिक अधिकार के बीच संतुलन बनाने के लिए प्रशिक्षित किया जाता है।'
+      },
+      fa: {
+        title: '۱۳. کرامت خطرپذیری',
+        content: 'شما حق دارید در زندگی خود خطرات معقول را بپذیرید. انجام انتخاب‌ها — حتی آن‌هایی که با خطراتی همراه هستند — بخشی از داشتن یک زندگی کامل و معنادار است. ما از شما حمایت خواهیم کرد تا خطرات را درک کنید، ایمن برنامه‌ریزی کنید و تصمیماتی بگیرید که برای شما مناسب است.',
+        auditText: 'DYAR اصل کرامت خطرپذیری را با گنجاندن آن در تمام برنامه‌های حمایتی فردی، حمایت می‌کند. تیم‌های ما برای ایجاد تعادل بین وظیفه مراقبت و حق اساسی هر شرکت‌کننده به استقلال، خودمختاری و آزادی زندگی بر اساس شرایط خودشان آموزش دیده‌اند.'
+      },
+      vi: {
+        title: '13. Nhân phẩm của Rủi ro',
+        content: 'Bạn có quyền chấp nhận những rủi ro hợp lý trong cuộc sống của mình. Đưa ra các lựa chọn — kể cả những lựa chọn mang theo một số rủi ro — là một phần của việc sống một cuộc sống đầy đủ và có ý nghĩa. Chúng tôi sẽ hỗ trợ bạn hiểu rõ rủi ro, lập kế hoạch an toàn và đưa ra những quyết định phù hợp với bạn.',
+        auditText: 'DYAR duy trì nguyên tắc Nhân phẩm của Rủi ro bằng cách tích hợp nó vào tất cả các kế hoạch hỗ trợ cá nhân. Các nhóm của chúng tôi được đào tạo để cân bằng giữa trách nhiệm chăm sóc và quyền cơ bản của mỗi người tham gia về quyền tự chủ, quyền tự quyết và sự tự do sống theo cách của riêng họ.'
+      }
+    }
   }
 ];
