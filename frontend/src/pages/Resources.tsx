@@ -409,6 +409,105 @@ const newResourcesTabs = [
               </div>
             </div>
 
+
+            <!-- MODULE SECTION: Appendix C — De-escalation Strategies -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-purple-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">5</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Strategies for Effectively Diffusing Behavioural Escalation</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">De-escalating situations involving behavioural escalation requires a combination of communication skills, empathy, and an understanding of the individual's needs and triggers. Here are some strategies that are often effective in diffusing behavioural escalation:</p>
+
+              <div class="rounded-2xl border-2 border-blue-900 overflow-hidden mb-6">
+                <div class="bg-blue-900 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">🧩 De-escalation Strategies</h4>
+                </div>
+                <div class="bg-white px-6 py-6">
+                  <ol class="space-y-4">
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Remain Calm and Composed:</strong> Your own calm demeanour can have a calming effect on others. Speak softly, maintain a non-threatening body posture, and ensure your facial expressions convey empathy and understanding.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Establish a Safe Environment:</strong> Make sure the environment is safe for both the individual and others around. Remove any potential hazards or items that could be used harmfully.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Listen Actively:</strong> Show that you are listening and trying to understand their perspective. Sometimes, just feeling heard can significantly reduce a person's agitation.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Acknowledge His Feelings:</strong> Validate their emotions without necessarily agreeing with the behaviour. Phrases like <em>"I can see you're upset"</em> or <em>"It sounds like this is really frustrating for you"</em> can be helpful.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">5</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Use Non-Threatening Body Language:</strong> Avoid direct eye contact, which can be perceived as confrontational. Instead, use a sideways stance and keep a respectful distance.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">6</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Use Simple and Clear Communication:</strong> When someone is agitated, they may not be able to process complex information. Use short, simple sentences and avoid jargon or overly technical language.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">7</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Offer Choices and Control:</strong> If possible, give the person options. This can provide a sense of control, which can be calming. For example, ask if they would like to talk in a different location or if there's something specific that would help them feel more at ease.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">8</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Set Boundaries:</strong> While it's important to be empathetic, it's also crucial to set clear boundaries. If the behaviour is unsafe or unacceptable, communicate this calmly but firmly.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">9</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Identify Triggers:</strong> If you are familiar with the individual, use your knowledge of their triggers to avoid exacerbating the situation. If not, try to identify potential triggers in the environment and address them if possible.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">10</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Seek Support:</strong> If the situation escalates beyond your ability to manage safely, don't hesitate to ask for help from colleagues or, if necessary, professional crisis intervention teams.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-7 h-7 rounded-full bg-blue-900 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">11</span>
+                      <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-gray-900">Follow-Up:</strong> After the situation has de-escalated, it's important to follow up. This can involve discussing the incident with the individual to understand what triggered it and how similar situations might be avoided in the future.</p>
+                    </li>
+                  </ol>
+                  <div class="mt-6 bg-blue-50 rounded-xl p-4 border border-blue-100">
+                    <p class="text-sm text-blue-900 font-semibold leading-relaxed">💡 Remember, every individual and situation is unique, and what works in one case may not be effective in another. It's important to remain flexible and adapt your approach as needed. Additionally, maintaining a non-judgmental attitude and respecting the dignity of the individual are key in successfully de-escalating behavioural escalations.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Escalation Cycle Visual -->
+              <div class="rounded-2xl border-2 border-gray-200 overflow-hidden">
+                <div class="bg-gray-800 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">📊 The Escalation Cycle</h4>
+                </div>
+                <div class="bg-white px-6 py-6">
+                  <div class="flex flex-col md:flex-row rounded-xl overflow-hidden border border-gray-200 text-center text-sm font-black">
+                    <div class="flex-1 bg-green-500 text-white py-4 px-3">
+                      <div class="text-lg mb-1">😌</div>
+                      Calm
+                    </div>
+                    <div class="flex-1 bg-yellow-400 text-gray-900 py-4 px-3">
+                      <div class="text-lg mb-1">😟</div>
+                      Agitation
+                    </div>
+                    <div class="flex-1 bg-orange-500 text-white py-4 px-3">
+                      <div class="text-lg mb-1">😠</div>
+                      Escalation
+                    </div>
+                    <div class="flex-1 bg-red-600 text-white py-4 px-3">
+                      <div class="text-lg mb-1">🚨</div>
+                      Crisis
+                    </div>
+                    <div class="flex-1 bg-sky-400 text-white py-4 px-3">
+                      <div class="text-lg mb-1">🌿</div>
+                      Recovery
+                    </div>
+                  </div>
+                  <p class="text-xs text-gray-500 font-medium mt-3 text-center">Understanding where someone is in the cycle helps workers choose the most appropriate response strategy.</p>
+                </div>
+              </div>
+            </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
               <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
