@@ -207,6 +207,115 @@ const newResourcesTabs = [
               </div>
             </div>
 
+
+            <!-- MODULE SECTION: Response Strategies -->
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <span class="w-8 h-8 bg-purple-600 text-white rounded-lg flex items-center justify-center font-black text-sm shrink-0">3</span>
+                <h3 class="text-xl font-black text-gray-900 tracking-tight">Response Strategies</h3>
+              </div>
+              <p class="text-gray-600 text-sm font-medium mb-6 ml-11">Response strategies are specific actions taken in reaction to certain behaviours or situations. Effective response strategies are critical for managing incidents when they occur and for preventing escalation. Here are some key strategies:</p>
+
+              <div class="rounded-2xl border-2 border-blue-900 overflow-hidden">
+                <div class="bg-blue-900 px-6 py-3">
+                  <h4 class="text-white font-black text-base tracking-wide">⚡ Response Strategies</h4>
+                </div>
+                <div class="divide-y divide-gray-100">
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Calm and Measured Reaction</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Respond to behaviours calmly and without heightened emotion. A calm demeanour can help de-escalate situations.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Avoid raising your voice or showing frustration, as this can exacerbate the behaviour.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Immediate and Appropriate Response</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Remain vigilant for the early warning signs of escalation.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Ensure only one person at a time is responding to early warning signs to avoid overwhelming the participant or accidentally reinforcing the behaviour.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Address the behaviour as soon as it occurs, ensuring that the response is appropriate to the severity and nature of the behaviour.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">The response should be consistent with previously established guidelines or plans.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Safety First</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Prioritise safety for the participant, others involved, and yourself. If a behaviour poses a risk of harm, take necessary steps to ensure everyone's safety.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">If behaviours are observed that are not causing serious physical harm, do not physically stop or restrain the participant — as this can cause more distress and increase risk.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Understanding and Empathy</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Try to understand the reason behind the behaviour. Acknowledge the participant's feelings and emotions, showing empathy while still addressing the behaviour.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Sometimes, underlying needs or frustrations might be driving the behaviour.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Effective Communication</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Use soft, positive and low tones of voice.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Use clear and simple language to communicate with the participant.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Verbalise understanding of their feelings, and if possible, offer alternatives or solutions to their concerns.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Reinforce good communication instead of the behaviour of concern.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Reduce the amount of demands or prompts on the participant. Avoid saying things like <strong>"calm down"</strong> or <strong>"stop hitting yourself"</strong>.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Avoid using reprimanding language.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">Redirect and Distract</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Redirect their attention to a different, more positive activity when feasible.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Distraction can be an effective tool in preventing the escalation of behaviours.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div class="bg-gray-50 px-5 py-4 flex items-start pt-5">
+                      <span class="font-black text-gray-800 text-sm">De-escalation Techniques</span>
+                    </div>
+                    <div class="col-span-2 bg-white px-5 py-4">
+                      <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Employ de-escalation techniques such as offering space, speaking softly, and maintaining a non-threatening body posture.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-blue-900 font-bold shrink-0">•</span><span class="leading-relaxed">Know when to give the participant a moment to cool down if they are becoming increasingly agitated.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
               <span class="text-amber-600 font-black text-lg shrink-0">📌</span>
               <p class="text-amber-800 text-sm font-semibold">More modules coming — send through your next section and it will be added here.</p>
