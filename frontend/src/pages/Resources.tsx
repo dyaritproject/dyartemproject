@@ -1097,8 +1097,14 @@ const Resources = () => {
 
   const activeNewTab = newResourcesTabs.find(tab => tab.id === activeTabId);
 
+
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen pb-24">
+      {/* Dynamic iframe sizing based on sidebar state */}
+      <style>{`
+        .content-expanded iframe { height: 650px !important; }
+        .content-expanded .rounded-xl { border-radius: 0.75rem; }
+      `}</style>
       {/* Header Area */}
       <section className="relative bg-gradient-to-b from-[#FAF5FF] to-white pt-20 pb-8 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1179,8 +1185,8 @@ const Resources = () => {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1">
-        
+        <div className={`transition-all duration-300 ease-in-out ${sidebarOpen ? 'flex-1' : 'w-full content-expanded'}`}>
+
         {/* Render Participant Rights & Resources */}
         {activeTabId === 'rights' && (
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
