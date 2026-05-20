@@ -17,6 +17,7 @@ import Dashboard from './pages/Dashboard';
 import WorkWithUs from './pages/WorkWithUs';
 import EasyReadLibrary from './pages/EasyReadLibrary';
 import Announcements from './pages/Announcements';
+import AccessibilityToolbar from './components/AccessibilityToolbar';
 
 function App() {
   return (
@@ -37,8 +38,9 @@ function App() {
           {/* Public pages — with navbar and footer */}
           <Route path="/*" element={
             <div className="app-container">
+              <AccessibilityToolbar />
               <Navbar />
-              <main className="main-content">
+              <main id="main-content" className="main-content">
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
