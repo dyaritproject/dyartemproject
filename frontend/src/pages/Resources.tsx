@@ -1141,51 +1141,49 @@ const Resources = () => {
       </section>
 
       {/* Main Layout Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24 flex flex-col lg:flex-row gap-8" dir={currentDir}>
-        
-        {/* Sidebar Navigation */}
-        <div className={`shrink-0 transition-all duration-300 ease-in-out ${sidebarOpen ? 'w-full lg:w-1/3' : 'w-full lg:w-auto'}`}>
-          <div className="sticky top-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24" dir={currentDir}>
 
-            {/* Toggle Button */}
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
-              className="mb-3 flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 border border-purple-200 text-purple-700 font-bold text-sm hover:bg-purple-100 transition-all shadow-sm"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${sidebarOpen ? 'rotate-0' : 'rotate-180'}`}>
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-              {sidebarOpen ? 'Hide Menu' : 'Show Menu'}
-            </button>
-
-            {/* Sidebar Menu */}
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${sidebarOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
-              <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-4 flex flex-col gap-2">
-                {topTabs.map(tab => (
-                  <button
-                    key={tab.id}
-                    onClick={() => {
-                      setActiveTabId(tab.id);
-                      setExpandedItem(null);
-                    }}
-                    className={`w-full text-left px-5 py-4 rounded-2xl text-sm font-bold transition-all ${
-                      activeTabId === tab.id
-                        ? 'bg-[#6A0DAD] text-white shadow-md'
-                        : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-700'
-                    }`}
-                  >
-                    {tab.title}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-          </div>
+        {/* Toggle Button — always visible above layout */}
+        <div className="flex mb-4">
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 border border-purple-200 text-purple-700 font-bold text-sm hover:bg-purple-100 transition-all shadow-sm"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${sidebarOpen ? 'rotate-0' : 'rotate-180'}`}>
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            {sidebarOpen ? 'Hide Menu' : 'Show Menu'}
+          </button>
         </div>
 
-        {/* Content Area */}
-        <div className={`transition-all duration-300 ease-in-out ${sidebarOpen ? 'flex-1' : 'w-full content-expanded'}`}>
+        {/* Flex Row: Sidebar + Content */}
+        <div className="flex flex-col lg:flex-row gap-8">
+
+          {/* Sidebar Navigation — collapses to zero width when hidden */}
+          <div className={`shrink-0 transition-all duration-500 ease-in-out overflow-hidden ${sidebarOpen ? 'w-full lg:w-80 opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}>
+            <div className="sticky top-24 bg-white rounded-3xl border border-gray-100 shadow-sm p-4 flex flex-col gap-2 min-w-[280px]">
+              {topTabs.map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => {
+                    setActiveTabId(tab.id);
+                    setExpandedItem(null);
+                  }}
+                  className={`w-full text-left px-5 py-4 rounded-2xl text-sm font-bold transition-all ${
+                    activeTabId === tab.id
+                      ? 'bg-[#6A0DAD] text-white shadow-md'
+                      : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-700'
+                  }`}
+                >
+                  {tab.title}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Content Area — always flex-1, expands fully when sidebar is gone */}
+          <div className={`flex-1 min-w-0 transition-all duration-500 ease-in-out ${!sidebarOpen ? 'content-expanded' : ''}`}>
 
         {/* Render Participant Rights & Resources */}
         {activeTabId === 'rights' && (
@@ -1323,6 +1321,8 @@ const Resources = () => {
           </div>
         )}
 
+        </div>
+        {/* End flex row */}
         </div>
       </div>
     </div>
