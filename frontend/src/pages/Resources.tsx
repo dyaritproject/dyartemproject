@@ -23,7 +23,205 @@ const newResourcesTabs = [
   },
   { 
     id: 'training', title: 'Training Materials', 
-    accordions: [{ id: 'train-1', title: 'Training Materials', content: '<p>Download the Training Materials below.</p>', pdf: '/documents/resources/12 — Training Materials.pdf', docx: '/documents/resources/12 — Training Materials.docx' }]
+    accordions: [
+      { 
+        id: 'train-pbs', 
+        title: '🧠 Positive Behaviour Support (PBS)', 
+        content: `
+          <div class="space-y-6">
+            <div class="bg-purple-50 border border-purple-100 rounded-2xl p-5">
+              <p class="text-purple-900 font-semibold leading-relaxed">Positive Behaviour Support (PBS) is a person-centred framework that focuses on improving quality of life and understanding the reasons behind behaviours of concern — not just managing them. All DYAR practitioners delivering behaviour support must complete this training.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">The foundations and values of Positive Behaviour Support</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Functional Behaviour Assessment (FBA) and what drives behaviour</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Developing and implementing a Behaviour Support Plan (BSP)</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Proactive strategies vs reactive strategies</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Dignity of Risk and least restrictive practice principles</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">NDIS Practice Standards — Behaviour Support module</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-purple-500 mt-2 shrink-0"></span><span class="text-gray-700">Documenting, monitoring and reviewing the BSP</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">✅ Learning Outcomes</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Understand why behaviour is communication and how to respond appropriately</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Apply the PBS framework to real-world support scenarios</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Confidently contribute to and implement a Behaviour Support Plan</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Meet NDIS Quality & Safeguards Commission requirements for behaviour support</span></li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
+              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">4–6 hours</span></span>
+              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Workbook</span></span>
+              <span class="font-bold text-gray-500">🏅 Certificate: <span class="text-gray-800">Yes — on completion</span></span>
+            </div>
+          </div>
+        `, 
+        pdf: '/documents/resources/training/PBS-Training-Module.pdf', 
+        docx: '/documents/resources/training/PBS-Training-Module.docx' 
+      },
+      { 
+        id: 'train-rp', 
+        title: '🔒 Restrictive Practices', 
+        content: `
+          <div class="space-y-6">
+            <div class="bg-rose-50 border border-rose-100 rounded-2xl p-5">
+              <p class="text-rose-900 font-semibold leading-relaxed">Restrictive practices are a last resort. All DYAR support workers and practitioners must understand the legal obligations, authorisation requirements, and the strict reporting and monitoring framework that governs their use under the NDIS.</p>
+            </div>
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+              <span class="text-amber-600 font-black text-lg shrink-0">⚠️</span>
+              <p class="text-amber-800 text-sm font-semibold">This training is mandatory for any staff member involved in delivering supports to participants who have a Behaviour Support Plan that includes a regulated restrictive practice.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Definition and types of regulated restrictive practices (chemical, mechanical, physical, environmental, seclusion)</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">The legal framework — NDIS Act, State/Territory authorisation requirements</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">When a restrictive practice can and cannot be used</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">The role of the Behaviour Support Practitioner and NDIS Commission</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Reporting obligations — reportable incidents and NDIS Commission notifications</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Transitioning away from restrictive practices — reduction plans</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span><span class="text-gray-700">Supporting participants and families through the process</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">✅ Learning Outcomes</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Identify the 5 types of regulated restrictive practices and when each applies</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Understand the authorisation and reporting obligations for your state</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Know your responsibilities when a restrictive practice is in a BSP</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-600 font-bold shrink-0">✓</span><span class="text-gray-700">Contribute to reducing and eliminating restrictive practices over time</span></li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
+              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">3–4 hours</span></span>
+              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Case Studies</span></span>
+              <span class="font-bold text-gray-500">🏅 Certificate: <span class="text-gray-800">Yes — on completion</span></span>
+            </div>
+          </div>
+        `, 
+        pdf: '/documents/resources/training/Restrictive-Practices-Training.pdf', 
+        docx: '/documents/resources/training/Restrictive-Practices-Training.docx' 
+      },
+      { 
+        id: 'train-ndis-orientation', 
+        title: '📘 NDIS Worker Orientation Module', 
+        content: `
+          <div class="space-y-6">
+            <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+              <p class="text-blue-900 font-semibold leading-relaxed">The NDIS Worker Orientation Module "Quality, Safety and You" is mandatory for all new DYAR staff before they begin working with participants. It covers the rights of people with disability and the responsibilities of NDIS workers.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">Rights of people with disability under the NDIS</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">NDIS Code of Conduct — your obligations as a worker</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">Recognising and responding to abuse, neglect and exploitation</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">Supported decision making and person-centred practice</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></span><span class="text-gray-700">How to raise concerns and report incidents</span></li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
+              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">90 minutes</span></span>
+              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Online (NDIS Commission portal)</span></span>
+              <span class="font-bold text-gray-500">🏅 Certificate: <span class="text-gray-800">Yes — completion certificate required</span></span>
+            </div>
+            <a href="https://www.ndiscommission.gov.au/workers/training-and-education/worker-orientation-module" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-sm">
+              🔗 Access via NDIS Commission Website
+            </a>
+          </div>
+        `, 
+        pdf: '/documents/resources/training/NDIS-Worker-Orientation-Guide.pdf', 
+        docx: null
+      },
+      { 
+        id: 'train-safeguarding', 
+        title: '🛡️ Safeguarding & Mandatory Reporting', 
+        content: `
+          <div class="space-y-6">
+            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+              <p class="text-emerald-900 font-semibold leading-relaxed">All DYAR staff are mandatory reporters. This training ensures every team member knows how to identify signs of abuse, neglect and exploitation — and what to do when they suspect a participant is at risk.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span><span class="text-gray-700">Types of abuse, neglect and exploitation — indicators and warning signs</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span><span class="text-gray-700">Your legal duty to report under the NDIS and state legislation</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span><span class="text-gray-700">How to make a report — internally and to the NDIS Commission</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span><span class="text-gray-700">Supporting participants through a disclosure</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span><span class="text-gray-700">Whistleblower protections for staff who report</span></li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
+              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">2 hours</span></span>
+              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Scenario Exercises</span></span>
+              <span class="font-bold text-gray-500">🔄 Renewal: <span class="text-gray-800">Every 2 years</span></span>
+            </div>
+          </div>
+        `, 
+        pdf: '/documents/resources/training/Safeguarding-Mandatory-Reporting.pdf', 
+        docx: '/documents/resources/training/Safeguarding-Mandatory-Reporting.docx' 
+      },
+      { 
+        id: 'train-cultural', 
+        title: '🌏 Cultural Safety & Inclusion', 
+        content: `
+          <div class="space-y-6">
+            <div class="bg-orange-50 border border-orange-100 rounded-2xl p-5">
+              <p class="text-orange-900 font-semibold leading-relaxed">DYAR serves participants from diverse cultural and linguistic backgrounds including Aboriginal and Torres Strait Islander communities. This training builds the skills to deliver culturally safe, respectful and inclusive supports.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0"></span><span class="text-gray-700">Understanding cultural safety vs cultural awareness</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0"></span><span class="text-gray-700">Working with Aboriginal and Torres Strait Islander participants</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0"></span><span class="text-gray-700">Supporting CALD (Culturally and Linguistically Diverse) participants</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0"></span><span class="text-gray-700">Using interpreters and translated materials effectively</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0"></span><span class="text-gray-700">Addressing unconscious bias in service delivery</span></li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
+              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">2–3 hours</span></span>
+              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Self-paced + Reflection Activities</span></span>
+              <span class="font-bold text-gray-500">🔄 Renewal: <span class="text-gray-800">Annually</span></span>
+            </div>
+          </div>
+        `, 
+        pdf: '/documents/resources/training/Cultural-Safety-Training.pdf', 
+        docx: '/documents/resources/training/Cultural-Safety-Training.docx' 
+      },
+      { 
+        id: 'train-manual', 
+        title: '💪 Manual Handling & Personal Care', 
+        content: `
+          <div class="space-y-6">
+            <div class="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p class="text-sky-900 font-semibold leading-relaxed">Safe manual handling protects both participants and workers. This training is required for all staff providing physical supports, personal care, or high-intensity daily activities.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-3 text-base">📋 What This Training Covers</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Safe manual handling principles and risk assessment</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Use of assistive equipment — hoists, transfer belts, slide sheets</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Dignity and consent in personal care routines</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Injury prevention for workers — posture, technique, fatigue management</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-sky-500 mt-2 shrink-0"></span><span class="text-gray-700">Incident reporting for near-misses and injuries</span></li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-wrap gap-4 text-sm">
+              <span class="font-bold text-gray-500">⏱ Duration: <span class="text-gray-800">3 hours (includes practical)</span></span>
+              <span class="font-bold text-gray-500">📄 Format: <span class="text-gray-800">Online theory + In-person practical</span></span>
+              <span class="font-bold text-gray-500">🔄 Renewal: <span class="text-gray-800">Every 3 years</span></span>
+            </div>
+          </div>
+        `, 
+        pdf: '/documents/resources/training/Manual-Handling-Training.pdf', 
+        docx: '/documents/resources/training/Manual-Handling-Training.docx' 
+      }
+    ]
   },
   { 
     id: 'advocacy', title: 'Statement on Advocacy Services', 
